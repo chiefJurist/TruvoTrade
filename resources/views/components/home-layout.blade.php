@@ -35,8 +35,23 @@
                 });
             });
         });
+
+        //for the loader
+        window.addEventListener('load', function () {
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+            setTimeout(() => loader.remove(), 500); // Optional: remove it completely
+        }
+    });
     </script>
     <body>
+        {{-- LOADER --}}
+        <div id="app-loader" class="fixed inset-0 bg-gray-300 z-50 flex items-center justify-center">
+            <img src="{{asset('img/truvo_trade.png')}}" alt="Logo" class="w-24 h-24 animate-pulse">
+        </div>
+
         <div>
             {{-- Header For Screens Greater Than md --}}
             <div class="hidden md:flex px-20 welcome-header">

@@ -9,22 +9,22 @@
     <script>
         //For Showing the small nav
         document.addEventListener("DOMContentLoaded", function () {
-        const openBtn = document.getElementById("openMenu");
-        const closeBtn = document.getElementById("closeMenu");
-        const mobileNav = document.getElementById("mobileNav");
+            const openBtn = document.getElementById("openMenu");
+            const closeBtn = document.getElementById("closeMenu");
+            const mobileNav = document.getElementById("mobileNav");
 
-        openBtn.addEventListener("click", () => {
-            // Show and slide in
-            mobileNav.classList.remove("translate-x-full");
-            mobileNav.classList.add("translate-x-0");
-        });
+            openBtn.addEventListener("click", () => {
+                // Show and slide in
+                mobileNav.classList.remove("translate-x-full");
+                mobileNav.classList.add("translate-x-0");
+            });
 
-        closeBtn.addEventListener("click", () => {
-            // Slide out to the right
-            mobileNav.classList.remove("translate-x-0");
-            mobileNav.classList.add("translate-x-full");
+            closeBtn.addEventListener("click", () => {
+                // Slide out to the right
+                mobileNav.classList.remove("translate-x-0");
+                mobileNav.classList.add("translate-x-full");
+            });
         });
-    });
 
         //For showing the sublinks of the small nav
         document.addEventListener('DOMContentLoaded', () => {
@@ -38,13 +38,13 @@
 
         //for the loader
         window.addEventListener('load', function () {
-        const loader = document.getElementById('app-loader');
-        if (loader) {
-            loader.style.opacity = '0';
-            loader.style.pointerEvents = 'none';
-            setTimeout(() => loader.remove(), 500); // Optional: remove it completely
-        }
-    });
+            const loader = document.getElementById('app-loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.pointerEvents = 'none';
+                setTimeout(() => loader.remove(), 500); // Optional: remove it completely
+            }
+        });
     </script>
     <body>
         {{-- LOADER --}}

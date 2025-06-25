@@ -13,6 +13,7 @@ layer(base);
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-nunito: "Nunito";
 }
+@plugin "@iconify/tailwind4";
 
 body {
   @apply bg-gray-100 text-gray-900 font-sans;

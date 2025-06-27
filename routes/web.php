@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomepagesController;
+use App\Http\Controllers\TraderController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,4 +31,8 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('/login', 'showLogin')->name('show.login');
     Route::get('/register', 'showRegister')->name('show.register');
     Route::get('/forgot-password', 'forgotPassword')->name('forgot-password');
+});
+
+Route::middleware('guest')->controller(TraderController::class)->group(function() {
+    Route::get('/overview', 'overview')->name('trader.overview');
 });

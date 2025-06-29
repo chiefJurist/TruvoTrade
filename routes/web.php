@@ -35,4 +35,11 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
 
 Route::middleware('guest')->controller(TraderController::class)->group(function() {
     Route::get('/overview', 'overview')->name('trader.overview');
+    Route::get('/profile', 'profile')->name('trader.profile');
+    Route::get('/investment', 'investment')->name('trader.investment');
+    Route::get('/plans', 'plans')->name('trader.plans');
+    Route::get('/transactions', 'transactions')->name('trader.transactions');
+    Route::get('/withdrawals', 'withdrawals')->name('trader.withdrawals');
+    Route::get('/deposits', 'deposits')->name('trader.deposits');
+    Route::get('/referrals', 'referrals')->name('trader.referrals');
 });

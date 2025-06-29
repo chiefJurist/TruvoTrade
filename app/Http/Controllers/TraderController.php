@@ -10,4 +10,39 @@ class TraderController extends Controller
     public function overview() {
         return view('trader.overview');
     }
+
+    //profile action
+    public function profile() {
+        return view('trader.profile');
+    }
+
+    //investment action
+    public function investment() {
+        return view('trader.investment');
+    }
+
+    //plans action
+    public function plans() {
+        return view('trader.plans');
+    }
+
+    //transactions action
+    public function transactions() {
+        return view('trader.transactions');
+    }
+
+    //withdrawals action
+    public function withdrawals() {
+        return view('trader.withdrawals');
+    }
+
+    //deposits action
+    public function deposits() {
+        return view('trader.deposits');
+    }
+
+    //referrals action
+    public function referrals() {
+        return view('trader.referrals');
+    }
 }

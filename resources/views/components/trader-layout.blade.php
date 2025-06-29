@@ -57,7 +57,7 @@
     </div>
 
     {{-- navigation for smaller screens --}}
-    <div  id="mobileNav" class="md:hidden fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto z-40 transform -translate-x-full transition-transform duration-400 ease-out font-nunito font-bold">
+    <div  id="mobileNav" class="trader-small-mobilenav -translate-x-full ">
         <div id="closeMenu" class="trader-menu-cancel-con">
             <div class="trader-small-header-logo-con">
                 <img src="{{ asset('img/truvo_trade.png')}}" alt="Truvo Logo" class="w-10">
@@ -66,89 +66,89 @@
             <span class="icon-[material-symbols--cancel-outline-rounded] trader-menu-cancel"></span>
         </div>
         <div>
-            <div class="">HOME</div>
+            <div  class="trader-small-nav-link-header">HOME</div>
             <a href="{{ route('trader.overview') }}" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
-                    <span class="icon-[tabler--layout-dashboard] text-2xl"></span>
+                    <span class="icon-[tabler--layout-dashboard] trader-small-nav-link-icon"></span>
                 </div>
                 <div>
-                    <span class="">Overview</span>
-                </div>
-            </a>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
-                <div>
-                    <span class="icon-[tabler--user-cog]"></span>
-                </div>
-                <div>
-                    <span class="">My Profile</span>
+                    <span class="trader-small-nav-link-text">Overview</span>
                 </div>
             </a>
-
-            <div>APPS</div>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <a href="{{ route('trader.profile') }}" class="trader-small-nav-link {{ request()->routeIs('trader.profile') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
-                    <span class="icon-[tabler--home-stats]"></span>
+                    <span class="icon-[tabler--user-cog] trader-small-nav-link-icon"></span>
                 </div>
                 <div>
-                    <span class="">Investment</span>
-                </div>
-            </a>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
-                <div>
-                    <span class="icon-[tabler--report-money]"></span>
-                </div>
-                <div>
-                    <span class="">Our Plans</span>
+                    <span class="trader-small-nav-link-text">My Profile</span>
                 </div>
             </a>
 
-            <div>TRANSACTIONS</div>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <div class="trader-small-nav-link-header">APPS</div>
+            <a href="{{ route('trader.investment') }}" class="trader-small-nav-link {{ request()->routeIs('trader.investment') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
-                    <span class="icon-[tabler--building-bank]"></span>
+                    <span class="icon-[tabler--home-stats] trader-small-nav-link-icon"></span>
                 </div>
                 <div>
-                    <span class="">Transactions</span>
-                </div>
-            </a>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
-                <div>
-                    <span class="icon-[tabler--square-arrow-up]"></span>
-                </div>
-                <div>
-                    <span class="">Withdrawals</span>
+                    <span class="trader-small-nav-link-text">Investment</span>
                 </div>
             </a>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <a href="{{ route('trader.plans') }}" class="trader-small-nav-link {{ request()->routeIs('trader.plans') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
-                    <span class="icon-[tabler--square-arrow-down]"></span>
+                    <span class="icon-[tabler--report-money] trader-small-nav-link-icon"></span>
                 </div>
                 <div>
-                    <span class="">Deposits</span>
-                </div>
-            </a>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
-                <div>
-                    <span class="icon-[tabler--share]"></span>
-                </div>
-                <div>
-                    <span class="">Referrals</span>
+                    <span class="trader-small-nav-link-text">Our Plans</span>
                 </div>
             </a>
 
-            <div>EXTRAS</div>
-            <a href="" class="trader-small-nav-link {{ request()->routeIs('trader.overview') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <div class="trader-small-nav-link-header">TRANSACTIONS</div>
+            <a href="{{ route('trader.transactions') }}" class="trader-small-nav-link {{ request()->routeIs('trader.transactions') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
-                    <span class="icon-[tabler--power]"></span>
+                    <span class="icon-[tabler--building-bank] trader-small-nav-link-icon"></span>
                 </div>
                 <div>
-                    <span class="">Log Out</span>
+                    <span class="trader-small-nav-link-text">Transactions</span>
+                </div>
+            </a>
+            <a href="{{ route('trader.withdrawals') }}" class="trader-small-nav-link {{ request()->routeIs('trader.withdrawals') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <div>
+                    <span class="icon-[tabler--square-arrow-up] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">Withdrawals</span>
+                </div>
+            </a>
+            <a href="{{ route('trader.deposits') }}" class="trader-small-nav-link {{ request()->routeIs('trader.deposits') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <div>
+                    <span class="icon-[tabler--square-arrow-down] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">Deposits</span>
+                </div>
+            </a>
+            <a href="{{ route('trader.referrals') }}" class="trader-small-nav-link {{ request()->routeIs('trader.referrals') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <div>
+                    <span class="icon-[tabler--share] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">Referrals</span>
                 </div>
             </a>
 
-            <div>
+            <div class="trader-small-nav-link-header">EXTRAS</div>
+            <a href="" class="trader-small-nav-link">
+                <div>
+                    <span class="icon-[tabler--power] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">Log Out</span>
+                </div>
+            </a>
+
+            <div class="trader-small-nav-link-contact-btn-con">
                 <div>24/7 Support Available</div>
-                <div>
+                <div class="trader-small-nav-link-contact-btn">
                     <span>Contact Us</span>
                     <span class="icon-[tabler--headset]"></span>
                 </div>

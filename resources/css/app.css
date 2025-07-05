@@ -427,10 +427,10 @@ td{
   @apply p-5 md:p-10 mt-24 block;
 }
 .trader-big-gen-container{
-  @apply font-nunito bg-white text-gray-800 hidden md:flex;
+  @apply font-nunito bg-white text-gray-800 block md:flex;
 }
 .trader-small-header-con{
-  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
+  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24 z-20;
 }
 .trader-small-header-logo-con{
   @apply flex items-center text-black text-xs font-bold;
@@ -463,7 +463,7 @@ td{
   @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
 }
 .trader-big-mobile-nav{
-  @apply border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
+  @apply hidden md:block border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
 }
 .trader-big-screen-header{
   @apply hidden md:flex justify-between items-center fixed top-0 h-24 px-10 z-20 border-b border-gray-200 bg-white;

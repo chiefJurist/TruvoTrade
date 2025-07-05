@@ -45,4 +45,9 @@ class TraderController extends Controller
     public function referrals() {
         return view('trader.referrals');
     }
+
+    //test action
+    public function test() {
+        return view('trader.test');
+    }
 }

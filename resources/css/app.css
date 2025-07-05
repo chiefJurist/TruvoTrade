@@ -18,6 +18,12 @@ layer(base);
 body {
   @apply bg-gray-100 text-gray-900 font-sans;
 }
+.loader{
+  @apply fixed inset-0 bg-white z-50 flex items-center justify-center;
+}
+.loader-img{
+  @apply w-24 h-24 animate-pulse;
+}
 .button{
   @apply cursor-pointer transition duration-400 ease-out;
 }
@@ -417,15 +423,14 @@ td{
 
 
 
-
 .trader-gen-container{
-  @apply p-5 md:p-10 bg-white mt-24;
+  @apply p-5 md:p-10 mt-24 block;
 }
-.overview-chart-card-con{
-  @apply bg-white shadow-lg rounded-xl p-4 w-full;
+.trader-big-gen-container{
+  @apply font-nunito bg-white text-gray-800 hidden md:flex;
 }
 .trader-small-header-con{
-  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-2xl fixed top-0 w-full h-24;
+  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
 }
 .trader-small-header-logo-con{
   @apply flex items-center text-black text-xs font-bold;
@@ -434,7 +439,7 @@ td{
   @apply w-10 h-10 rounded-full;
 }
 .trader-small-mobilenav{
-  @apply font-nunito font-bold md:hidden fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto transform transition-transform duration-400 ease-out z-40;
+  @apply md:hidden font-nunito font-bold fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto transform transition-all duration-500 ease-out z-40;
 }
 .trader-menu-cancel-con{
   @apply flex justify-between items-center pt-5 pb-10;
@@ -446,17 +451,53 @@ td{
   @apply flex items-center gap-2 my-1 p-3 text-sm font-semibold rounded-md cursor-pointer transition duration-400 ease-out;
 }
 .trader-small-nav-link-header{
-  @apply mt-5;
+  @apply mt-5 font-bold;
 }
 .trader-small-nav-link-icon{
   @apply text-2xl;
-}
-.trader-small-nav-link-text{
-  @apply text-lg;
 }
 .trader-small-nav-link-contact-btn-con{
   @apply bg-blue-200 p-3 rounded-lg mt-5;
 }
 .trader-small-nav-link-contact-btn{
   @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
+}
+.trader-big-mobile-nav{
+  @apply border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
+}
+.trader-big-screen-header{
+  @apply hidden md:flex justify-between items-center fixed top-0 h-24 px-10 z-20 border-b border-gray-200 bg-white;
+}
+.trader-big-screen-hamburger{
+  @apply cursor-pointer text-3xl hover:text-blue-400 hover:bg-blue-200 rounded-full flex justify-center w-10 h-10 items-center;
+}
+.trader-big-header-con{
+  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
+}
+.trader-big-header-logo-con{
+  @apply flex items-center text-black text-xs font-bold;
+}
+.trader-big-nav-link-header{
+  @apply mt-5 font-bold;
+}
+.trader-big-nav-link-header-dot{
+  @apply mt-5 font-bold text-center;
+}
+.trader-big-nav-link{
+  @apply flex items-center gap-2 my-1 p-3 text-sm font-semibold rounded-md cursor-pointer transition duration-300 ease-out hover:text-blue-400 hover:bg-blue-200;
+}
+.trader-big-nav-link-icon{
+  @apply text-xl;
+}
+.trader-big-nav-link-contact-btn-con{
+  @apply bg-blue-200 p-3 rounded-lg mt-5;
+}
+.trader-big-nav-link-contact-btn{
+  @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
+}
+.trader-big-main-content{
+  @apply ml-auto relative transition-all duration-500;
+}
+.overview-chart-card-con{
+  @apply bg-white shadow-lg rounded-xl p-4 w-full;
 }

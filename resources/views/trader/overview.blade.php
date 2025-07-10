@@ -291,45 +291,44 @@
         </div>
 
         {{-- ninth div --}}
-        <div class="md:w-5/6 mx-auto my-8">
-            <div class="flex justify-between items-center my-5">
-                <div class="font-bold md:text-xl">Recent Transactions</div>
+        <div class="overview-ninth-div-con">
+            <div class="overview-ninth-div-wrap-one">
+                <div class="overview-ninth-div-wrap-two">Recent Transactions</div>
                 <a href="{{route('trader.transactions')}}">
-                    <div class="border border-blue-400 text-blue-400 inline-flex items-center gap-1 p-2 rounded-lg hover:text-white hover:bg-blue-400 font-bold button">
+                    <div class="overview-ninth-div-wrap-three button">
                         <span>View all</span>
-                        <span class="icon-[tabler--arrow-big-right-lines-filled] md:text-xl"></span>
+                        <span class="icon-[tabler--arrow-big-right-lines-filled] overview-ninth-div-wrap-four"></span>
                     </div>
                 </a>
             </div>
-            <div class="h-30 overflow-auto">
-                <table class="mx-auto table-auto w-full border border-gray-200 text-gray-500">
+            <div class="overview-ninth-div-wrap-five">
+                <table class="overview-ninth-div-wrap-six">
                     <thead>
-                        <tr class="border-b border-gray-300">
-                            <th class="border-none px-4 py-2 text-center">Transaction</th>
-                            <th class="border-none px-4 py-2 text-center">Status</th>
-                            <th class="border-none px-4 py-2 text-center">Date</th>
+                        <tr class="overview-ninth-div-wrap-seven">
+                            <th class="overview-ninth-div-wrap-eight">Transaction</th>
+                            <th class="overview-ninth-div-wrap-eight">Status</th>
+                            <th class="overview-ninth-div-wrap-eight">Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="border-none px-4 py-2 text-center">Deposit</td>
-                            <td class="border-none px-4 py-2 text-center">Success</td>
-                            <td class="border-none px-4 py-2 text-center">Monday</td>
+                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
+                            <td class="overview-ninth-div-wrap-eight">Success</td>
+                            <td class="overview-ninth-div-wrap-eight">Monday</td>
                         </tr>
                         <tr>
-                            <td class="border-none px-4 py-2 text-center">Deposit</td>
-                            <td class="border-none px-4 py-2 text-center">Success</td>
-                            <td class="border-none px-4 py-2 text-center">Monday</td>
+                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
+                            <td class="overview-ninth-div-wrap-eight">Success</td>
+                            <td class="overview-ninth-div-wrap-eight">Monday</td>
                         </tr>
                         <tr>
-                            <td class="border-none px-4 py-2 text-center">Deposit</td>
-                            <td class="border-none px-4 py-2 text-center">Success</td>
-                            <td class="border-none px-4 py-2 text-center">Monday</td>
+                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
+                            <td class="overview-ninth-div-wrap-eight">Success</td>
+                            <td class="overview-ninth-div-wrap-eight">Monday</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
         </div>
     </div>
 </x-trader-layout>

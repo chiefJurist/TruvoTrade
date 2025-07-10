@@ -618,3 +618,31 @@ td{
 .overview-seventh-div-wrap-two{
   @apply md:text-xl font-bold;
 }
+
+.overview-ninth-div-con{
+  @apply md:w-5/6 mx-auto my-8;
+}
+.overview-ninth-div-wrap-one{
+  @apply flex justify-between items-center my-5;
+}
+.overview-ninth-div-wrap-two{
+  @apply font-bold md:text-xl;
+}
+.overview-ninth-div-wrap-three{
+  @apply border border-blue-400 text-blue-400 inline-flex items-center gap-1 p-2 rounded-lg hover:text-white hover:bg-blue-400 font-bold;
+}
+.overview-ninth-div-wrap-four{
+  @apply md:text-xl;
+}
+.overview-ninth-div-wrap-five{
+  @apply h-30 overflow-auto;
+}
+.overview-ninth-div-wrap-six{
+  @apply mx-auto table-auto w-full border border-gray-200 text-gray-500;
+}
+.overview-ninth-div-wrap-seven{
+  @apply border-b border-gray-300;
+}
+.overview-ninth-div-wrap-eight{
+  @apply border-none px-4 py-2 text-center;
+}

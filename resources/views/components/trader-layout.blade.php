@@ -144,6 +144,21 @@
         }
     }
 
+    //overview Modal
+    window.toggleOverviewModal = function () {
+        const modal = document.getElementById('overviewModal');
+        let visible = !modal.classList.contains('hidden');
+        const content = document.getElementById('overviewModalContent');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+   }
+
 </script>
 <body>
     {{-- LOADER --}}
@@ -385,6 +400,30 @@
             <div class="trader-gen-container">
                 {{ $slot }}
             </div>
+        </div>
+    </div>
+
+    {{-- Overview Modal View --}}
+    <div id="overviewModal" class="hidden fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg justify-center items-center p-5 text-gray-600 font-nunito">
+        <div id="overviewModalContent" class="bg-white w-lg p-8 rounded-lg animate-bounce-once">
+            <form action="">
+                @csrf
+                <div class="flex justify-end" onclick="toggleOverviewModal()">
+                    <span class="icon-[hugeicons--cancel-01] text-2xl font-bold cursor-pointer"></span>
+                </div>
+                <div class="font-bold text-lg">Load Tokens</div>
+                <div class="text-xs text-blue-400">Enter the Coupon Code</div>
+                <div class="mt-6 border border-blue-200 rounded-lg px-3 py-1">
+                    <div class="text-gray-400 text-sm select-none">Enter Coupon Code to load tokens</div>
+                    <input type="text" class="w-full outline-none mt-1">
+                </div>
+                <div class="font-bold mt-5">Token Balance (Available)</div>
+                <input type="text" value="0 ELT" readonly class="bg-gray-300 px-5 py-2 rounded-lg w-full outline-none">
+                <div class="mt-2 text-xs text-blue-400">These are the profits you currently have available.</div>
+                <div class="mt-8 flex justify-center-safe">
+                    <input type="submit" value="Proceed" class="bg-gray-700 text-white font-bold p-2 rounded-lg w-28 hover:bg-gray-500 button">
+                </div>
+            </form>
         </div>
     </div>
 </body>

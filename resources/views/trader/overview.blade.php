@@ -232,7 +232,7 @@
                     <div class="overview-sixth-div-wrap-five">0 ELT</div>
                 </div>
                 <div>
-                    <div class="overview-sixth-div-wrap-six button">
+                    <div class="overview-sixth-div-wrap-six button" onclick="toggleOverviewModal()">
                         <span class="icon-[tabler--ticket]"></span>
                         <span>Load Tokens</span>
                     </div>

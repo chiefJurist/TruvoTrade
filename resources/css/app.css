@@ -294,7 +294,7 @@ body {
   @apply bg-cover bg-center;
 }
 .marijuana-first-div-text{
-  @apply px-6 md:px-20 py-20 min-h-60  text-white backdrop-brightness-25 text-5xl text-center font-bold;
+  @apply px-6 md:px-20 py-20 min-h-60  text-white backdrop-brightness-25 text-3xl md:text-5xl text-center font-bold;
 }
 
 
@@ -498,6 +498,123 @@ td{
 .trader-big-main-content{
   @apply ml-auto relative transition-all duration-500;
 }
+
+
+
 .overview-chart-card-con{
   @apply bg-white shadow-lg rounded-xl p-4 w-full;
+}
+.overview-second-div-con{
+  @apply flex justify-between items-center;
+}
+.overview-second-div-user-con{
+  @apply flex gap-3 items-center;
+}
+.overview-second-div-user-img{
+  @apply w-20 md:w-16 rounded-full outline-2 outline-offset-2 outline-blue-400;
+}
+.overview-second-div-salute{
+  @apply font-bold md:text-3xl;
+}
+.overview-second-div-salute-text{
+  @apply text-xs text-gray-500 md:text-base;
+}
+.overview-second-div-btn-con{
+  @apply mt-2 md:mt-6 flex gap-1 md:gap-4;
+}
+.overview-second-div-deposit-btn{
+  @apply bg-blue-400 hover:bg-blue-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-lg font-bold text-xs md:text-base;
+}
+.overview-second-div-withdraw-btn{
+  @apply bg-emerald-300 hover:bg-emerald-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-lg font-bold text-xs md:text-base;
+}
+.overview-third-div-second{
+  @apply bg-orange-300 p-6 rounded-2xl text-xs md:text-base text-white flex justify-between gap-3 items-center;
+}
+.overview-third-div-first{
+  @apply my-8;
+}
+.overview-third-div-third{
+  @apply bg-orange-100 hover:bg-orange-50 text-orange-300 w-20 md:w-28 p-2 text-center rounded-lg;
+}
+.overview-third-div-fourth{
+  @apply bg-blue-400 p-6 rounded-2xl text-xs md:text-base text-white flex justify-between gap-3 items-center my-4;
+}
+.overview-third-div-fifth{
+  @apply bg-blue-200 hover:bg-blue-100 text-blue-400 w-24 md:w-32 p-2 text-center rounded-lg;
+}
+.overview-fifth-div-con{
+  @apply my-16 grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+.overview-fifth-div-card-con{
+  @apply p-8 shadow-lg rounded-lg border border-gray-100 flex justify-between;
+}
+.overview-fifth-div-card-header{
+  @apply font-bold text-xl;
+}
+.overview-fifth-div-card-left{        
+  @apply flex items-center gap-4 py-4;
+}
+.overview-fifth-div-card-balance{
+  @apply font-bold text-xl;
+}
+.overview-fifth-div-card-arrow{
+  @apply bg-green-200 flex justify-center items-center w-5 h-5 rounded-full;
+}
+.overview-fifth-div-card-img{
+  @apply bg-blue-200 p-2 rounded-lg;
+}
+.overview-sixth-div-con{
+  @apply my-8 text-xs md:text-base grid grid-cols-1 md:grid-cols-2 gap-5;
+}
+.overview-sixth-div-left-con{
+  @apply bg-blue-50 rounded-lg p-3 md:p-6 flex justify-between items-center;
+}
+.overview-sixth-div-right-con{
+  @apply bg-emerald-100 rounded-lg p-3 md:p-6 flex justify-between items-start;
+}
+.overview-sixth-div-wrap-one{
+  @apply inline-flex items-center gap-1;
+}
+.overview-sixth-div-wrap-two{
+  @apply bg-blue-400 inline-flex justify-center items-center p-1 md:p-2 rounded-lg
+}
+.overview-sixth-div-wrap-three{
+  @apply bg-white rounded-full p-0.5;
+}
+.overview-sixth-div-wrap-four{
+  @apply text-blue-400 text-xl;
+}
+.overview-sixth-div-wrap-five{
+  @apply mt-5 font-bold md:text-2xl;
+}
+.overview-sixth-div-wrap-six{
+  @apply border border-blue-400 text-blue-400 p-2 inline-flex justify-between items-center rounded-lg hover:bg-blue-400 hover:text-white;
+}
+.overview-sixth-div-wrap-seven{
+  @apply mt-5 p-2 rounded-lg bg-blue-400 text-white hover:bg-blue-500;
+}
+.overview-sixth-div-wrap-eight{
+  @apply inline-flex items-center gap-1;
+}
+.overview-sixth-div-wrap-nine{
+  @apply bg-emerald-400 p-1 md:p-2 rounded-lg
+}
+.overview-sixth-div-wrap-ten{
+  @apply mt-5 font-bold md:text-2xl text-orange-500;
+}
+.overview-sixth-div-wrap-eleven{
+  @apply text-orange-500 py-2;
+}
+.overview-seventh-div-con{
+  @apply my-10 text-center border border-gray-100 rounded-xl p-5;
+}
+.overview-seventh-div-wrap-one{
+  @apply bg-blue-50 p-5;
+}
+.overview-seventh-div-img{
+  @apply mx-auto w-24;
+}
+.overview-seventh-div-wrap-two{
+  @apply md:text-xl font-bold;
 }

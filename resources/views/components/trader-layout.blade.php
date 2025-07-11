@@ -404,24 +404,24 @@
     </div>
 
     {{-- Overview Modal View --}}
-    <div id="overviewModal" class="hidden fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg justify-center items-center p-5 text-gray-600 font-nunito">
-        <div id="overviewModalContent" class="bg-white w-lg p-8 rounded-lg animate-bounce-once">
+    <div id="overviewModal" class="hidden overview-modal-backdrop">
+        <div id="overviewModalContent" class="overview-modal-con animate-bounce-once">
             <form action="">
                 @csrf
-                <div class="flex justify-end" onclick="toggleOverviewModal()">
-                    <span class="icon-[hugeicons--cancel-01] text-2xl font-bold cursor-pointer"></span>
+                <div class="overview-modal-div-wrap-one" onclick="toggleOverviewModal()">
+                    <span class="icon-[hugeicons--cancel-01] overview-modal-div-wrap-two"></span>
                 </div>
-                <div class="font-bold text-lg">Load Tokens</div>
-                <div class="text-xs text-blue-400">Enter the Coupon Code</div>
-                <div class="mt-6 border border-blue-200 rounded-lg px-3 py-1">
-                    <div class="text-gray-400 text-sm select-none">Enter Coupon Code to load tokens</div>
-                    <input type="text" class="w-full outline-none mt-1">
+                <div class="overview-modal-div-wrap-three">Load Tokens</div>
+                <div class="overview-modal-div-wrap-four">Enter the Coupon Code</div>
+                <div class="overview-modal-div-wrap-five">
+                    <div class="overview-modal-div-wrap-six">Enter Coupon Code to load tokens</div>
+                    <input type="text" class="overview-modal-div-wrap-seven">
                 </div>
-                <div class="font-bold mt-5">Token Balance (Available)</div>
-                <input type="text" value="0 ELT" readonly class="bg-gray-300 px-5 py-2 rounded-lg w-full outline-none">
-                <div class="mt-2 text-xs text-blue-400">These are the profits you currently have available.</div>
-                <div class="mt-8 flex justify-center-safe">
-                    <input type="submit" value="Proceed" class="bg-gray-700 text-white font-bold p-2 rounded-lg w-28 hover:bg-gray-500 button">
+                <div class="overview-modal-div-wrap-eight">Token Balance (Available)</div>
+                <input type="text" value="0 ELT" readonly class="overview-modal-div-wrap-nine">
+                <div class="overview-modal-div-wrap-ten">These are the profits you currently have available.</div>
+                <div class="overview-modal-div-wrap-eleven">
+                    <input type="submit" value="Proceed" class="overview-modal-div-wrap-twelve button">
                 </div>
             </form>
         </div>

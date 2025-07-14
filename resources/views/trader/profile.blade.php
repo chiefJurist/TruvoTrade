@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="profile-third-wrap-seven">
-                            <input type="submit" value="Save" class="profile-third-wrap-eight">
+                            <input type="submit" value="Save" class="profile-third-wrap-eight button">
                         </div>
                     </form>
                 @elseif($section === 'accounts')

@@ -781,5 +781,5 @@ td{
   @apply flex justify-center md:justify-end;
 }
 .profile-third-wrap-eight{
-  @apply text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400 button;
+  @apply text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400;
 }

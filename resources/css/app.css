@@ -738,6 +738,11 @@ td{
   @apply basis-1/3 flex justify-end;
 }
 
+
+.profile-second-and-third-div-con{
+  @apply border border-gray-100 shadow p-5 mt-10 rounded-lg;
+}
+
 .profile-second-div-con{
   @apply flex items-center text-gray-600 my-5;
 }

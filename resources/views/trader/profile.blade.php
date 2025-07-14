@@ -84,8 +84,8 @@
                             </div>
                         </div>
 
-                        <div class="flex justify-center md:justify-end">
-                            <input type="submit" value="Save" class="text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400 button">
+                        <div class="profile-third-wrap-seven">
+                            <input type="submit" value="Save" class="profile-third-wrap-eight">
                         </div>
                     </form>
                 @elseif($section === 'accounts')

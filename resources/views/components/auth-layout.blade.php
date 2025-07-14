@@ -18,7 +18,7 @@
         }
     });
 </script>
-<body>
+<body class="bg-white">
     {{-- LOADER --}}
     <div id="app-loader" class="fixed inset-0 bg-gray-300 z-50 flex items-center justify-center">
         <img src="{{asset('img/truvo_trade.png')}}" alt="Logo" class="w-24 h-24 animate-pulse">

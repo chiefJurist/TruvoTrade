@@ -11,9 +11,10 @@ class TraderController extends Controller
         return view('trader.overview');
     }
 
-    //profile action
-    public function profile() {
-        return view('trader.profile');
+    //profile actions
+    public function profile(Request $request) {
+        $section = $request->query('section', 'trader.profile'); // Defaults to 'profile'
+        return view('trader.profile', compact('section'));
     }
 
     //investment action
@@ -44,10 +45,5 @@ class TraderController extends Controller
     //referrals action
     public function referrals() {
         return view('trader.referrals');
-    }
-
-    //test action
-    public function test() {
-        return view('trader.test');
     }
 }

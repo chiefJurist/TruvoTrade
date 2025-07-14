@@ -17,75 +17,81 @@
 
         {{-- second div --}}
         <div class="profile-second-div-con">
-            <a href="{{route('trader.profile')}}" class="profile-second-div-wrap-one {{ request()->routeIs('trader.profile') ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
+            <a href="{{ route('trader.profile', ['section' => 'profile']) }}" class="profile-second-div-wrap-one {{ $section === 'profile' ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
                 <div>
                     <span class="icon-[tabler--user-circle] profile-second-div-wrap-two"></span>
                 </div>
-                <div>Profile</div>
+                <div class="profile-second-div-wrap-three">Profile</div>
             </a>
             
-            <a href="" class="profile-second-div-wrap-one {{ request()->routeIs('trader.profile.accounts') ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
+            <a href="{{ route('trader.profile', ['section' => 'accounts']) }}" class="profile-second-div-wrap-one {{ $section === 'accounts' ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
                 <div>
                     <span class="icon-[tabler--building-bank] profile-second-div-wrap-two"></span>
                 </div>
-                <div>Accounts</div>
+                <div class="profile-second-div-wrap-three">Accounts</div>
             </a>
 
-            <a href="" class="profile-second-div-wrap-one {{ request()->routeIs('trader.profile.security') ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
+            <a href="{{ route('trader.profile', ['section' => 'security']) }}" class="profile-second-div-wrap-one {{ $section === 'security' ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
                 <div>
                     <span class="icon-[tabler--lock] profile-second-div-wrap-two"></span>
                 </div>
-                <div>Security</div>
+                <div class="profile-second-div-wrap-three">Security</div>
             </a>
         </div>
 
         {{-- third div --}}
-        <div class="my-10">
-            <form action="">
-                @csrf
+        <div class="profile-third-div-con">
+            @if ($section === 'profile')
+                <form action="">
+                    @csrf
 
-                <div class="font-bold text-lg">Personal Details</div>
+                    <div class="profile-third-wrap-one">Personal Details</div>
 
-                <div class="text-gray-600 my-1">
-                    To change your personal detail , edit and save from here
-                </div>
-
-                <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div>
-                        <label for="fullname" class="block font-bold">Full Name</label>
-                        <input type="text" name="fullname" id="fullname" value="Conor Iwobi" readonly class="block bg-gray-200 outline-none py-2 px-4 rounded-lg w-full">
+                    <div class="profile-third-wrap-two">
+                        To change your personal detail , edit and save from here
                     </div>
 
-                    <div>
-                        <label for="displayname">Display Name</label>
-                        <input type="text" name="displayname" id="displayname" value="Conor" readonly class="block bg-gray-200 outline-none py-2 px-4 rounded-lg w-full">
-                    </div>
-                    
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="conoriwovi@gmail.com" readonly class="block bg-gray-200 outline-none py-2 px-4 rounded-lg w-full">
+                    <div class="profile-third-wrap-three">
+                        <div>
+                            <label for="fullname" class="profile-third-wrap-four">Full Name</label>
+                            <input type="text" name="fullname" id="fullname" value="Conor Iwobi" readonly class="profile-third-wrap-five">
+                        </div>
+
+                        <div>
+                            <label for="displayname" class="profile-third-wrap-four">Display Name</label>
+                            <input type="text" name="displayname" id="displayname" value="Conor" readonly class="profile-third-wrap-five">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="profile-third-wrap-four">Email</label>
+                            <input type="email" name="email" id="email" value="conoriwovi@gmail.com" readonly class="profile-third-wrap-five">
+                        </div>
+
+                        <div>
+                            <label for="country" class="profile-third-wrap-four">Country</label>
+                            <input type="text" name="country" id="country" value="Nigeria" readonly class="profile-third-wrap-five">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="profile-third-wrap-four">Phone</label>
+                            <input type="tel" name="phone" id="phone" value="07010028679" class="profile-third-wrap-six">
+                        </div>
+
+                        <div>
+                            <label for="address" class="profile-third-wrap-four">Address</label>
+                            <input type="text" name="address" id="address" value="No. 21 Omila Road" class="profile-third-wrap-six">
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="country">Country</label>
-                        <input type="text" name="country" id="country" value="Nigeria" readonly class="block bg-gray-200 outline-none py-2 px-4 rounded-lg w-full">
+                    <div class="flex justify-center md:justify-end">
+                        <input type="submit" value="Save" class="text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400 button">
                     </div>
-
-                    <div>
-                        <label for="phone">Phone</label>
-                        <input type="tel" name="phone" id="phone" value="07010028679" class="block border border-gray-200 outline-none py-2 px-4 rounded-lg w-full">
-                    </div>
-
-                    <div>
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address" value="No. 21 Omila Road" class="block border border-gray-200 outline-none py-2 px-4 rounded-lg w-full">
-                    </div>
-                </div>
-
-                <div class="flex justify-center md:justify-end">
-                    <input type="submit" value="Save" class="text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400 button">
-                </div>
-            </form>
+                </form>
+            @elseif($section === 'accounts')
+                <div></div>
+            @elseif($section === 'security')
+                <div></div>
+            @endif
         </div>
     </div>
 </x-trader-layout>

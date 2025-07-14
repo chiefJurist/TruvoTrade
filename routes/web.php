@@ -42,5 +42,4 @@ Route::middleware('guest')->controller(TraderController::class)->group(function(
     Route::get('/withdrawals', 'withdrawals')->name('trader.withdrawals');
     Route::get('/deposits', 'deposits')->name('trader.deposits');
     Route::get('/referrals', 'referrals')->name('trader.referrals');
-    Route::get('/test', 'test')->name('trader.test');
 });

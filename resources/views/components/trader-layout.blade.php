@@ -160,7 +160,7 @@
    }
 
 </script>
-<body>
+<body class="bg-white">
     {{-- LOADER --}}
     <div id="app-loader" class="loader">
         <img src="{{asset('img/truvo_trade.png')}}" alt="Logo" class="loader-img">

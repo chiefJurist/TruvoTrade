@@ -436,7 +436,7 @@ td{
   @apply text-gray-700;
 }
 .auth-input{
-  @apply border border-gray-300 py-2 px-3 rounded-xl w-full;
+  @apply border border-gray-300 py-2 px-3 rounded-xl w-full outline-none;
 }
 .auth-input-div{
   @apply my-3 text-center;
@@ -809,4 +809,52 @@ td{
 }
 .profile-third-wrap-seventeen{
   @apply hover:bg-gray-200 p-2 flex gap-2 items-center;
+}
+
+
+
+.profile-bank-modal-backdrop{
+  @apply fixed top-0 w-full h-full z-50 overflow-y-auto py-10 backdrop-brightness-50 backdrop-blur-xs  text-gray-600 font-nunito;
+}
+.profile-bank-modal-sizer{
+  @apply flex justify-center items-center;
+}
+.profile-bank-modal-con{
+  @apply w-full md:w-2/3 py-10 px-8 rounded-lg bg-white;
+}
+.profile-bank-modal-wrap-one{
+  @apply text-lg font-bold;
+}
+.profile-bank-modal-wrap-two{
+  @apply text-sm my-1 text-gray-400;
+}
+.profile-bank-modal-wrap-three{
+  @apply my-4;
+}
+.profile-bank-modal-wrap-four{
+  @apply font-bold;
+}
+.profile-bank-modal-required{
+  @apply text-red-400;
+}
+.profile-bank-modal-wrap-five{
+  @apply text-gray-400;
+}
+.profile-bank-modal-input{
+  @apply border border-gray-200 text-gray-500 w-full p-2 outline-none rounded-lg;
+}
+.profile-bank-modal-wrap-six{
+  @apply text-gray-500 text-xs my-2;
+}
+.profile-bank-modal-wrap-seven{
+  @apply my-10;
+}
+.profile-bank-modal-wrap-eight{
+  @apply hover:bg-gray-500 bg-gray-700 text-white font-bold rounded-md p-2;
+}
+.authed-form-cancel-con{
+  @apply flex justify-end;
+}
+.authed-form-cancel{
+  @apply text-2xl font-bold cursor-pointer;
 }

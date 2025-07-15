@@ -103,15 +103,17 @@
                         </div>
                     </div>
 
-                    <div id="cryptoAndBank" class="hidden profile-third-wrap-fifteen">
-                        <div class="profile-third-wrap-sixteen animate-bounce-once">
-                            <div class="profile-third-wrap-seventeen button">
-                                <span class="icon-[tabler--currency-bitcoin]"></span>
-                                <span>Crypto</span>
-                            </div>
-                            <div class="profile-third-wrap-seventeen button">
-                                <span class="icon-[tabler--building-bank]"></span>
-                                <span>Bank</span>
+                    <div class="relative">
+                        <div id="cryptoAndBank" class="hidden profile-third-wrap-fifteen">
+                            <div class="profile-third-wrap-sixteen animate-bounce-once">
+                                <div class="profile-third-wrap-seventeen button">
+                                    <span class="icon-[tabler--currency-bitcoin]"></span>
+                                    <span>Crypto</span>
+                                </div>
+                                <div class="profile-third-wrap-seventeen button" onclick="toggleProfileBankModal()">
+                                    <span class="icon-[tabler--building-bank]"></span>
+                                    <span>Bank</span>
+                                </div>
                             </div>
                         </div>
                     </div>

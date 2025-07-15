@@ -161,17 +161,29 @@
 
    //profile accounts display
    window.toggleProfileAccounts = function (){
-    const buttons = document.getElementById('cryptoAndBank');
-    let visible = !buttons.classList.contains('hidden');
+        const buttons = document.getElementById('cryptoAndBank');
+        let visible = !buttons.classList.contains('hidden');
 
-    if (visible) {
-        buttons.classList.add('hidden');
-        buttons.classList.remove('flex');
-    } else {
-        buttons.classList.remove('hidden');
-        buttons.classList.add('flex');
+        if (visible) {
+            buttons.classList.add('hidden');
+        } else {
+            buttons.classList.remove('hidden');
+        }
     }
-   }
+
+    //Profile Accounts Bank Modal
+    window.toggleProfileBankModal = function () {
+        const modal = document.getElementById('profileBankModal');
+        const buttons = document.getElementById('cryptoAndBank');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            buttons.classList.add('hidden');
+        } else {
+            modal.classList.remove('hidden');
+        }
+    }
 
 </script>
 <body class="bg-white relative">
@@ -442,13 +454,13 @@
     </div>
 
     {{-- Profile Accounts Bank Modal --}}
-    <div class="profile-bank-modal-backdrop">
+    <div id="profileBankModal" class="hidden profile-bank-modal-backdrop">
         <div class="profile-bank-modal-sizer">
             <div class="profile-bank-modal-con">
                 <form action="">
                     @csrf
 
-                    <div class="authed-form-cancel-con" onclick="">
+                    <div class="authed-form-cancel-con" onclick="toggleProfileBankModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
                     </div>
 

@@ -89,7 +89,32 @@
                         </div>
                     </form>
                 @elseif($section === 'accounts')
-                    <div></div>
+                    <div class="profile-third-wrap-nine">
+                        <div class="profile-third-wrap-ten">
+                            <span class="icon-[tabler--info-circle] profile-third-wrap-eleven"></span>
+                            <span class="profile-third-wrap-twelve">
+                                Add a withdrawal account to withdraw funds.
+                            </span>
+                        </div>
+
+                        <div onclick="toggleProfileAccounts()" class="profile-third-wrap-thirteen button">
+                            <span>Add Account</span>
+                            <span class="icon-[ion--caret-down] profile-third-wrap-fourteen"></span>
+                        </div>
+                    </div>
+
+                    <div id="cryptoAndBank" class="hidden profile-third-wrap-fifteen">
+                        <div class="profile-third-wrap-sixteen animate-bounce-once">
+                            <div class="profile-third-wrap-seventeen button">
+                                <span class="icon-[tabler--currency-bitcoin]"></span>
+                                <span>Crypto</span>
+                            </div>
+                            <div class="profile-third-wrap-seventeen button">
+                                <span class="icon-[tabler--building-bank]"></span>
+                                <span>Bank</span>
+                            </div>
+                        </div>
+                    </div>
                 @elseif($section === 'security')
                     <div></div>
                 @endif

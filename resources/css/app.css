@@ -783,3 +783,30 @@ td{
 .profile-third-wrap-eight{
   @apply text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400;
 }
+.profile-third-wrap-nine{
+  @apply flex justify-between items-center bg-orange-400 max-w-2xl p-2 md:p-5 mx-auto rounded-xl;
+}
+.profile-third-wrap-ten{
+  @apply inline-flex gap-2 items-center text-white;
+}
+.profile-third-wrap-eleven{
+  @apply font-bold text-xs md:text-lg;
+}
+.profile-third-wrap-twelve{
+  @apply text-xs md:text-base;
+}
+.profile-third-wrap-thirteen{
+  @apply bg-white text-orange-400 hover:bg-gray-200 p-1 md:p-2 rounded-lg font-bold text-xs min-w-max;
+}
+.profile-third-wrap-fourteen{
+  @apply font-bold;
+}
+.profile-third-wrap-fifteen{
+  @apply w-2/3 mx-auto justify-end -mt-3 z-20;
+}
+.profile-third-wrap-sixteen{
+  @apply bg-white border border-gray-100 rounded-lg py-3 shadow w-48 text-gray-700;
+}
+.profile-third-wrap-seventeen{
+  @apply hover:bg-gray-200 p-2 flex gap-2 items-center;
+}

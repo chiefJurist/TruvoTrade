@@ -5,6 +5,7 @@
     <link rel="icon" href="{{ asset('img/truvo_trades.png') }}" type="image/png">
     <title>Truvo Trade</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 <script>
     //for the loader

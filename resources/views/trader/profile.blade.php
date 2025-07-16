@@ -18,7 +18,7 @@
         <div class="profile-second-and-third-div-con">
             {{-- second div --}}
             <div class="profile-second-div-con">
-                <a href="{{ route('trader.profile', ['section' => 'profile']) }}" class="profile-second-div-wrap-one {{ request()->routeIs('trader.profile') ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
+                <a href="{{ route('trader.profile', ['section' => 'profile']) }}" class="profile-second-div-wrap-one {{ request()->routeIs('trader.profile') && $section !== 'accounts' && $section !== 'security' ? 'border-blue-600 text-blue-600' : 'text-gray-600 border-white' }}">
                     <div>
                         <span class="icon-[tabler--user-circle] profile-second-div-wrap-two"></span>
                     </div>
@@ -42,7 +42,7 @@
 
             {{-- third div --}}
             <div class="profile-third-div-con">
-                @if (request()->routeIs('trader.profile'))
+                @if (request()->routeIs('trader.profile') && $section !== 'accounts' && $section !== 'security')
                     <form action="">
                         @csrf
 

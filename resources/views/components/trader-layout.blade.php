@@ -594,8 +594,7 @@
     </div>
 
     {{-- Profile Accounts Crypto Modal --}}
-    <div id="profileCryptoModal" class="hidden =-89
-    profile-bank-modal-backdrop">
+    <div id="profileCryptoModal" class="hidden profile-bank-modal-backdrop">
         <div class="profile-bank-modal-sizer">
             <div class="profile-bank-modal-con">
                 <form action="">

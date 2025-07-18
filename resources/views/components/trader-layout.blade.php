@@ -186,6 +186,20 @@
         }
     }
 
+    //Profile Accounts Crypto Modal
+    window.toggleProfileCryptoModal = function () {
+        const modal = document.getElementById('profileCryptoModal');
+        const buttons = document.getElementById('cryptoAndBank');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            buttons.classList.add('hidden');
+        } else {
+            modal.classList.remove('hidden');
+        }
+    }
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}
@@ -579,125 +593,81 @@
         </div>
     </div>
 
-    {{-- Profile Accounts Bank Modal --}}
-    <div id="profileBankModal" class="hidden profile-bank-modal-backdrop">
+    {{-- Profile Accounts Crypto Modal --}}
+    <div id="profileCryptoModal" class="hidden =-89
+    profile-bank-modal-backdrop">
         <div class="profile-bank-modal-sizer">
             <div class="profile-bank-modal-con">
                 <form action="">
                     @csrf
 
-                    <div class="authed-form-cancel-con" onclick="toggleProfileBankModal()">
+                    <div class="authed-form-cancel-con" onclick="toggleProfileCryptoModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
                     </div>
 
-                    <div class="profile-bank-modal-wrap-one">Add Bank Account</div>
+                    <div class="profile-bank-modal-wrap-one">Add New Wallet</div>
 
-                    <div class="profile-bank-modal-wrap-two">Add your bank information to withdraw your funds.</div>
+                    <div class="profile-bank-modal-wrap-two">Add your personal wallet to withdraw your funds.</div>
 
-                    <div class="profile-bank-modal-wrap-three">
-                        <div class="profile-bank-modal-wrap-four">
-                            <span>Account Type</span>
-                            <span class="profile-bank-modal-required">*</span>
-                        </div>
-                        <div>
-                            <span>
-                                <input type="radio" name="bank-type" id="personalBank">
-                                <span class="profile-bank-modal-wrap-five">Personal</span>
-                            </span>
-                            <span>
-                                <input type="radio" name="bank-type" id="businessBank">
-                                <span class="profile-bank-modal-wrap-five">Business</span>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="profile-crypto-modal-wrap-one">
                         <div>
                             <div class="profile-bank-modal-wrap-four">
-                                <span>Acount Name</span>
+                                <span>Wallet Name</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="account-name" placeholder="Your Account Name" class="profile-bank-modal-input" required>
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Acount Number</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="number" name="account-number" placeholder="eg. 094567453712" class="profile-bank-modal-input">
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Bank Country</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <select id="countrySelect" name="country" required class="profile-bank-modal-input">
-                                <option value="" disabled selected>Select your country</option>
+                            <select id="addressSelect" name="address" required class="profile-bank-modal-input">
+                                <option value="" disabled selected>Select Your Wallet Chain</option>
+                                <option value="Bitcoin">Bitcoin</option>
+                                <option value="Ethereum (ERC20)">Ethereum (ERC20)</option>
+                                <option value="Ethereum (BEP20)">Ethereum (BEP20)</option>
+                                <option value="USDT (BEP20)">USDT (BEP20)</option>
+                                <option value="USDT (TRC20)">USDT (TRC20)</option>
+                                <option value="Tron">Tron</option>
+                                <option value="Litecoin">Litecoin</option>
+                                <option value="XRP">XRP</option>
+                                <option value="USD Coin">USD Coin</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="profile-crypto-modal-wrap-two">
                             <div class="profile-bank-modal-wrap-four">
-                                <span>Bank Currency</span>
+                                <span>Wallet Address</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="bank-currency" placeholder="Enter Currency Name" class="profile-bank-modal-input" required>
+                            <input type="text" name="account-name"  class="profile-bank-modal-input" required placeholder="eg. GCSWJRVBEYSXO4U35DYWV6MZGLEVA3NRHNXPVWFTDR2J7XKM5IJ5IGB6">
                         </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Bank Name</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="bank-name" placeholder="Your Bank Name" class="profile-bank-modal-input" required>
+                    </div>
+
+                    <div class="profile-crypto-modal-wrap-three">
+                        You will receive payment on this account in selected currency.
+                    </div>
+
+                    <div class="profile-crypto-modal-wrap-four">
+                        <div class="profile-bank-modal-wrap-four">
+                            Label of account (Optional)
                         </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Branch Name</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="branch-name" placeholder="Name of Branch" class="profile-bank-modal-input" required>
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Sort Code</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="sort-code" placeholder="Bank Sort Code" class="profile-bank-modal-input" required>
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Routing Number</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="routing-number" placeholder="Routing Number" class="profile-bank-modal-input" required>
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>Swift Code / BIC</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="swift-code" placeholder="Bank Swift / BIC Code" class="profile-bank-modal-input" required>
-                        </div>
-                        <div>
-                            <div class="profile-bank-modal-wrap-four">
-                                <span>IBAN Number</span>
-                                <span class="profile-bank-modal-required">*</span>
-                            </div>
-                            <input type="text" name="iban-number" placeholder="Bank IBAN Number" class="profile-bank-modal-input" required>
-                        </div>
-                        <div class="md:col-span-2">
-                            <div class="profile-bank-modal-wrap-four">
-                                Label of account (Optional)
-                            </div>
-                            <input type="text" name="label" placeholder="eg. Personal" class="profile-bank-modal-input" required>
-                        </div>
+                        <input type="text" name="label" placeholder="eg. Personal" class="profile-bank-modal-input" required>
                     </div>
 
                     <div class="profile-bank-modal-wrap-six">
                         You can easily identify using this. The label will auto generate if you leave blank.
                     </div>
 
-                    <div class="profile-bank-modal-wrap-seven">
+                    <div class="profile-bank-modal-wrap-seven profile-crypto-modal-wrap-five">
                         <input type="submit" value="Add Account" class="profile-bank-modal-wrap-eight button">
+                    </div>
+
+                    <div class="profile-crypto-modal-wrap-six">
+                        <span class="icon-[tabler--info-circle]"></span>
+                        <span class="text-xs">
+                            Please ensure that you have provided the correct address and you have access to it.
+                        </span>
+                    </div>
+
+                    <div class="profile-crypto-modal-wrap-seven">
+                        <span class="icon-[tabler--info-circle]"></span>
+                        <span class="text-xs">
+                            Caution: You will lose your funds if your wallet address is wrong or you don't have access.
+                        </span>
                     </div>
                 </form>
             </div>

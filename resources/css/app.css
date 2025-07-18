@@ -858,3 +858,27 @@ td{
 .authed-form-cancel{
   @apply text-2xl font-bold cursor-pointer;
 }
+
+
+
+.profile-crypto-modal-wrap-one{
+  @apply mt-10 grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+.profile-crypto-modal-wrap-two{
+  @apply col-span-2;
+}
+.profile-crypto-modal-wrap-three{
+  @apply text-sm text-gray-400;
+}
+.profile-crypto-modal-wrap-four{
+  @apply mt-10;
+}
+.profile-crypto-modal-wrap-five{
+  @apply pb-5 border-b border-gray-300;
+}
+.profile-crypto-modal-wrap-six{
+  @apply text-yellow-400 inline-flex items-center gap-2;
+}
+.profile-crypto-modal-wrap-seven{
+  @apply text-red-400 inline-flex items-center gap-2;
+}

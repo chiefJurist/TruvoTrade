@@ -106,7 +106,7 @@
                     <div class="relative">
                         <div id="cryptoAndBank" class="hidden profile-third-wrap-fifteen">
                             <div class="profile-third-wrap-sixteen animate-bounce-once">
-                                <div class="profile-third-wrap-seventeen button">
+                                <div class="profile-third-wrap-seventeen button" onclick="toggleProfileCryptoModal()">
                                     <span class="icon-[tabler--currency-bitcoin]"></span>
                                     <span>Crypto</span>
                                 </div>

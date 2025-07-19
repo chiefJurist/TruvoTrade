@@ -80,8 +80,8 @@
             sidebar.classList.remove('hover:overflow-y-auto');
             header.classList.remove('w-10/12');
             header.classList.add('w-11/12');
-            main.classList.remove('md:w-10/12');
-            main.classList.add('md:w-11/12');
+            main.classList.remove('lg:w-10/12');
+            main.classList.add('lg:w-11/12');
             logoName.classList.add('hidden');
             homeHeading.classList.add('hidden');
             homeDot.classList.remove('hidden');
@@ -114,8 +114,8 @@
             sidebar.classList.add('hover:overflow-y-auto');
             header.classList.add('w-10/12');
             header.classList.remove('w-11/12');
-            main.classList.add('md:w-10/12');
-            main.classList.remove('md:w-11/12');
+            main.classList.add('lg:w-10/12');
+            main.classList.remove('lg:w-11/12');
             logoName.classList.remove('hidden');
             homeHeading.classList.remove('hidden');
             homeDot.classList.add('hidden');
@@ -207,7 +207,7 @@
         <img src="{{asset('img/truvo_trade.png')}}" alt="Logo" class="loader-img">
     </div>
 
-    {{-- Header for screens less than md: --}}
+    {{-- Header for screens less than lg: --}}
     <div class="trader-small-header-con">
         <div id="openMenu">
             <span class="icon-[material-symbols--menu-rounded] text-3xl"></span>
@@ -221,7 +221,7 @@
         </div>
     </div>
 
-    {{-- navigation for smaller screens less than md --}}
+    {{-- navigation for smaller screens less than lg --}}
     <div  id="mobileNav" class="trader-small-mobilenav -translate-x-full ">
         <div class="trader-menu-cancel-con">
             <div class="trader-small-header-logo-con">
@@ -426,7 +426,7 @@
         </div>
         
         {{-- Header and Page Content --}}
-        <div id="bigMainContent" class="trader-big-main-content md:w-10/12">
+        <div id="bigMainContent" class="trader-big-main-content lg:w-10/12">
             {{-- Header for bigger screens --}}
             <div id="bigScreenHeader" class="trader-big-screen-header w-10/12">
                 <div class="trader-big-screen-hamburger" onclick="toggleBigSideBar()">

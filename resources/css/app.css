@@ -455,10 +455,10 @@ td{
   @apply p-5 md:p-10 mt-24 block;
 }
 .trader-big-gen-container{
-  @apply font-nunito bg-white text-gray-800 block md:flex;
+  @apply font-nunito bg-white text-gray-800 block lg:flex;
 }
 .trader-small-header-con{
-  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24 z-20;
+  @apply lg:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24 z-20;
 }
 .trader-small-header-logo-con{
   @apply flex items-center text-black text-xs font-bold;
@@ -467,7 +467,7 @@ td{
   @apply w-10 h-10 rounded-full;
 }
 .trader-small-mobilenav{
-  @apply md:hidden font-nunito font-bold fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto transform transition-all duration-500 ease-out z-40;
+  @apply lg:hidden font-nunito font-bold fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto transform transition-all duration-500 ease-out z-40;
 }
 .trader-menu-cancel-con{
   @apply flex justify-between items-center pt-5 pb-10;
@@ -491,16 +491,16 @@ td{
   @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
 }
 .trader-big-mobile-nav{
-  @apply hidden md:block border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
+  @apply hidden lg:block border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
 }
 .trader-big-screen-header{
-  @apply hidden md:flex justify-between items-center fixed top-0 h-24 px-10 z-20 border-b border-gray-200 bg-white;
+  @apply hidden lg:flex justify-between items-center fixed top-0 h-24 px-10 z-20 border-b border-gray-200 bg-white;
 }
 .trader-big-screen-hamburger{
   @apply cursor-pointer text-3xl hover:text-blue-400 hover:bg-blue-200 rounded-full flex justify-center w-10 h-10 items-center;
 }
 .trader-big-header-con{
-  @apply md:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
+  @apply lg:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
 }
 .trader-big-header-logo-con{
   @apply flex items-center text-black text-xs font-bold;

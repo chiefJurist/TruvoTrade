@@ -127,7 +127,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a href="">
+                                <a href="{{route('trader.kyc')}}">
                                     <div class="profile-fourth-wrap-twenty-two button">Verify</div>
                                 </a>
                             </div>

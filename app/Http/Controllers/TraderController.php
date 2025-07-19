@@ -46,4 +46,9 @@ class TraderController extends Controller
     public function referrals() {
         return view('trader.referrals');
     }
+
+    //kyc action
+    public function kyc() {
+        return view('trader.kyc');
+    }
 }

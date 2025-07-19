@@ -920,3 +920,35 @@ td{
 .profile-fourth-wrap-twenty-nine{
   @apply bg-blue-400 text-blue-50 px-4 py-2 font-bold rounded-lg w-max hover:bg-blue-500;
 }
+
+
+.trader-kyc-gen-con{
+  @apply w-4/6 md:w-3/6 mx-auto;
+}
+.trader-kyc-wrap-one{
+  @apply bg-emerald-100 text-emerald-400 px-5 py-2 font-bold my-10 rounded-lg;
+}
+.trader-kyc-wrap-two{
+  @apply text-center font-bold text-lg md:text-2xl font-sans;
+}
+.trader-kyc-wrap-three{
+  @apply text-emerald-400;
+}
+.trader-kyc-wrap-four{
+  @apply my-10;
+}
+.trader-kyc-wrap-five{
+  @apply w-40 mx-auto;
+}
+.trader-kyc-wrap-six{
+  @apply font-bold text-gray-700;
+}
+.trader-kyc-wrap-seven{
+  @apply border border-gray-200 outline-none p-2 rounded-lg w-full text-gray-500 focus:border-blue-300;
+}
+.trader-kyc-wrap-eight{
+  @apply my-10 text-center;
+}
+.trader-kyc-wrap-nine{
+  @apply bg-emerald-400 px-4 py-2 font-bold text-white rounded-lg hover:bg-emerald-500;
+}

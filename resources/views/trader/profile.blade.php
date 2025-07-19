@@ -118,7 +118,46 @@
                         </div>
                     </div>
                 @elseif($section === 'security')
-                    <div></div>
+                    <div class="profile-fourth-wrap-eighteen">
+                        <div class="profile-fourth-wrap-nineteen">
+                            <div>
+                                <div class="profile-fourth-wrap-twenty">KYC VERIFICATION</div>
+                                <div class="profile-fourth-wrap-twenty-one">
+                                    Note: You have to complete your KYC Verification to access withdrawals
+                                </div>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <div class="profile-fourth-wrap-twenty-two button">Verify</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="profile-fourth-wrap-twenty-three">
+                            <form action="">
+                                @csrf
+                                <div class="profile-fourth-wrap-twenty-four">Change Password</div>
+                                <div class="profile-fourth-wrap-twenty-five">
+                                    To change your password please confirm here
+                                </div>
+                                <div class="profile-fourth-wrap-twenty-six">
+                                    <label for="currentpassword" class="profile-fourth-wrap-twenty-seven">Current Password</label><br>
+                                    <input type="password" name="currentpassword" class="profile-fourth-wrap-twenty-eight">
+                                </div>
+                                <div class="profile-fourth-wrap-twenty-six">
+                                    <label for="password" class="profile-fourth-wrap-twenty-seven">New Password</label><br>
+                                    <input type="password" name="password" class="profile-fourth-wrap-twenty-eight">
+                                </div>
+                                <div class="profile-fourth-wrap-twenty-six">
+                                    <label for="confirmpassword" class="profile-fourth-wrap-twenty-seven">Confirm Password</label><br>
+                                    <input type="password" name="confirmpassword" class="profile-fourth-wrap-twenty-eight">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="submit" value="Update Password" class="profile-fourth-wrap-twenty-nine button">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 @endif
             </div>
         </div>

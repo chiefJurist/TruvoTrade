@@ -551,10 +551,10 @@ td{
   @apply mt-2 md:mt-6 flex gap-1 md:gap-4;
 }
 .overview-second-div-deposit-btn{
-  @apply bg-blue-400 hover:bg-blue-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-lg font-bold text-xs md:text-base;
+  @apply bg-blue-400 hover:bg-blue-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-md font-bold text-xs md:text-base;
 }
 .overview-second-div-withdraw-btn{
-  @apply bg-emerald-300 hover:bg-emerald-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-lg font-bold text-xs md:text-base;
+  @apply bg-emerald-300 hover:bg-emerald-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-md font-bold text-xs md:text-base;
 }
 .overview-third-div-second{
   @apply bg-orange-300 p-6 rounded-2xl text-xs md:text-base text-white flex justify-between gap-3 items-center;
@@ -951,4 +951,15 @@ td{
 }
 .trader-kyc-wrap-nine{
   @apply bg-emerald-400 px-4 py-2 font-bold text-white rounded-lg hover:bg-emerald-500;
+}
+
+
+.investment-second-div-con{
+  @apply my-10 md:my-20 md:flex justify-between items-start;
+}
+.investment-second-div-wrap-one{
+  @apply text-gray-600 font-semibold;
+}
+.investment-second-div-wrap-two{
+  @apply text-4xl font-sans;
 }

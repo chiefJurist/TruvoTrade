@@ -963,3 +963,30 @@ td{
 .investment-second-div-wrap-two{
   @apply text-4xl font-sans;
 }
+
+
+
+.investment-third-div-con{
+  @apply my-5 md:my-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10
+}
+.investment-third-div-wrap-one{
+  @apply border border-gray-100 shadow-lg rounded-lg p-5 md:p-8;
+}
+.investment-third-div-wrap-two{
+  @apply font-bold text-lg;
+}
+.investment-third-div-wrap-three{
+  @apply font-bold text-2xl py-2;
+}
+.investment-third-div-wrap-four{
+  @apply text-gray-500;
+}
+.investment-third-div-wrap-five{
+  @apply inline-flex items-center text-indigo-500 font-bold bg-indigo-100 p-2 rounded-md gap-1 hover:bg-indigo-200 my-5;
+}
+.investment-third-div-wrap-six{
+  @apply border border-gray-100 shadow-lg rounded-lg p-5 md:p-8 col-span-2 md:flex justify-between items-center;
+}
+.investment-third-div-wrap-seven{
+  @apply text-9xl text-indigo-600;
+}

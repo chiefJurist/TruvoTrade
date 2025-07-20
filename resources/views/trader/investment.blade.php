@@ -40,5 +40,32 @@
                 </a>
             </div>
         </div>
+
+        {{-- third div --}}
+        <div class="investment-third-div-con">
+            <div class="investment-third-div-wrap-one">
+                <div class="investment-third-div-wrap-two">Investment Account</div>
+                <div class="investment-third-div-wrap-three">0 USD</div>
+                <div class="investment-third-div-wrap-four">Gained profits</div>
+                <div class="investment-third-div-wrap-five button">
+                    <span>Transfer Funds</span>
+                    <span class="icon-[tabler--arrow-big-right]"></span>
+                </div>
+            </div>
+            <div class="investment-third-div-wrap-six">
+                <div>
+                    <div class="investment-third-div-wrap-two">Current Investments</div>
+                    <div class="investment-third-div-wrap-three">$ 0</div>
+                    <div class="investment-third-div-wrap-four">Amount Invested</div>
+                    <div class="investment-third-div-wrap-five button">
+                        <span>History</span>
+                        <span class="icon-[tabler--history]"></span>
+                    </div>
+                </div>
+                <div>
+                    <span class="icon-[tabler--chart-histogram] investment-third-div-wrap-seven"></span>
+                </div>
+            </div>
+        </div>
     </div>
 </x-trader-layout>

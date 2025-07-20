@@ -990,3 +990,23 @@ td{
 .investment-third-div-wrap-seven{
   @apply text-9xl text-indigo-600;
 }
+
+
+.investment-fourth-div-wrap-one{
+  @apply font-bold text-lg;
+}
+.investment-fourth-div-wrap-two{
+  @apply text-gray-500 py-3;
+}
+.investment-fourth-div-wrap-three{
+  @apply w-full overflow-x-auto;
+}
+.investment-fourth-div-wrap-four{
+  @apply mx-auto table-auto w-full border-b border-gray-200 text-gray-500 overflow-auto;
+}
+.investment-fourth-div-wrap-five{
+  @apply border-b border-gray-300;
+}
+.investment-fourth-div-wrap-six{
+  @apply border-none px-4 py-3 text-center;
+}

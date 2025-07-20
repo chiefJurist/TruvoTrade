@@ -67,5 +67,37 @@
                 </div>
             </div>
         </div>
+
+        {{-- fourth div --}}
+        <div class="my-5 md:my-15">
+            <div class="investment-fourth-div-wrap-one">Ongoing Investment</div>
+            <div class="investment-fourth-div-wrap-two">
+                List of ongoing investments in your account
+            </div>
+            <div class="investment-fourth-div-wrap-three">
+                <table class="investment-fourth-div-wrap-four">
+                    <thead>
+                        <tr class="investment-fourth-div-wrap-five">
+                            <th class="investment-fourth-div-wrap-six">Plan</th>
+                            <th class="investment-fourth-div-wrap-six">Status</th>
+                            <th class="investment-fourth-div-wrap-six">From - To</th>
+                            <th class="investment-fourth-div-wrap-six">Amount</th>
+                            <th class="investment-fourth-div-wrap-six">Date</th>
+                            <th class="investment-fourth-div-wrap-six">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="investment-fourth-div-wrap-six">Deposit</td>
+                            <td class="investment-fourth-div-wrap-six">Success</td>
+                            <td class="investment-fourth-div-wrap-six">Monday</td>
+                            <td class="investment-fourth-div-wrap-six">Deposit</td>
+                            <td class="investment-fourth-div-wrap-six">Success</td>
+                            <td class="investment-fourth-div-wrap-six">Monday</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </x-trader-layout>

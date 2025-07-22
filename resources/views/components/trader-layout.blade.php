@@ -200,6 +200,20 @@
         }
     }
 
+    //Profile Accounts Crypto Modal
+    window.togglePlanModalOne = function () {
+        const modal = document.getElementById('planOneModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}
@@ -674,43 +688,43 @@
     </div>
 
     {{-- Plan-one Modal --}}
-    <div id="" class="fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg flex justify-center items-center p-5 text-gray-600 font-nunito">
-        <div class="w-lg p-8 rounded-xl bg-white">
+    <div id="planOneModal" class="hidden plan-modal-backdrop">
+        <div class="plan-modal-con">
             <form action="">
                 @csrf
 
-                <div class="authed-form-cancel-con" onclick="">
+                <div class="authed-form-cancel-con" onclick="togglePlanModalOne()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
                 </div>
 
-                <div class="text-lg font-bold">Subscribe to plan</div>
+                <div class="plan-modal-wrap-one">Subscribe to plan</div>
 
-                <div class="text-sm text-gray-400">Please input the amount you'd like to invest</div>
+                <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
-                <div class="mt-8">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="border border-gray-100 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600">
+                <div class="plan-modal-wrap-three">
+                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
-                <div class="text-gray-400 text-xs">
+                <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
                 </div>
 
-                <div class="border border-gray-100 bg-gray-200 select-none rounded-lg px-4 py-2 my-3">
-                    <div class="text-xs">Plan</div>
-                    <div>STARTER PACK</div>
+                <div class="plan-modal-wrap-six">
+                    <div class="plan-modal-wrap-seven">Plan</div>
+                    <div class="plan-modal-wrap-eight">STARTER PACK</div>
                 </div>
 
-                <div>
+                <div class="plan-modal-wrap-nine">
                     <div>
-                        <label for="PlanBalance">Account Balance</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required>
+                        <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
+                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                    </div>
+                    <div class="plan-modal-wrap-twelve">
+                        This is your available account balance for investments.
                     </div>
                 </div>
-                <div>
-                    This is your available account balance for investments.
-                </div>
 
-                <div>
-                    <input type="submit" value="Confirm&Proceed">
+                <div class="plan-modal-wrap-thirteen">
+                    <input type="submit" value="Confirm&Proceed" class="plan-modal-wrap-fourteen button">
                 </div>
             </form>
         </div>

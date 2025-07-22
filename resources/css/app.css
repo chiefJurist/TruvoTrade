@@ -1056,3 +1056,54 @@ td{
 .plans-second-div-wrap-fourteen{
   @apply text-xl font-extrabold;
 }
+
+
+
+.plan-modal-backdrop{
+  @apply fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg justify-center items-center p-5 text-gray-600 font-nunito;
+}
+.plan-modal-con{
+  @apply w-lg p-8 rounded-xl bg-white;
+}
+.plan-modal-wrap-one{
+  @apply text-lg font-bold;
+}
+.plan-modal-wrap-two{
+  @apply text-sm text-gray-400;
+}
+.plan-modal-wrap-three{
+  @apply mt-8;
+}
+.plan-modal-wrap-four{
+  @apply border border-gray-100 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600;
+}
+.plan-modal-wrap-five{
+  @apply text-gray-400 text-xs;
+}
+.plan-modal-wrap-six{
+  @apply border border-gray-100 bg-gray-200 select-none rounded-lg px-4 py-2 my-5;
+}
+.plan-modal-wrap-seven{
+  @apply text-xs;
+}
+.plan-modal-wrap-eight{
+  @apply font-semibold text-gray-500;
+}
+.plan-modal-wrap-nine{
+  @apply my-2;
+}
+.plan-modal-wrap-ten{
+  @apply font-bold;
+}
+.plan-modal-wrap-eleven{
+  @apply w-full outline-none rounded-lg p-3 bg-gray-200 text-gray-600 my-0.5;
+}
+.plan-modal-wrap-twelve{
+  @apply text-gray-400 text-sm;
+}
+.plan-modal-wrap-thirteen{
+  @apply my-5 flex justify-center;
+}
+.plan-modal-wrap-fourteen{
+  @apply font-bold text-white bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-600;
+}

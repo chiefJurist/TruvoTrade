@@ -1107,3 +1107,13 @@ td{
 .plan-modal-wrap-fourteen{
   @apply font-bold text-white bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-600;
 }
+
+.transactions-second-div-con{
+  @apply my-15 xl:my-20;
+}
+.transactions-second-div-wrap-one{
+  @apply font-bold text-3xl text-gray-600;
+}
+.transactions-second-div-wrap-two{
+  @apply text-gray-400 py-3;
+}

@@ -96,7 +96,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalTwo()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>

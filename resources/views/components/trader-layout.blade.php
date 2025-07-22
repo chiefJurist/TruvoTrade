@@ -200,9 +200,23 @@
         }
     }
 
-    //Profile Accounts Crypto Modal
+    //Plan Modal One
     window.togglePlanModalOne = function () {
         const modal = document.getElementById('planOneModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Two
+    window.togglePlanModalTwo = function () {
+        const modal = document.getElementById('planTwoModal');
         let visible = !modal.classList.contains('hidden');
 
         if (visible) {
@@ -711,6 +725,49 @@
                 <div class="plan-modal-wrap-six">
                     <div class="plan-modal-wrap-seven">Plan</div>
                     <div class="plan-modal-wrap-eight">STARTER PACK</div>
+                </div>
+
+                <div class="plan-modal-wrap-nine">
+                    <div>
+                        <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
+                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                    </div>
+                    <div class="plan-modal-wrap-twelve">
+                        This is your available account balance for investments.
+                    </div>
+                </div>
+
+                <div class="plan-modal-wrap-thirteen">
+                    <input type="submit" value="Confirm&Proceed" class="plan-modal-wrap-fourteen button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{-- Plan-Two Modal --}}
+    <div id="planTwoModal" class="hidden plan-modal-backdrop">
+        <div class="plan-modal-con">
+            <form action="">
+                @csrf
+
+                <div class="authed-form-cancel-con" onclick="togglePlanModalTwo()">
+                    <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
+                </div>
+
+                <div class="plan-modal-wrap-one">Subscribe to plan</div>
+
+                <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
+
+                <div class="plan-modal-wrap-three">
+                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                </div>
+                <div class="plan-modal-wrap-five">
+                    * Your account balance will be immediately deducted upon confirmation.
+                </div>
+
+                <div class="plan-modal-wrap-six">
+                    <div class="plan-modal-wrap-seven">Plan</div>
+                    <div class="plan-modal-wrap-eight">STANDARD PACK PLAN</div>
                 </div>
 
                 <div class="plan-modal-wrap-nine">

@@ -136,7 +136,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalThree()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalFour()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalFive()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>
@@ -256,7 +256,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalSix()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>
@@ -296,7 +296,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalSeven()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                         <div class="plans-second-div-wrap-twelve">
-                            <div class="plans-second-div-wrap-thirteen button"> 
+                            <div class="plans-second-div-wrap-thirteen button" onclick="togglePlanModalEight()"> 
                                 <span>Invest Now</span>
                                 <span class="icon-[tabler--building-bank] plans-second-div-wrap-fourteen"></span>
                             </div>

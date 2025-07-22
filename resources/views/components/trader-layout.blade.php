@@ -672,5 +672,48 @@
             </div>
         </div>
     </div>
+
+    {{-- Plan-one Modal --}}
+    <div id="" class="fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg flex justify-center items-center p-5 text-gray-600 font-nunito">
+        <div class="w-lg p-8 rounded-xl bg-white">
+            <form action="">
+                @csrf
+
+                <div class="authed-form-cancel-con" onclick="">
+                    <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
+                </div>
+
+                <div class="text-lg font-bold">Subscribe to plan</div>
+
+                <div class="text-sm text-gray-400">Please input the amount you'd like to invest</div>
+
+                <div class="mt-8">
+                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="border border-gray-100 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600">
+                </div>
+                <div class="text-gray-400 text-xs">
+                    * Your account balance will be immediately deducted upon confirmation.
+                </div>
+
+                <div class="border border-gray-100 bg-gray-200 select-none rounded-lg px-4 py-2 my-3">
+                    <div class="text-xs">Plan</div>
+                    <div>STARTER PACK</div>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="PlanBalance">Account Balance</label><br>
+                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required>
+                    </div>
+                </div>
+                <div>
+                    This is your available account balance for investments.
+                </div>
+
+                <div>
+                    <input type="submit" value="Confirm&Proceed">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

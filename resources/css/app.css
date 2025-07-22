@@ -1010,3 +1010,49 @@ td{
 .investment-fourth-div-wrap-six{
   @apply border-none px-4 py-3 text-center;
 }
+
+.plans-second-div-con{
+  @apply my-10;
+}
+.plans-second-div-wrap-one{
+  @apply font-bold text-2xl text-center;
+}
+.plans-second-div-wrap-two{
+  @apply text-gray-600 text-center py-5 mb-15;
+}
+.plans-second-div-wrap-three{
+  @apply my-5 grid grid-cols-1 md:grid-cols-3 gap-7 2xl:grid-cols-4;
+}
+.plans-second-div-wrap-four{
+  @apply bg-white border border-gray-100 rounded-lg shadow-lg;
+}
+.plans-second-div-wrap-five{
+  @apply bg-gray-100 text-center text-gray-600 font-extrabold text-xl rounded-t-lg p-4;
+}
+.plans-second-div-wrap-six{
+  @apply py-8 px-10;
+}
+.plans-second-div-wrap-seven{
+  @apply flex items-center justify-between;
+}
+.plans-second-div-wrap-eight{
+  @apply text-3xl font-bold;
+}
+.plans-second-div-wrap-nine{
+  @apply text-gray-500 font-semibold;
+}
+.plans-second-div-wrap-ten{
+  @apply mt-5 text-gray-400 font-semibold divide-y divide-gray-200;
+}
+.plans-second-div-wrap-eleven{
+  @apply flex justify-between items-center py-3;
+}
+.plans-second-div-wrap-twelve{
+  @apply flex justify-center;
+}
+.plans-second-div-wrap-thirteen{
+  @apply inline-flex items-center gap-2 bg-blue-500 text-white font-bold rounded-md px-4 py-2 w-max hover:bg-blue-600 my-5 mx-auto;
+}
+.plans-second-div-wrap-fourteen{
+  @apply text-xl font-extrabold;
+}

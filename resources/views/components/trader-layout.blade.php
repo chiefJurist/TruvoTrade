@@ -228,6 +228,90 @@
         }
     }
 
+    //Plan Modal Three
+    window.togglePlanModalThree = function () {
+        const modal = document.getElementById('planThreeModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Four
+    window.togglePlanModalFour = function () {
+        const modal = document.getElementById('planFourModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Five
+    window.togglePlanModalFive = function () {
+        const modal = document.getElementById('planFiveModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Six
+    window.togglePlanModalSix = function () {
+        const modal = document.getElementById('planSixModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Seven
+    window.togglePlanModalSeven = function () {
+        const modal = document.getElementById('planSevenModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //Plan Modal Eight
+    window.togglePlanModalEight = function () {
+        const modal = document.getElementById('planEightModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}

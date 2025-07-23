@@ -56,9 +56,9 @@
         <div class="withdrawals-third-div-con">
             <div class="withdrawals-third-div-wrap-one">
                 <div>
-                    <div class="investment-fourth-div-wrap-one">Ongoing Investment</div>
+                    <div class="investment-fourth-div-wrap-one">Pending Withdrawals</div>
                     <div class="investment-fourth-div-wrap-two">
-                        List of ongoing investments in your account
+                        List of Pending Withdrawals in your account
                     </div>
                 </div>
                 <div>

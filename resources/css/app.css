@@ -1117,3 +1117,33 @@ td{
 .transactions-second-div-wrap-two{
   @apply text-gray-400 py-3;
 }
+
+
+
+.withdrawals-second-div-con{
+  @apply mt-15 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 xl:gap-10;
+}
+.withdrawals-second-div-wrap-one{
+  @apply border border-gray-100 shadow p-5 rounded-xl;
+}
+.withdrawals-second-div-wrap-two{
+  @apply text-2xl font-bold;
+}
+.withdrawals-second-div-wrap-three{
+  @apply flex justify-between items-center py-8;
+}
+.withdrawals-second-div-wrap-four{
+  @apply text-3xl font-semibold font-sans;
+}
+.withdrawals-second-div-wrap-five{
+  @apply text-white font-bold text-2xl rounded-full p-2;
+}
+.withdrawals-second-div-wrap-six{
+  @apply flex items-center gap-1;
+}
+.withdrawals-second-div-wrap-seven{
+  @apply my-5 bg-indigo-500 text-white text-center font-bold p-2 rounded-lg hover:bg-indigo-700;
+}
+.withdrawals-second-div-wrap-eight{
+  @apply my-5 bg-orange-500 text-white text-center font-bold p-2 rounded-lg hover:bg-orange-700;
+}

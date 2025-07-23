@@ -1075,7 +1075,7 @@ td{
   @apply mt-8;
 }
 .plan-modal-wrap-four{
-  @apply border border-gray-100 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600;
+  @apply border border-gray-300 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600;
 }
 .plan-modal-wrap-five{
   @apply text-gray-400 text-xs;
@@ -1093,7 +1093,7 @@ td{
   @apply my-2;
 }
 .plan-modal-wrap-ten{
-  @apply font-bold;
+  @apply font-bold text-sm;
 }
 .plan-modal-wrap-eleven{
   @apply w-full outline-none rounded-lg p-3 bg-gray-200 text-gray-600 my-0.5;

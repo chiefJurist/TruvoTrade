@@ -29,7 +29,7 @@
                     <span class="icon-[tabler--arrow-up-left] text-green-400"></span>
                     <span>0 USD</span>
                 </div>
-                <div class="withdrawals-second-div-wrap-seven button">
+                <div class="withdrawals-second-div-wrap-seven button" onclick="toggleWithdrawalModal()">
                     Request Withdrawal
                 </div>
             </div>

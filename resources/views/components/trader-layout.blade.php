@@ -312,6 +312,20 @@
         }
     }
 
+    //Plan Modal Eight
+    window.toggleWithdrawalModal = function () {
+        const modal = document.getElementById('withdrawalModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}
@@ -1124,6 +1138,65 @@
 
                 <div class="plan-modal-wrap-thirteen">
                     <input type="submit" value="Confirm&Proceed" class="plan-modal-wrap-fourteen button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{-- Withdrawal Modal --}}
+    <div id="withdrawalModal" class="hidden plan-modal-backdrop">
+        <div class="plan-modal-con animate-bounce-once">
+            <form action="">
+                @csrf
+
+                <div class="authed-form-cancel-con" onclick="toggleWithdrawalModal()">
+                    <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
+                </div>
+
+                <div class="plan-modal-wrap-one">Request Withdrawal</div>
+
+                <div class="plan-modal-wrap-two">Withdraw funds from your account directly.</div>
+
+                <div class="plan-modal-wrap-three">
+                    <input type="number" name="planAmount" placeholder="Enter Amount ($)" required class="plan-modal-wrap-four">
+                </div>
+                <div class="plan-modal-wrap-five">
+                    * Your account balance will be immediately deducted upon confirmation.
+                </div>
+
+                <div class="my-7">
+                    <div class="plan-modal-wrap-ten">Select Withdrawal Method</div>
+                    <div class="flex space-x-4">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment_method" value="crypto" class="peer hidden" checked>
+                            <div class="px-4 py-2 text-center text-orange-300 font-semibold select-none rounded-lg border border-orange-300 peer-checked:bg-orange-300 peer-checked:text-white transition-all">
+                                <span class="icon-[tabler--coins]"></span>
+                                <span>Crypto Wallet</span>
+                            </div>
+                        </label>
+
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment_method" value="bank" class="peer hidden">
+                            <div class="px-4 py-2 text-center text-blue-400 select-none font-semibold rounded-lg border border-blue-400 peer-checked:bg-blue-400 peer-checked:text-white transition-all">
+                                <span class="icon-[tabler--building-bank]"></span>
+                                <span>Bank Account</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="plan-modal-wrap-nine">
+                    <div>
+                        <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
+                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                    </div>
+                    <div class="plan-modal-wrap-twelve">
+                        This is your available account balance for investments.
+                    </div>
+                </div>
+
+                <div class="plan-modal-wrap-thirteen">
+                    <input type="submit" value="Proceed" class="plan-modal-wrap-fourteen button">
                 </div>
             </form>
         </div>

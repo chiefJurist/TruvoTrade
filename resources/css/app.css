@@ -1147,3 +1147,13 @@ td{
 .withdrawals-second-div-wrap-eight{
   @apply my-5 bg-orange-500 text-white text-center font-bold p-2 rounded-lg hover:bg-orange-700;
 }
+
+.withdrawals-third-div-con{
+  @apply my-10 md:my-15;
+}
+.withdrawals-third-div-wrap-one{
+  @apply md:flex items-center justify-between my-7;
+}
+.withdrawals-third-div-wrap-two{
+  @apply bg-indigo-500 px-4 py-2 rounded-lg font-bold text-white hover:bg-indigo-700 w-max ;
+}

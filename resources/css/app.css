@@ -1157,3 +1157,16 @@ td{
 .withdrawals-third-div-wrap-two{
   @apply bg-indigo-500 px-4 py-2 rounded-lg font-bold text-white hover:bg-indigo-700 w-max ;
 }
+
+.withdrawals-modal-wrap-one{
+  @apply my-7;
+}
+.withdrawals-modal-wrap-two{
+  @apply flex space-x-4;
+}
+.withdrawals-modal-wrap-three{
+  @apply px-4 py-2 text-center text-orange-300 font-semibold select-none rounded-lg border border-orange-300 peer-checked:bg-orange-300 peer-checked:text-white transition-all;
+}
+.withdrawals-modal-wrap-four{
+  @apply px-4 py-2 text-center text-blue-400 select-none font-semibold rounded-lg border border-blue-400 peer-checked:bg-blue-400 peer-checked:text-white transition-all;
+}

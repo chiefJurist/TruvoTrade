@@ -1164,12 +1164,12 @@
                     * Your account balance will be immediately deducted upon confirmation.
                 </div>
 
-                <div class="my-7">
+                <div class="withdrawals-modal-wrap-one">
                     <div class="plan-modal-wrap-ten">Select Withdrawal Method</div>
-                    <div class="flex space-x-4">
+                    <div class="withdrawals-modal-wrap-two">
                         <label class="cursor-pointer">
                             <input type="radio" name="payment_method" value="crypto" class="peer hidden" checked>
-                            <div class="px-4 py-2 text-center text-orange-300 font-semibold select-none rounded-lg border border-orange-300 peer-checked:bg-orange-300 peer-checked:text-white transition-all">
+                            <div class="withdrawals-modal-wrap-three">
                                 <span class="icon-[tabler--coins]"></span>
                                 <span>Crypto Wallet</span>
                             </div>
@@ -1177,7 +1177,7 @@
 
                         <label class="cursor-pointer">
                             <input type="radio" name="payment_method" value="bank" class="peer hidden">
-                            <div class="px-4 py-2 text-center text-blue-400 select-none font-semibold rounded-lg border border-blue-400 peer-checked:bg-blue-400 peer-checked:text-white transition-all">
+                            <div class="withdrawals-modal-wrap-four">
                                 <span class="icon-[tabler--building-bank]"></span>
                                 <span>Bank Account</span>
                             </div>

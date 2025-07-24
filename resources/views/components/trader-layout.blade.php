@@ -340,6 +340,20 @@
         }
     }
 
+    //deposit modal
+    window.toggleDepositModal = function () {
+        const modal = document.getElementById('depositModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}
@@ -1266,6 +1280,50 @@
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
                     </div>
+                </div>
+
+                <div class="plan-modal-wrap-thirteen">
+                    <input type="submit" value="Proceed" class="plan-modal-wrap-fourteen button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{-- Deposit Modal --}}
+    <div id="depositModal" class="hidden plan-modal-backdrop">
+        <div class="plan-modal-con animate-bounce-once">
+            <form action="">
+                @csrf
+
+                <div class="authed-form-cancel-con" onclick="toggleDepositModal()">
+                    <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
+                </div>
+
+                <div class="plan-modal-wrap-one">Fund Account</div>
+
+                <div class="plan-modal-wrap-two">Deposit Funds into your account directly.</div>
+
+                <div class="font-bold text-sm mt-7">Payment method</div>
+                <div class="border border-blue-200 rounded-lg px-3 py-1">
+                    <div class="text-gray-400 text-sm select-none">Select Payment Method*</div>
+                    <select required name="depositPaymentMethod" class="w-full outline-none text-gray-500">
+                        <option value="BITCOIN">BITCOIN</option>
+                        <option value="ETHEREUM">ETHEREUM (ERC20)</option>
+                        <option value="SOLANA">SOLANA (SOL)</option>
+                        <option value="USDT(BEP20)">USDT(BEP20)</option>
+                        <option value="USDT(TRX10)">USDT(TRX10)</option>
+                        <option value="USDC(BEP20)">USDC(BEP20)</option>
+                        <option value="BNB(BEP20)">BNB(BEP20)</option>
+                        <option value="TRON(TRX)">TRON(TRX)</option>
+                    </select>
+                </div>
+
+                <div class="overview-modal-div-wrap-five">
+                    <div class="overview-modal-div-wrap-six">Enter Amount ($)</div>
+                    <input type="text" class="overview-modal-div-wrap-seven" required>
+                </div>
+                <div class="plan-modal-wrap-five">
+                    * Secure and safely deposit money into your account.
                 </div>
 
                 <div class="plan-modal-wrap-thirteen">

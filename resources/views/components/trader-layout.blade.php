@@ -354,6 +354,18 @@
         }
     }
 
+    //copy referral link
+    window.copyReferralLink = function () {
+    const text = document.getElementById("referral-link").innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById("copy-toast");
+        toast.classList.remove("hidden");
+        setTimeout(() => toast.classList.add("hidden"), 2000);
+    }).catch(err => {
+        alert("Failed to copy link: " + err);
+    });
+}
+
 </script>
 <body class="bg-white relative">
     {{-- LOADER --}}

@@ -53,7 +53,7 @@ body {
   @apply w-24 h-24 animate-pulse;
 }
 .button{
-  @apply cursor-pointer transition duration-400 ease-out;
+  @apply cursor-pointer transition duration-400 ease-out select-none;
 }
 .welcome-header{
   @apply py-3 bg-gray-900 justify-between items-center
@@ -1130,7 +1130,7 @@ td{
   @apply text-2xl font-bold;
 }
 .withdrawals-second-div-wrap-three{
-  @apply flex justify-between items-center py-8;
+  @apply flex justify-between items-center py-5;
 }
 .withdrawals-second-div-wrap-four{
   @apply text-3xl font-semibold font-sans;
@@ -1169,4 +1169,26 @@ td{
 }
 .withdrawals-modal-wrap-four{
   @apply px-4 py-2 text-center text-blue-400 select-none font-semibold rounded-lg border border-blue-400 peer-checked:bg-blue-400 peer-checked:text-white transition-all;
+}
+
+
+
+
+.referral-second-div-wrap-one{
+  @apply text-gray-400;
+}
+.referral-second-div-wrap-two{
+  @apply flex items-stretch my-7 w-full overflow-auto border border-gray-300 rounded-lg;
+}
+.referral-second-div-wrap-three{
+  @apply bg-gray-300 p-2;
+}
+.referral-second-div-wrap-four{
+  @apply p-2 whitespace-nowrap;
+}
+.referral-second-div-wrap-five{
+  @apply font-bold text-white bg-blue-400 flex justify-center gap-1.5 items-center p-2 rounded-lg hover:bg-blue-500;
+}
+.referral-second-div-alert{
+  @apply fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow z-50;
 }

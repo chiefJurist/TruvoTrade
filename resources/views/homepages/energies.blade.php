@@ -62,7 +62,7 @@
     <div style="background-image: url('{{ asset('img/forex-img2.png') }}')" class=" general-div-container  text-white bg-cover bg-center min-h-screen">
         <div class="text-3xl md:text-5xl font-bold text-center">ENERGY TRADING</div>
         <div class="text-lg md:text-2xl text-center font-nunito py-5">
-            Oil and natural gas can be traded as CFDs on the Fundflextrades MT4 and MT5 platforms.
+            Oil and natural gas can be traded as CFDs on the TruvoTrade MT4 and MT5 platforms.
         </div>
         <div class="text-center py-14 text-blue-500 text-4xl md:text-8xl">
             Highly volatile trading instruments.
@@ -71,7 +71,7 @@
             <div class="forex-fourth-div-card">
                 <div class="forex-fourth-div-card-heading">Why trade energies?</div>
                 <div class="forex-fourth-div-card-body">
-                    Energy prices are highly volatile and affected by a number of political and environmental factors. The constant motion of prices makes energies a great instrument for day traders seeking to trade fast movements. Trading energy CFDs with Fundflextrades lets you buy or sell freely without owning the physical assets.
+                    Energy prices are highly volatile and affected by a number of political and environmental factors. The constant motion of prices makes energies a great instrument for day traders seeking to trade fast movements. Trading energy CFDs with TruvoTrade lets you buy or sell freely without owning the physical assets.
                 </div>
             </div>
             <div class="forex-fourth-div-card">

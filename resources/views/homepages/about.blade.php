@@ -7,7 +7,7 @@
                 We're one of the largest stock exchange-listed FX & CFD brokers in the world
             </div>
             <div class="div-texts text-gray-500">
-                Fundflextrades is a licensed industry leader, at work to source the best products in the market for you, while also striving to increase accessibility and transparency in the trading industry.
+                TruvoTrade is a licensed industry leader, at work to source the best products in the market for you, while also striving to increase accessibility and transparency in the trading industry.
             </div>
         </div>
         <div class=" pt-10 md:pt-0">
@@ -40,7 +40,7 @@
                 Our Company
             </div>
             <div class="div-texts text-gray-500">
-                With almost 20 years of experience, Fundflextrades is one of the largest stock exchange-listed FX & CFD brokers in the world. We have offices in over 13 countries including UK, Poland, Germany, France and Chile.
+                With almost 20 years of experience, TruvoTrade is one of the largest stock exchange-listed FX & CFD brokers in the world. We have offices in over 13 countries including UK, Poland, Germany, France and Chile.
             </div>
             <a href="{{ route('show.register') }}">
                 <div class="mt-6 md:mt-12 about-third-div-btn button">Open an Account</div>
@@ -82,7 +82,7 @@
     <div class="general-div-container bg-white">
         <div class="div-headings">Our Values</div>
         <div class="font-nunito text-gray-400 py-5 max-w-3xl">
-            Fundflextrades strives to provide the best possible trading experience to our clients, and our core values are tightly aligned with that vision.
+            TruvoTrade strives to provide the best possible trading experience to our clients, and our core values are tightly aligned with that vision.
         </div>
     </div>
 
@@ -91,7 +91,7 @@
         <div>
             <div class="about-sixth-div-header">Our Technology</div>
             <div class="about-sixth-div-body">
-                Nowadays, technology is one of the most important elements of investing and finance. We know that, that's why we constantly improve our trading application in accordance with the latest trends and solutions. Our ambition is to make Fundflextrades one of the most reliable and functional trading apps on the market.
+                Nowadays, technology is one of the most important elements of investing and finance. We know that, that's why we constantly improve our trading application in accordance with the latest trends and solutions. Our ambition is to make TruvoTrade one of the most reliable and functional trading apps on the market.
             </div>
         </div>
         <div>
@@ -110,7 +110,7 @@
                 <div class="border-b border-gray-600">
                     <div class="text-2xl md:text-4xl font-bold text-gray-900 py-8">Trusted For More Than 7 Years</div>
                     <div class="text-gray-400 font-nunito text-sm md:text-base">
-                        Fundflextrades is an online Forex and cryptocurrency STP broker providing CFD trading on hundreds of assets and optimal trading conditions within the award-winning MT4 platform. Fundflextrades offers deep liquidity, generous leverage up to 1:500, and some of the best spreads in the industry. As part of our commitment to our client’s satisfaction, we offer 24/7 live customer service, charge no deposit or withdrawal fees, and process withdrawals within 30-minutes or less. We feel that these, along with many other advantages, help to set us apart from the rest.
+                        TruvoTrade is an online Forex and cryptocurrency STP broker providing CFD trading on hundreds of assets and optimal trading conditions within the award-winning MT4 platform. TruvoTrade offers deep liquidity, generous leverage up to 1:500, and some of the best spreads in the industry. As part of our commitment to our client’s satisfaction, we offer 24/7 live customer service, charge no deposit or withdrawal fees, and process withdrawals within 30-minutes or less. We feel that these, along with many other advantages, help to set us apart from the rest.
                     </div>
                     <div class="text-gray-700 text-2xl font-nunito py-8">Multi-award winner</div>
                 </div>

@@ -266,7 +266,7 @@
                 </div>
                 <div class="mt-10">
                     <div class="twelfth-div-par">
-                        This website can be accessed worldwide however the information on the website is related to Fundflextrades A/S and is not specific to any entity of Fundflextrades. All clients will directly engage with Fundflextrades A/S and all client agreements will be entered into with Fundflextrades A/S .
+                        This website can be accessed worldwide however the information on the website is related to TruvoTrade A/S and is not specific to any entity of TruvoTrade. All clients will directly engage with TruvoTrade A/S and all client agreements will be entered into with TruvoTrade A/S .
 
                     </div>
                     <div class="twelfth-div-par">

@@ -32,7 +32,7 @@
                 </div>
                 <div class="why-us-third-div-header">INNOVATIVE</div>
                 <div class="why-us-third-div-text">
-                    Power up your trading with innovative products like the Fundflextradess, which lets you undo losing trades if the marketsove against you.
+                    Power up your trading with innovative products like the TruvoTrade, which lets you undo losing trades if the marketsove against you.
                 </div>
             </div>
             <div class="basis-1/2">

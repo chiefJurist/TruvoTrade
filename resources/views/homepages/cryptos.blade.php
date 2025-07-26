@@ -88,7 +88,7 @@
     {{-- fifth div --}}
     <div class="general-div-container">
         <div class="crypto-fifth-div-heading">
-            Fundflextradess. Invest in a Broker.
+            TruvoTrade. Invest in a Broker.
         </div>
         <div class="text-center text-lg md:text-2xl font-nunito py-4">
             Join the UTFTX Pool in 4 steps to receive daily payments
@@ -117,7 +117,7 @@
             Create An Account
         </div>
         <div class="cryto-fifth-div-last-texts">
-            To start please register a new account with Fundflextradess.com and complete all the necessary steps to verify your account.
+            To start please register a new account with TruvoTrade.com and complete all the necessary steps to verify your account.
         </div>
         <div class="cryto-fifth-div-last-texts">
             Sign up for an account

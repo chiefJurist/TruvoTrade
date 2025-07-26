@@ -27,7 +27,7 @@
         <div class="md:pr-36">
             <div class="div-headings">Trade With Low Commissions and Tight Spreads</div>
             <div class="div-texts text-gray-500">
-                With Fundflextrades you get a transparent pricing structure and a secure and regulated trading environment. As an active trader you can also qualify for lower fees and extra benefits.
+                With TruvoTrade you get a transparent pricing structure and a secure and regulated trading environment. As an active trader you can also qualify for lower fees and extra benefits.
             </div>
             <div class="mt-6 md:mt-12 short-white-btn button">
                 <a href="{{ route('show.register') }}">Login</a>
@@ -146,9 +146,9 @@
 
     {{--sixth div--}}
     <div class="general-div-container">
-        <div class="div-headings text-center">Switch to Fundflextrades</div>
+        <div class="div-headings text-center">Switch to TruvoTrade</div>
         <div class="div-texts text-center text-gray-500 md:px-44">
-            At Fundflextrades we work hard to enhance your trading experience. As a global, 5 star rated broker, our client’s satisfaction is in the center of our focus.
+            At TruvoTrade we work hard to enhance your trading experience. As a global, 5 star rated broker, our client’s satisfaction is in the center of our focus.
         </div>
         <div class="py-10 md:grid grid-cols-3 gap-4">
             <div class="py-6">
@@ -159,7 +159,7 @@
             <div class="py-6">
                 <div class="sixth-div-icon-div"><span class="icon-[uil--shield-check] sixth-div-icon"></span></div>
                 <div class="sixth-div-mini-header">Safe & Secure</div>
-                <div class="sixth-div-mini-text">Fundflextrades is regulated by the world's biggest supervision authorities, including the Financial Conduct Authority.</div>
+                <div class="sixth-div-mini-text">TruvoTrade is regulated by the world's biggest supervision authorities, including the Financial Conduct Authority.</div>
             </div>
             <div class="py-6">
                 <div class="sixth-div-icon-div"><span class="icon-[uil--book-open] sixth-div-icon"></span></div>
@@ -174,7 +174,7 @@
             <div class="py-6">
                 <div class="sixth-div-icon-div"><span class="icon-[hugeicons--message-user-01] sixth-div-icon"></span></div>
                 <div class="sixth-div-mini-header">495,000+ customers</div>
-                <div class="sixth-div-mini-text">With years of activity in the financial markets, Fundflextrades has gained thousands of customers.</div>
+                <div class="sixth-div-mini-text">With years of activity in the financial markets, TruvoTrade has gained thousands of customers.</div>
             </div>
             <div class="py-6">
                 <div class="sixth-div-icon-div"><span class="icon-[hugeicons--user-star-02] sixth-div-icon"></span></div>
@@ -318,7 +318,7 @@
                 <div class="border-b border-gray-600">
                     <div class="text-2xl md:text-4xl font-bold text-gray-900 py-8">Trusted For More Than 7 Years</div>
                     <div class="text-gray-400 font-nunito text-sm md:text-base">
-                        Fundflextrades is an online Forex and cryptocurrency STP broker providing CFD trading on hundreds of assets and optimal trading conditions within the award-winning MT4 platform. Fundflextrades offers deep liquidity, generous leverage up to 1:500, and some of the best spreads in the industry. As part of our commitment to our client’s satisfaction, we offer 24/7 live customer service, charge no deposit or withdrawal fees, and process withdrawals within 30-minutes or less. We feel that these, along with many other advantages, help to set us apart from the rest.
+                        TruvoTrade is an online Forex and cryptocurrency STP broker providing CFD trading on hundreds of assets and optimal trading conditions within the award-winning MT4 platform. TruvoTrade offers deep liquidity, generous leverage up to 1:500, and some of the best spreads in the industry. As part of our commitment to our client’s satisfaction, we offer 24/7 live customer service, charge no deposit or withdrawal fees, and process withdrawals within 30-minutes or less. We feel that these, along with many other advantages, help to set us apart from the rest.
                     </div>
                     <div class="text-gray-700 text-2xl font-nunito py-8">Multi-award winner</div>
                 </div>

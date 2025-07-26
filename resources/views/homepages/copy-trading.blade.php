@@ -54,7 +54,7 @@
             Low spreads on oil and gas spot and futures markets.
         </div>
         <div class="text-center py-16 max-w-5xl italic font-nunito text-gray-500">
-            *Experience the power of copy trading with Fundflextrades, a leading FX & CFD broker with almost two decades of experience. With offices in over 13 countries, including the UK, Poland, Germany, France, and Chile.
+            *Experience the power of copy trading with TruvoTrade, a leading FX & CFD broker with almost two decades of experience. With offices in over 13 countries, including the UK, Poland, Germany, France, and Chile.
         </div>
     </div>
 
@@ -62,7 +62,7 @@
     <div style="background-image: url('{{ asset('img/forex-img2.png') }}')" class=" general-div-container  text-white bg-cover bg-center min-h-screen">
         <div class="text-3xl md:text-5xl font-bold text-center">COPY TRADING</div>
         <div class="text-lg md:text-2xl text-center font-nunito py-5">
-            Oil and natural gas can be traded as CFDs on the Fundflextrades MT4 and MT5 platforms.
+            Oil and natural gas can be traded as CFDs on the TruvoTrade MT4 and MT5 platforms.
         </div>
         <div class="text-center py-14 text-blue-500 text-4xl md:text-8xl">
             Highly volatile trading instruments.

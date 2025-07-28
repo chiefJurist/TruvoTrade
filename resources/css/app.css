@@ -1,0 +1,1194 @@
+/*Importing from Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap')
+layer(base);
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-nunito: "Nunito";
+}
+@plugin "@iconify/tailwind4";
+
+@layer utilities {
+  @keyframes bounce-once {
+    0% {
+      transform: translateY(-70px);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(0px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(-20px);
+    }
+    90% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-bounce-once {
+    animation: bounce-once 0.8s ease-out forwards;
+  }
+}
+
+body {
+  @apply text-gray-900 font-sans;
+}
+.loader{
+  @apply fixed inset-0 bg-white z-50 flex items-center justify-center;
+}
+.loader-img{
+  @apply w-24 h-24 animate-pulse;
+}
+.button{
+  @apply cursor-pointer transition duration-400 ease-out select-none;
+}
+.welcome-header{
+  @apply py-3 bg-gray-900 justify-between items-center
+}
+.btn{
+    @apply p-3 border border-gray-100 rounded-sm font-bold text-gray-100 w-48 text-center cursor-pointer font-nunito;
+}
+.logo-container{
+  @apply flex items-center text-gray-100 text-xs font-bold;
+}
+.big-nav-gen-con{
+  @apply hidden md:flex px-20 flex-wrap gap-8 font-semibold text-sm;
+}
+.big-nav-link-con{
+  @apply p-3 hover:bg-gray-200;
+}
+.big-nav-transition{
+  @apply opacity-0 -translate-y-3 invisible absolute group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-400 ease-in-out;
+}
+.big-nav-sublink{
+  @apply py-3 px-5 hover:bg-gray-300 hover:text-black;
+}
+.big-nav-sublink-con{
+  @apply z-20 bg-white absolute top-11 left-0 text-gray-600 min-w-max;
+}
+.external-icon{
+  @apply text-3xl font-bold text-white;
+}
+.small-nav-link{
+  @apply py-4 text-sm font-semibold;
+}
+.small-nav-sublink{
+  @apply px-6 py-4 text-xs font-semibold;
+}
+.small-screen-nav-backdrop{
+  @apply md:hidden backdrop-brightness-75 backdrop-blur-lg w-full h-full fixed top-0;
+}
+.small-screen-nav-con{
+  @apply p-6 bg-gray-900 w-64 text-gray-100 fixed top-0 right-0 h-full overflow-y-auto;
+}
+.general-div-container{
+  @apply px-6 md:px-20 py-12;
+}
+.first-div-container{
+  @apply md:pr-90 py-32 md:py-48 absolute top-0 left-0 w-full h-full  text-white z-10;
+}
+.div-headings{
+  @apply text-3xl md:text-4xl font-semibold;
+}
+.div-texts{
+  @apply mt-4 md:mt-10;
+}
+.second-div-container{
+  @apply md:flex justify-between items-center;
+}
+.short-white-btn{
+  @apply py-3 border border-blue-600 rounded-md font-bold text-blue-600 w-36 text-center cursor-pointer font-nunito hover:bg-blue-600 hover:text-gray-100;
+}
+.fourth-div-card-container{
+  @apply bg-gray-200 rounded-lg p-8 min-h-96 mt-8 md:my-0;
+}
+.fourth-div-card-line-one{
+  @apply text-sm font-bold py-2;
+}
+.fourth-div-card-line-two{
+  @apply text-sm text-gray-500 font-semibold;
+}
+.fourth-div-card-line-three{
+  @apply text-4xl text-gray-600 font-semibold py-2;
+}
+.fourth-div-card-line-four{
+  @apply text-sm text-gray-500 font-semibold;
+}
+.fourth-div-card-line-five{
+  @apply text-sm text-gray-500 py-10;
+}
+.fourth-div-reg-btn{
+  @apply rounded-3xl text-white bg-blue-600 px-4 py-1 font-bold font-nunito w-48 text-center cursor-pointer hover:scale-x-105 ease-in-out;
+}
+.fourth-div-reg-con{
+  @apply rounded-xl shadow-xl p-4 w-11/12 md:w-1/2 md:flex justify-around bg-white;
+}
+.fourth-div-reg-text{
+  @apply text-gray-500 pt-2 md:pt-0 text-center;
+}
+.fourth-div-rec-con{
+  @apply p-10;
+}
+.fourth-div-icon-con{
+  @apply flex justify-center;
+}
+.fourth-div-icon{
+  @apply text-gray-500 text-3xl font-extrabold;
+}
+.fourth-div-rec-text{
+  @apply text-gray-500 text-sm md:text-base;
+}
+.sixth-div-icon-div{
+  @apply flex justify-center;
+}
+.sixth-div-icon{
+  @apply text-5xl;
+}
+.sixth-div-mini-header{
+  @apply text-2xl font-bold text-center my-4 font-nunito;
+}
+.sixth-div-mini-text{
+  @apply text-gray-500 text-center font-nunito;
+}
+.seventh-div-os-con{
+  @apply flex justify-between items-center w-36 mb-5;
+}
+.seventh-div-icon{
+  @apply text-4xl text-gray-500;
+}
+.seventh-div-sys{
+  @apply text-gray-500 font-semibold text-sm;
+}
+.eight-div-btn{
+  @apply bg-blue-600 hover:bg-gray-900 p-3 rounded-lg w-32 font-bold font-nunito text-center;
+}
+.ninth-div-btn{
+  @apply w-48 p-3 border border-blue-600 rounded-lg text-center text-blue-600 font-bold hover:bg-gray-900;
+}
+.tenth-div-header{
+  @apply text-3xl md:text-4xl font-bold text-center;
+}
+.tenth-div-card-con{
+  @apply my-5 grid grid-cols-2 md:grid-cols-6 gap-5;
+}
+.tenth-div-card{
+  @apply p-5 bg-white rounded-lg w-40 border border-gray-400;
+}
+.tenth-div-card img {
+  @apply h-16;
+}
+.tenth-div-card-rate{
+  @apply bg-black text-center text-white rounded-md p-1 w-32 font-bold text-2xl;
+}
+.tenth-div-card-rate-con{
+  @apply flex justify-center mt-6;
+}
+.tenth-div-award-con{
+  @apply flex justify-between items-center py-3 w-72 gap-4;
+}
+.tenth-div-award-head{
+  @apply text-gray-700 font-bold text-start;
+}
+.tenth-div-award-text{
+  @apply text-gray-400 text-start;
+}
+.tenth-div-sponsor-span{
+  @apply mt-4 md:mt-0;
+}
+.tenth-div-sponsor-img{
+  @apply w-44;
+}
+.eleventh-div-icon-con{
+  @apply flex justify-center;
+}
+.eleventh-div-icon{
+  @apply text-6xl text-black;
+}
+.eleventh-div-mini-header{
+  @apply text-2xl font-bold text-center my-4 font-nunito text-black;
+}
+.eleventh-div-mini-text{
+  @apply text-gray-400 text-center font-nunito;
+}
+.eleventh-div-btn{
+  @apply p-2 w-44 bg-blue-600 text-white font-bold font-nunito text-center rounded-md hover:bg-gray-900;
+}
+.twelfth-div-par{
+  @apply py-2;
+}
+.twelfth-div-link-heading{
+  @apply font-bold text-white text-base;
+}
+.twelfth-div-link{
+  @apply hover:text-white;
+}
+
+
+.about-first-div-container{
+  @apply md:flex justify-between items-center bg-white;
+}
+.about-second-div-card{
+  @apply bg-white p-5 border border-gray-400 rounded-md flex justify-between items-center gap-3 mt-3 lg:mt-0 basis-1/3 min-w-80;
+}
+.about-second-div-card-text{
+  @apply text-gray-500 font-nunito font-semibold text-sm;
+}
+.about-third-div-btn{
+  @apply py-3  rounded-md font-bold text-white bg-blue-600 w-44 text-center font-nunito hover:bg-gray-900;
+}
+.about-fourth-div-card-header{
+  @apply text-xl font-bold;
+}
+.about-sixth-div-header{
+  @apply text-4xl text-blue-500;
+}
+.about-sixth-div-body{
+  @apply font-nunito text-gray-500 py-5;
+}
+
+
+.forex-first-div-container{
+  @apply md:flex justify-between items-center bg-black;
+}
+.forex-first-div-texts{
+  @apply max-w-xl text-white;
+}
+.forex-first-div-header{
+  @apply text-3xl md:text-5xl font-bold;
+}
+.forex-first-div-body{
+  @apply mt-4 md:mt-10 text-lg;
+}
+.forex-first-div-btn{
+  @apply mt-6 md:mt-12 py-3  rounded-md font-bold text-white bg-blue-600 w-44 text-center font-nunito hover:bg-gray-900;
+}
+.forex-first-div-img-con{
+  @apply pt-10 md:pt-0 basis-5/12;
+}
+.forex-second-div-card{
+  @apply bg-gray-900 p-4 mb-4 lg:mb-0 lg:p-10 text-center;
+}
+.forex-second-div-card-header{
+  @apply text-3xl font-bold;
+}
+.forex-second-div-card-body{
+  @apply font-nunito py-3 text-lg;
+}
+.forex-fourth-div-card{
+  @apply pb-10 md:pb-0 basis-1/2;
+}
+.forex-fourth-div-card-heading{
+  @apply text-xl font-nunito py-4;
+}
+.forex-fourth-div-card-body{
+  @apply font-nunito;
+}
+
+
+.crypto-fifth-div-heading{
+  @apply text-center text-3xl md:text-4xl text-black py-5 font-nunito;
+}
+.crypto-fifth-div-card{
+  @apply py-6;
+}
+.crypto-fifth-div-card-icon-div{
+  @apply w-16 h-16 rounded-full bg-blue-500 flex justify-center items-center text-white text-xl mx-auto;
+}
+.crypto-fifth-div-card-text{
+  @apply text-gray-700 font-nunito pt-3 text-center;
+}
+.cryto-fifth-div-last-texts{
+  @apply text-gray-500 py-3 text-center font-nunito;
+}
+.crypto-last-div-btn{
+  @apply mt-6 md:mt-12 py-3  rounded-full font-bold text-white bg-blue-600 w-44 text-center font-nunito hover:bg-gray-900;
+}
+
+
+.marijuana-first-div-con{
+  @apply bg-cover bg-center;
+}
+.marijuana-first-div-text{
+  @apply px-6 md:px-20 py-20 min-h-60  text-white backdrop-brightness-25 text-3xl md:text-5xl text-center font-bold;
+}
+
+
+
+.platforms-first-div-con{
+  @apply bg-cover bg-center;
+}
+.platforms-first-div-text{
+  @apply px-6 md:px-20 pt-20 pb-52 md:pb-60 min-h-60  text-white backdrop-brightness-25 text-5xl text-center font-bold;
+}
+.platform-third-div-card{
+  @apply py-6;
+}
+.platform-third-div-card-icon-con{
+  @apply text-gray-700 bg-white text-7xl text-center mx-auto;
+}
+.platform-third-div-card-text{
+  @apply text-black font-nunito pt-2 text-center font-bold text-lg;
+}
+.platform-fourth-div-card{
+  @apply py-5 md:py-0;
+}
+.platform-fourth-div-card-icon-con{
+  @apply text-center text-blue-500 text-5xl;
+}
+.platform-fourth-div-card-header{
+  @apply text-center text-xl font-bold py-4;
+}
+.platform-fourth-div-card-text{
+  @apply text-center font-nunito text-lg;
+}
+
+
+.swaps-text-divs{
+  @apply text-gray-500 font-nunito py-3;
+}
+
+
+th{
+  @apply border border-gray-300 px-4 py-3;
+}
+td{
+  @apply border border-gray-300 px-4 py-3;
+}
+
+
+
+.why-us-second-div-text{
+  @apply font-nunito text-gray-500 py-4;
+}
+.why-us-second-div-btn{
+  @apply my-20 w-36 rounded-3xl bg-blue-600 text-center text-white font-nunito font-bold p-3 hover:bg-white hover:text-blue-600 hover:border border-blue-600 mx-auto;
+}
+.why-us-third-div-text{
+  @apply font-nunito text-gray-500 pb-6;
+}
+.why-us-third-div-header{
+  @apply text-black text-4xl font-bold py-5;
+}
+.why-us-fourth-div-card{
+  @apply py-5 md:py-0 basis-1/3;
+}
+.why-us-fourth-div-card-text{
+  @apply text-center font-nunito text-lg text-gray-500;
+}
+.why-us-fourth-div-card-icon-con{
+  @apply text-center text-blue-500 text-7xl;
+}
+.why-us-sixth-div-card{
+  @apply bg-gray-900 text-white font-nunito px-10 py-16;
+}
+.why-us-sixth-div-icon-div{
+  @apply text-blue-500 text-7xl text-start;
+}
+.why-us-sixth-div-header{
+  @apply text-2xl py-5 font-bold;
+}
+.why-us-seventh-div-format-btn{
+  @apply text-center w-68 rounded-full p-2.5 font-bold font-nunito;
+}
+
+
+.general-policy-con{
+  @apply px-10 md:px-40 py-12 bg-white;
+}
+.privacy-pol-sect-con{
+  @apply py-7;
+}
+.privacy-policy-text{
+  @apply text-gray-500 font-nunito py-3;
+}
+.privacy-policy-header{
+  @apply font-bold text-gray-800 text-3xl py-3;
+}
+
+
+
+.auth-logo-con{
+  @apply flex items-center text-lg font-bold font-nunito;
+}
+.auth-header{
+  @apply text-2xl font-bold text-gray-900;
+}
+.auth-sub-head-con{
+  @apply text-center py-8;
+}
+.auth-sub-head-border{
+  @apply text-gray-300;
+}
+.auth-sub-head-text{
+  @apply text-gray-700;
+}
+.auth-input{
+  @apply border border-gray-300 py-2 px-3 rounded-xl w-full outline-none;
+}
+.auth-input-div{
+  @apply my-3 text-center;
+}
+.auth-form-btn{
+  @apply bg-blue-600 text-white font-bold p-3 rounded-lg w-full my-5;
+}
+.forgot-password-btn{
+  @apply bg-blue-600 text-white font-bold rounded-xl p-3 hover:bg-blue-300;
+}
+
+
+
+
+.trader-gen-container{
+  @apply p-5 md:p-10 mt-24 block;
+}
+.trader-big-gen-container{
+  @apply font-nunito bg-white text-gray-800 block lg:flex;
+}
+.trader-small-header-con{
+  @apply lg:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24 z-20;
+}
+.trader-small-header-logo-con{
+  @apply flex items-center text-black text-xs font-bold;
+}
+.trader-small-header-img{
+  @apply w-10 h-10 rounded-full;
+}
+.trader-small-mobilenav{
+  @apply lg:hidden font-nunito font-bold fixed top-0 left-0 p-6 bg-white w-64 text-gray-800 h-full overflow-y-auto transform transition-all duration-500 ease-out z-40;
+}
+.trader-menu-cancel-con{
+  @apply flex justify-between items-center pt-5 pb-10;
+}
+.trader-menu-cancel{
+  @apply text-3xl font-bold text-gray-900;
+}
+.trader-small-nav-link{
+  @apply flex items-center gap-2 my-1 p-3 text-sm font-semibold rounded-md cursor-pointer transition duration-400 ease-out;
+}
+.trader-small-nav-link-header{
+  @apply mt-5 font-bold;
+}
+.trader-small-nav-link-icon{
+  @apply text-2xl;
+}
+.trader-small-nav-link-contact-btn-con{
+  @apply bg-blue-200 p-3 rounded-lg mt-5;
+}
+.trader-small-nav-link-contact-btn{
+  @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
+}
+.trader-big-mobile-nav{
+  @apply hidden lg:block border-r border-gray-200 p-5 bg-white overflow-x-clip fixed top-0 left-0 h-full transition-all duration-500 z-30;
+}
+.trader-big-screen-header{
+  @apply hidden lg:flex justify-between items-center fixed top-0 h-24 px-10 z-20 border-b border-gray-200 bg-white;
+}
+.trader-big-screen-hamburger{
+  @apply cursor-pointer text-3xl hover:text-blue-400 hover:bg-blue-200 rounded-full flex justify-center w-10 h-10 items-center;
+}
+.trader-big-header-con{
+  @apply lg:hidden flex justify-between items-center px-5 py-3 bg-white shadow-md fixed top-0 w-full h-24;
+}
+.trader-big-header-logo-con{
+  @apply flex items-center text-black text-xs font-bold;
+}
+.trader-big-nav-link-header{
+  @apply mt-5 font-bold;
+}
+.trader-big-nav-link-header-dot{
+  @apply mt-5 font-bold text-center;
+}
+.trader-big-nav-link{
+  @apply flex items-center gap-2 my-1 p-3 text-sm font-semibold rounded-md cursor-pointer transition duration-300 ease-out hover:text-blue-400 hover:bg-blue-200;
+}
+.trader-big-nav-link-icon{
+  @apply text-xl;
+}
+.trader-big-nav-link-contact-btn-con{
+  @apply bg-blue-200 p-3 rounded-lg mt-5;
+}
+.trader-big-nav-link-contact-btn{
+  @apply bg-blue-400 text-white w-36 text-center text-lg p-2 rounded-lg mt-2;
+}
+.trader-big-main-content{
+  @apply ml-auto relative transition-all duration-500;
+}
+
+
+
+.overview-chart-card-con{
+  @apply bg-white shadow-lg rounded-xl p-4 w-full;
+}
+.overview-second-div-con{
+  @apply flex justify-between items-center;
+}
+.overview-second-div-user-con{
+  @apply flex gap-3 items-center;
+}
+.overview-second-div-user-img{
+  @apply w-20 md:w-16 rounded-full outline-2 outline-offset-2 outline-blue-400;
+}
+.overview-second-div-salute{
+  @apply font-bold md:text-3xl;
+}
+.overview-second-div-salute-text{
+  @apply text-xs text-gray-500 md:text-base;
+}
+.overview-second-div-btn-con{
+  @apply mt-2 md:mt-6 flex gap-1 md:gap-4;
+}
+.overview-second-div-deposit-btn{
+  @apply bg-blue-400 hover:bg-blue-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-md font-bold text-xs md:text-base;
+}
+.overview-second-div-withdraw-btn{
+  @apply bg-emerald-300 hover:bg-emerald-500 text-white p-2 flex items-center gap-1 w-24 md:w-32 rounded-md font-bold text-xs md:text-base;
+}
+.overview-third-div-second{
+  @apply bg-orange-300 p-6 rounded-2xl text-xs md:text-base text-white flex justify-between gap-3 items-center;
+}
+.overview-third-div-first{
+  @apply my-8;
+}
+.overview-third-div-third{
+  @apply bg-orange-100 hover:bg-orange-50 text-orange-300 w-20 md:w-28 p-2 text-center rounded-lg;
+}
+.overview-third-div-fourth{
+  @apply bg-blue-400 p-6 rounded-2xl text-xs md:text-base text-white flex justify-between gap-3 items-center my-4;
+}
+.overview-third-div-fifth{
+  @apply bg-blue-200 hover:bg-blue-100 text-blue-400 w-24 md:w-32 p-2 text-center rounded-lg;
+}
+.overview-fifth-div-con{
+  @apply my-16 grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+.overview-fifth-div-card-con{
+  @apply p-8 shadow-lg rounded-lg border border-gray-100 flex justify-between;
+}
+.overview-fifth-div-card-header{
+  @apply font-bold text-xl;
+}
+.overview-fifth-div-card-left{        
+  @apply flex items-center gap-4 py-4;
+}
+.overview-fifth-div-card-balance{
+  @apply font-bold text-xl;
+}
+.overview-fifth-div-card-arrow{
+  @apply bg-green-200 flex justify-center items-center w-5 h-5 rounded-full;
+}
+.overview-fifth-div-card-img{
+  @apply bg-blue-200 p-2 rounded-lg;
+}
+.overview-sixth-div-con{
+  @apply my-8 text-xs md:text-base grid grid-cols-1 md:grid-cols-2 gap-5;
+}
+.overview-sixth-div-left-con{
+  @apply bg-blue-50 rounded-lg p-3 md:p-6 flex justify-between items-center;
+}
+.overview-sixth-div-right-con{
+  @apply bg-emerald-100 rounded-lg p-3 md:p-6 flex justify-between items-start;
+}
+.overview-sixth-div-wrap-one{
+  @apply inline-flex items-center gap-1;
+}
+.overview-sixth-div-wrap-two{
+  @apply bg-blue-400 inline-flex justify-center items-center p-1 md:p-2 rounded-lg
+}
+.overview-sixth-div-wrap-three{
+  @apply bg-white rounded-full p-0.5;
+}
+.overview-sixth-div-wrap-four{
+  @apply text-blue-400 text-xl;
+}
+.overview-sixth-div-wrap-five{
+  @apply mt-5 font-bold md:text-2xl;
+}
+.overview-sixth-div-wrap-six{
+  @apply border border-blue-400 text-blue-400 p-2 inline-flex justify-between items-center rounded-lg hover:bg-blue-400 hover:text-white;
+}
+.overview-sixth-div-wrap-seven{
+  @apply mt-5 p-2 rounded-lg bg-blue-400 text-white hover:bg-blue-500;
+}
+.overview-sixth-div-wrap-eight{
+  @apply inline-flex items-center gap-1;
+}
+.overview-sixth-div-wrap-nine{
+  @apply bg-emerald-400 p-1 md:p-2 rounded-lg
+}
+.overview-sixth-div-wrap-ten{
+  @apply mt-5 font-bold md:text-2xl text-orange-500;
+}
+.overview-sixth-div-wrap-eleven{
+  @apply text-orange-500 py-2;
+}
+.overview-seventh-div-con{
+  @apply my-10 text-center border border-gray-100 rounded-xl p-5;
+}
+.overview-seventh-div-wrap-one{
+  @apply bg-blue-50 p-5;
+}
+.overview-seventh-div-img{
+  @apply mx-auto w-24;
+}
+.overview-seventh-div-wrap-two{
+  @apply md:text-xl font-bold;
+}
+
+.overview-ninth-div-con{
+  @apply md:w-5/6 mx-auto my-8;
+}
+.overview-ninth-div-wrap-one{
+  @apply flex justify-between items-center my-5;
+}
+.overview-ninth-div-wrap-two{
+  @apply font-bold md:text-xl;
+}
+.overview-ninth-div-wrap-three{
+  @apply border border-blue-400 text-blue-400 inline-flex items-center gap-1 p-2 rounded-lg hover:text-white hover:bg-blue-400 font-bold;
+}
+.overview-ninth-div-wrap-four{
+  @apply md:text-xl;
+}
+.overview-ninth-div-wrap-five{
+  @apply h-30 overflow-auto;
+}
+.overview-ninth-div-wrap-six{
+  @apply mx-auto table-auto w-full border border-gray-200 text-gray-500;
+}
+.overview-ninth-div-wrap-seven{
+  @apply border-b border-gray-300;
+}
+.overview-ninth-div-wrap-eight{
+  @apply border-none px-4 py-2 text-center;
+}
+.overview-modal-backdrop{
+  @apply fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg justify-center items-center p-5 text-gray-600 font-nunito;
+}
+.overview-modal-con{
+  @apply w-lg p-8 rounded-lg bg-white;
+}
+.overview-modal-div-wrap-one{
+  @apply flex justify-end;
+}
+.overview-modal-div-wrap-two{
+  @apply text-2xl font-bold cursor-pointer;
+}
+.overview-modal-div-wrap-three{
+  @apply font-bold text-lg;
+}
+.overview-modal-div-wrap-four{
+  @apply text-xs text-blue-400;
+}
+.overview-modal-div-wrap-five{
+  @apply mt-6 border border-blue-200 rounded-lg px-3 py-1;
+}
+.overview-modal-div-wrap-six{
+  @apply text-gray-400 text-sm select-none;
+}
+.overview-modal-div-wrap-seven{
+  @apply w-full outline-none mt-1;
+}
+.overview-modal-div-wrap-eight{
+  @apply font-bold mt-5;
+}
+.overview-modal-div-wrap-nine{
+  @apply bg-gray-300 px-5 py-2 rounded-lg w-full outline-none;
+}
+.overview-modal-div-wrap-ten{
+  @apply mt-2 text-xs text-blue-400;
+}
+.overview-modal-div-wrap-eleven{
+  @apply mt-8 flex justify-center-safe;
+}
+.overview-modal-div-wrap-twelve{
+  @apply bg-gray-700 text-white font-bold p-2 rounded-lg w-28 hover:bg-gray-500;
+}
+
+
+
+.profile-first-div-con{
+  @apply flex justify-between items-center bg-purple-100 px-7 py-5 rounded-xl;
+}
+.profile-first-div-wrap-one{
+  @apply basis-2/3;
+}
+.profile-first-div-wrap-two{
+  @apply text-2xl font-bold;
+}
+.profile-first-div-wrap-three{
+  @apply text-xs md:text-base inline-flex items-center text-gray-500;
+}
+.profile-first-div-wrap-four{
+  @apply text-3xl font-bold;
+}
+.profile-first-div-wrap-five{
+  @apply basis-1/3 flex justify-end;
+}
+
+
+.profile-second-and-third-div-con{
+  @apply border border-gray-100 shadow p-5 mt-10 rounded-lg;
+}
+
+.profile-second-div-con{
+  @apply flex items-center text-gray-600 my-5;
+}
+.profile-second-div-wrap-one{
+  @apply font-bold flex items-center gap-2 p-4 border-b-2 ;
+}
+.profile-second-div-wrap-two{
+  @apply font-bold text-lg;
+}
+.profile-second-div-wrap-three{
+  @apply hidden md:block;
+}
+
+.profile-third-div-con{
+  @apply my-10;
+}
+.profile-third-wrap-one{
+  @apply font-bold text-lg;
+}
+.profile-third-wrap-two{
+  @apply text-gray-600 my-1;
+}
+.profile-third-wrap-three{
+  @apply my-8 grid grid-cols-1 md:grid-cols-2 gap-10;
+}
+.profile-third-wrap-four{
+  @apply block font-bold;
+}
+.profile-third-wrap-five{
+  @apply block bg-gray-200 outline-none py-2 px-4 rounded-lg w-full;
+}
+.profile-third-wrap-six{
+  @apply block border border-gray-200 outline-none py-2 px-4 rounded-lg w-full;
+}
+.profile-third-wrap-seven{
+  @apply flex justify-center md:justify-end;
+}
+.profile-third-wrap-eight{
+  @apply text-white bg-blue-800 px-5 py-2 font-bold rounded-lg hover:bg-blue-400;
+}
+.profile-third-wrap-nine{
+  @apply flex justify-between items-center bg-orange-400 max-w-2xl p-2 md:p-5 mx-auto rounded-xl;
+}
+.profile-third-wrap-ten{
+  @apply inline-flex gap-2 items-center text-white;
+}
+.profile-third-wrap-eleven{
+  @apply font-bold text-xs md:text-lg;
+}
+.profile-third-wrap-twelve{
+  @apply text-xs md:text-base;
+}
+.profile-third-wrap-thirteen{
+  @apply bg-white text-orange-400 hover:bg-gray-200 p-1 md:p-2 rounded-lg font-bold text-xs min-w-max;
+}
+.profile-third-wrap-fourteen{
+  @apply font-bold;
+}
+.profile-third-wrap-fifteen{
+  @apply w-2/3 mx-auto -mt-1 z-20;
+}
+.profile-third-wrap-sixteen{
+  @apply bg-white border border-gray-100 rounded-lg py-3 shadow w-48 text-gray-700 absolute top-0 right-1/12;
+}
+.profile-third-wrap-seventeen{
+  @apply hover:bg-gray-200 p-2 flex gap-2 items-center;
+}
+
+
+
+.profile-bank-modal-backdrop{
+  @apply fixed top-0 w-full h-full z-50 overflow-y-auto py-10 backdrop-brightness-50 backdrop-blur-xs text-gray-600 font-nunito;
+}
+.profile-bank-modal-sizer{
+  @apply flex justify-center items-center;
+}
+.profile-bank-modal-con{
+  @apply w-full md:w-2/3 py-10 px-8 rounded-lg bg-white;
+}
+.profile-bank-modal-wrap-one{
+  @apply text-lg font-bold;
+}
+.profile-bank-modal-wrap-two{
+  @apply text-sm my-1 text-gray-400;
+}
+.profile-bank-modal-wrap-three{
+  @apply my-4;
+}
+.profile-bank-modal-wrap-four{
+  @apply font-bold;
+}
+.profile-bank-modal-required{
+  @apply text-red-400;
+}
+.profile-bank-modal-wrap-five{
+  @apply text-gray-400;
+}
+.profile-bank-modal-input{
+  @apply border border-gray-200 focus:border-blue-300 text-gray-500 w-full p-2 outline-none rounded-lg;
+}
+.profile-bank-modal-wrap-six{
+  @apply text-gray-500 text-xs my-2;
+}
+.profile-bank-modal-wrap-seven{
+  @apply my-10;
+}
+.profile-bank-modal-wrap-eight{
+  @apply hover:bg-gray-500 bg-gray-700 text-white font-bold rounded-md p-2;
+}
+.authed-form-cancel-con{
+  @apply flex justify-end;
+}
+.authed-form-cancel{
+  @apply text-2xl font-bold cursor-pointer;
+}
+
+
+
+.profile-crypto-modal-wrap-one{
+  @apply mt-10 grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+.profile-crypto-modal-wrap-two{
+  @apply col-span-2;
+}
+.profile-crypto-modal-wrap-three{
+  @apply text-sm text-gray-400;
+}
+.profile-crypto-modal-wrap-four{
+  @apply mt-10;
+}
+.profile-crypto-modal-wrap-five{
+  @apply pb-5 border-b border-gray-300;
+}
+.profile-crypto-modal-wrap-six{
+  @apply text-yellow-400 inline-flex items-center gap-2;
+}
+.profile-crypto-modal-wrap-seven{
+  @apply text-red-400 inline-flex items-center gap-2;
+}
+
+
+.profile-fourth-wrap-eighteen{
+  @apply lg:flex gap-10 items-start;
+}
+.profile-fourth-wrap-nineteen{
+  @apply flex justify-between items-center px-5 py-10 border border-gray-100 shadow rounded-lg;
+}
+.profile-fourth-wrap-twenty{
+  @apply font-bold text-lg md:text-xl;
+}
+.profile-fourth-wrap-twenty-one{
+  @apply text-xs md:text-sm text-red-500 font-mono py-5;
+}
+.profile-fourth-wrap-twenty-two{
+  @apply bg-blue-400 text-blue-50 p-2 font-bold rounded-lg w-20 hover:bg-blue-500 text-center;
+}
+.profile-fourth-wrap-twenty-three{
+  @apply my-10 lg:my-0;
+}
+.profile-fourth-wrap-twenty-four{
+  @apply font-bold text-lg md:text-xl;
+}
+.profile-fourth-wrap-twenty-five{
+  @apply text-gray-500;
+}
+.profile-fourth-wrap-twenty-six{
+  @apply mt-5;
+}
+.profile-fourth-wrap-twenty-seven{
+  @apply font-bold;
+}
+.profile-fourth-wrap-twenty-eight{
+  @apply outline-none border border-gray-100 p-2 rounded-lg w-full;
+}
+.profile-fourth-wrap-twenty-nine{
+  @apply bg-blue-400 text-blue-50 px-4 py-2 font-bold rounded-lg w-max hover:bg-blue-500;
+}
+
+
+.trader-kyc-gen-con{
+  @apply w-4/6 md:w-3/6 mx-auto;
+}
+.trader-kyc-wrap-one{
+  @apply bg-emerald-100 text-emerald-400 px-5 py-2 font-bold my-10 rounded-lg;
+}
+.trader-kyc-wrap-two{
+  @apply text-center font-bold text-lg md:text-2xl font-sans;
+}
+.trader-kyc-wrap-three{
+  @apply text-emerald-400;
+}
+.trader-kyc-wrap-four{
+  @apply my-10;
+}
+.trader-kyc-wrap-five{
+  @apply w-40 mx-auto;
+}
+.trader-kyc-wrap-six{
+  @apply font-bold text-gray-700;
+}
+.trader-kyc-wrap-seven{
+  @apply border border-gray-200 outline-none p-2 rounded-lg w-full text-gray-500 focus:border-blue-300;
+}
+.trader-kyc-wrap-eight{
+  @apply my-10 text-center;
+}
+.trader-kyc-wrap-nine{
+  @apply bg-emerald-400 px-4 py-2 font-bold text-white rounded-lg hover:bg-emerald-500;
+}
+
+
+.investment-second-div-con{
+  @apply my-10 md:my-20 md:flex justify-between items-start;
+}
+.investment-second-div-wrap-one{
+  @apply text-gray-600 font-semibold;
+}
+.investment-second-div-wrap-two{
+  @apply text-4xl font-sans;
+}
+
+
+
+.investment-third-div-con{
+  @apply my-5 md:my-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10
+}
+.investment-third-div-wrap-one{
+  @apply border border-gray-100 shadow-lg rounded-lg p-5 md:p-8;
+}
+.investment-third-div-wrap-two{
+  @apply font-bold text-lg;
+}
+.investment-third-div-wrap-three{
+  @apply font-bold text-2xl py-2;
+}
+.investment-third-div-wrap-four{
+  @apply text-gray-500;
+}
+.investment-third-div-wrap-five{
+  @apply inline-flex items-center text-indigo-500 font-bold bg-indigo-100 p-2 rounded-md gap-1 hover:bg-indigo-200 my-5;
+}
+.investment-third-div-wrap-six{
+  @apply border border-gray-100 shadow-lg rounded-lg p-5 md:p-8 col-span-2 md:flex justify-between items-center;
+}
+.investment-third-div-wrap-seven{
+  @apply text-9xl text-indigo-600;
+}
+
+
+.investment-fourth-div-wrap-one{
+  @apply font-bold text-lg;
+}
+.investment-fourth-div-wrap-two{
+  @apply text-gray-500 py-3;
+}
+.investment-fourth-div-wrap-three{
+  @apply w-full overflow-x-auto;
+}
+.investment-fourth-div-wrap-four{
+  @apply mx-auto table-auto w-full border-b border-gray-200 text-gray-500 overflow-auto;
+}
+.investment-fourth-div-wrap-five{
+  @apply border-b border-gray-300;
+}
+.investment-fourth-div-wrap-six{
+  @apply border-none px-4 py-3 text-center;
+}
+
+.plans-second-div-con{
+  @apply my-10;
+}
+.plans-second-div-wrap-one{
+  @apply font-bold text-2xl text-center;
+}
+.plans-second-div-wrap-two{
+  @apply text-gray-600 text-center py-5 mb-15;
+}
+.plans-second-div-wrap-three{
+  @apply my-5 grid grid-cols-1 md:grid-cols-3 gap-7 2xl:grid-cols-4;
+}
+.plans-second-div-wrap-four{
+  @apply bg-white border border-gray-100 rounded-lg shadow-lg;
+}
+.plans-second-div-wrap-five{
+  @apply bg-gray-100 text-center text-gray-600 font-extrabold text-xl rounded-t-lg p-4;
+}
+.plans-second-div-wrap-six{
+  @apply py-8 px-10;
+}
+.plans-second-div-wrap-seven{
+  @apply flex items-center justify-between;
+}
+.plans-second-div-wrap-eight{
+  @apply text-3xl font-bold;
+}
+.plans-second-div-wrap-nine{
+  @apply text-gray-500 font-semibold;
+}
+.plans-second-div-wrap-ten{
+  @apply mt-5 text-gray-400 font-semibold divide-y divide-gray-200;
+}
+.plans-second-div-wrap-eleven{
+  @apply flex justify-between items-center py-3;
+}
+.plans-second-div-wrap-twelve{
+  @apply flex justify-center;
+}
+.plans-second-div-wrap-thirteen{
+  @apply inline-flex items-center gap-2 bg-blue-500 text-white font-bold rounded-md px-4 py-2 w-max hover:bg-blue-600 my-5 mx-auto;
+}
+.plans-second-div-wrap-fourteen{
+  @apply text-xl font-extrabold;
+}
+
+
+
+.plan-modal-backdrop{
+  @apply fixed top-0 w-full h-full z-50 backdrop-brightness-50 backdrop-blur-lg justify-center items-center p-5 text-gray-600 font-nunito;
+}
+.plan-modal-con{
+  @apply w-lg p-8 rounded-xl bg-white;
+}
+.plan-modal-wrap-one{
+  @apply text-lg font-bold;
+}
+.plan-modal-wrap-two{
+  @apply text-sm text-gray-400;
+}
+.plan-modal-wrap-three{
+  @apply mt-8;
+}
+.plan-modal-wrap-four{
+  @apply border border-gray-300 outline-none w-full rounded-lg p-4 focus:border-blue-300 text-gray-600;
+}
+.plan-modal-wrap-five{
+  @apply text-gray-400 text-xs;
+}
+.plan-modal-wrap-six{
+  @apply border border-gray-100 bg-gray-200 select-none rounded-lg px-4 py-2 my-5;
+}
+.plan-modal-wrap-seven{
+  @apply text-xs;
+}
+.plan-modal-wrap-eight{
+  @apply font-semibold text-gray-500;
+}
+.plan-modal-wrap-nine{
+  @apply my-2;
+}
+.plan-modal-wrap-ten{
+  @apply font-bold text-sm;
+}
+.plan-modal-wrap-eleven{
+  @apply w-full outline-none rounded-lg p-3 bg-gray-200 text-gray-600 my-0.5;
+}
+.plan-modal-wrap-twelve{
+  @apply text-gray-400 text-sm;
+}
+.plan-modal-wrap-thirteen{
+  @apply my-5 flex justify-center;
+}
+.plan-modal-wrap-fourteen{
+  @apply font-bold text-white bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-600;
+}
+
+.transactions-second-div-con{
+  @apply my-15 xl:my-20;
+}
+.transactions-second-div-wrap-one{
+  @apply font-bold text-3xl text-gray-600;
+}
+.transactions-second-div-wrap-two{
+  @apply text-gray-400 py-3;
+}
+
+
+
+.withdrawals-second-div-con{
+  @apply mt-15 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 xl:gap-10;
+}
+.withdrawals-second-div-wrap-one{
+  @apply border border-gray-100 shadow p-5 rounded-xl;
+}
+.withdrawals-second-div-wrap-two{
+  @apply text-2xl font-bold;
+}
+.withdrawals-second-div-wrap-three{
+  @apply flex justify-between items-center py-5;
+}
+.withdrawals-second-div-wrap-four{
+  @apply text-3xl font-semibold font-sans;
+}
+.withdrawals-second-div-wrap-five{
+  @apply text-white font-bold text-2xl rounded-full p-2;
+}
+.withdrawals-second-div-wrap-six{
+  @apply flex items-center gap-1;
+}
+.withdrawals-second-div-wrap-seven{
+  @apply my-5 bg-indigo-500 text-white text-center font-bold p-2 rounded-lg hover:bg-indigo-700;
+}
+.withdrawals-second-div-wrap-eight{
+  @apply my-5 bg-orange-500 text-white text-center font-bold p-2 rounded-lg hover:bg-orange-700;
+}
+
+.withdrawals-third-div-con{
+  @apply my-10 md:my-15;
+}
+.withdrawals-third-div-wrap-one{
+  @apply md:flex items-center justify-between my-7;
+}
+.withdrawals-third-div-wrap-two{
+  @apply bg-indigo-500 px-4 py-2 rounded-lg font-bold text-white hover:bg-indigo-700 w-max ;
+}
+
+.withdrawals-modal-wrap-one{
+  @apply my-7;
+}
+.withdrawals-modal-wrap-two{
+  @apply flex space-x-4;
+}
+.withdrawals-modal-wrap-three{
+  @apply px-4 py-2 text-center text-orange-300 font-semibold select-none rounded-lg border border-orange-300 peer-checked:bg-orange-300 peer-checked:text-white transition-all;
+}
+.withdrawals-modal-wrap-four{
+  @apply px-4 py-2 text-center text-blue-400 select-none font-semibold rounded-lg border border-blue-400 peer-checked:bg-blue-400 peer-checked:text-white transition-all;
+}
+
+
+
+
+.referral-second-div-wrap-one{
+  @apply text-gray-400;
+}
+.referral-second-div-wrap-two{
+  @apply flex items-stretch my-7 w-full overflow-auto border border-gray-300 rounded-lg;
+}
+.referral-second-div-wrap-three{
+  @apply bg-gray-300 p-2;
+}
+.referral-second-div-wrap-four{
+  @apply p-2 whitespace-nowrap;
+}
+.referral-second-div-wrap-five{
+  @apply font-bold text-white bg-blue-400 flex justify-center gap-1.5 items-center p-2 rounded-lg hover:bg-blue-500;
+}
+.referral-second-div-alert{
+  @apply fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow z-50;
+}

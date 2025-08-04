@@ -20,4 +20,12 @@ class AuthController extends Controller
     public function forgotPassword()  {
         return view('auth.forgot-password');
     }
+
+    //registering the user
+    public function register(Request $request) {
+        //validation
+        $validated = $request->validate([
+            'name' => ''
+        ]);
+    }
 }

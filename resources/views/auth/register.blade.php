@@ -1,5 +1,5 @@
 <x-auth-layout>
-    <form action="" method="POST">
+    <form action="{{ route('register') }}" method="POST">
         @csrf
 
         <div class="auth-header">Create an Account</div>

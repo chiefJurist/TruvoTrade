@@ -34,6 +34,7 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('/login', 'showLogin')->name('show.login');
     Route::get('/register', 'showRegister')->name('show.register');
     Route::get('/forgot-password', 'forgotPassword')->name('forgot-password');
+    Route::post('register', 'register')->name('register');
 });
 
 Route::middleware('guest')->controller(TraderController::class)->group(function() {

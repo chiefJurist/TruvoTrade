@@ -13,10 +13,10 @@
 
         <div>
             <div class="auth-input-div">
-                <input type="text" name="firstname" value="{{ old('name') }}" required placeholder="First Name" class="auth-input">
+                <input type="text" name="first_name" value="{{ old('first_name') }}" required placeholder="First Name" class="auth-input">
             </div>
             <div class="auth-input-div">
-                <input type="text" name="lastname" value="{{ old('name') }}" required placeholder="Last Name" class="auth-input">
+                <input type="text" name="last_name" value="{{ old('last_name') }}" required placeholder="Last Name" class="auth-input">
             </div>
         </div>
         
@@ -26,26 +26,26 @@
 
         <div>
             <div class="auth-input-div">
-                <select id="countrySelect" name="country" required class="auth-input">
+                <select id="countrySelect" name="country" required class="auth-input" value="{{old('country')}}">
                     <option value="" disabled selected>Select your country</option>
                 </select>
             </div>
             <div class="auth-input-div">
-                <input type="tel" name="phone" id="phone-number" placeholder="phone number" class="auth-input">
+                <input type="tel" name="phone_number" id="phone-number" placeholder="phone number" class="auth-input" value="{{old('phone_number')}}">
             </div>
         </div>
 
         <div>
             <div class="auth-input-div">
-                <select name="gender" id="gender" required class="auth-input">
+                <select name="gender" id="gender" required class="auth-input" value="{{old('gender')}}">
                     <option value="" disabled selected>Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                     <option value="others">Others</option>
                 </select>
             </div>
             <div class="auth-input-div">
-                <input type="text" name="address" placeholder="address" class="auth-input">
+                <input type="text" name="address" placeholder="address" class="auth-input" value="{{old('address')}}">
             </div>
         </div>
 

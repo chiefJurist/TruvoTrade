@@ -468,14 +468,14 @@
             </a>
 
             <div class="trader-small-nav-link-header">EXTRAS</div>
-            <a href="" class="trader-small-nav-link">
-                <div>
-                    <span class="icon-[tabler--power] trader-small-nav-link-icon"></span>
-                </div>
-                <div>
-                    <span class="trader-small-nav-link-text">Log Out</span>
-                </div>
-            </a>
+                <form action="{{route('logout')}}" method="POST" class="trader-small-nav-link">
+                    <div>
+                        <span class="icon-[tabler--power] trader-small-nav-link-icon"></span>
+                    </div>
+                    <div>
+                        <span class="trader-small-nav-link-text">Log Out</span>
+                    </div>
+                </form>
 
             <div class="trader-small-nav-link-contact-btn-con">
                 <div>24/7 Support Available</div>

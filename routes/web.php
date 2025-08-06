@@ -12,7 +12,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('guest')->controller(HomepagesController::class)->group(function(){
+Route::controller(HomepagesController::class)->group(function(){
     Route::get('/about', 'about')->name('homepages.about');
     Route::get('/forex', 'forex')->name('homepages.forex');
     Route::get('/cryptos', 'cryptos')->name('homepages.cryptos');
@@ -40,9 +40,7 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('/verify-notice', 'verifyNotice')->name('verify.notice');
 });
 
-Route::middleware('auth')->controller(AuthController::class)->group(function(){
-    Route::post('/logout','logout')->name('logout');
-});
+Route::post('logout', action: [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->controller(TraderController::class)->group(function() {
     Route::get('/overview', 'overview')->name('trader.overview');

@@ -468,13 +468,17 @@
             </a>
 
             <div class="trader-small-nav-link-header">EXTRAS</div>
-                <form action="{{route('logout')}}" method="POST" class="trader-small-nav-link">
-                    <div>
-                        <span class="icon-[tabler--power] trader-small-nav-link-icon"></span>
-                    </div>
-                    <div>
-                        <span class="trader-small-nav-link-text">Log Out</span>
-                    </div>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    
+                    <button class="trader-small-nav-link">
+                        <div>
+                            <span class="icon-[tabler--power] trader-small-nav-link-icon"></span>
+                        </div>
+                        <div>
+                            <span class="trader-small-nav-link-text">Log Out</span>
+                        </div>
+                    </button>
                 </form>
 
             <div class="trader-small-nav-link-contact-btn-con">
@@ -571,14 +575,18 @@
                 <div id="traderExtrasBigHeader" class="trader-big-nav-link-header">EXTRAS</div>
                 <div id="traderExtrasBigDot" class="trader-big-nav-link-header-dot hidden">...</div>
                 <div id="extras">
-                    <a href="" class="trader-big-nav-link">
-                        <div>
-                            <span class="icon-[tabler--power] trader-big-nav-link-icon"></span>
-                        </div>
-                        <div>
-                            <span class="trader-big-nav-link-text">Log Out</span>
-                        </div>
-                    </a>
+                    <form action="{{route('logout')}}" method="POST">
+                        @csrf
+
+                        <button class="trader-big-nav-link">
+                            <div>
+                                <span class="icon-[tabler--power] trader-big-nav-link-icon"></span>
+                            </div>
+                            <div>
+                                <span class="trader-big-nav-link-text">Log Out</span>
+                            </div>
+                        </button>
+                    </form>
 
                     <div class="trader-big-nav-link-contact-btn-con">
                         <div>24/7 Support Available</div>

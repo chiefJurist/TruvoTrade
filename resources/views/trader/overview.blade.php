@@ -44,7 +44,7 @@
                         <img src="{{asset('img/user-2.png')}}" alt="user" class="overview-second-div-user-img">
                     </div>
                     <div>
-                        <div class="overview-second-div-salute">Hi, Conor</div>
+                        <div class="overview-second-div-salute">Hi, {{ucfirst(strtolower(auth()->user()->first_name))}}</div>
                         <div class="overview-second-div-salute-text">Here's a summary of your account. Have fun!</div>
                     </div>
                 </div>

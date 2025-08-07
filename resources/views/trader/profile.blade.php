@@ -55,32 +55,32 @@
                         <div class="profile-third-wrap-three">
                             <div>
                                 <label for="fullname" class="profile-third-wrap-four">Full Name</label>
-                                <input type="text" name="fullname" id="fullname" value="Conor Iwobi" readonly class="profile-third-wrap-five">
+                                <input type="text" name="fullname" id="fullname" value="{{auth()->user()->first_name}} {{auth()->user()->last_name}}" readonly class="profile-third-wrap-five">
                             </div>
 
                             <div>
                                 <label for="displayname" class="profile-third-wrap-four">Display Name</label>
-                                <input type="text" name="displayname" id="displayname" value="Conor" readonly class="profile-third-wrap-five">
+                                <input type="text" name="displayname" id="displayname" value="{{auth()->user()->first_name}}" readonly class="profile-third-wrap-five">
                             </div>
                             
                             <div>
                                 <label for="email" class="profile-third-wrap-four">Email</label>
-                                <input type="email" name="email" id="email" value="conoriwovi@gmail.com" readonly class="profile-third-wrap-five">
+                                <input type="email" name="email" id="email" value="{{auth()->user()->email}}" readonly class="profile-third-wrap-five">
                             </div>
 
                             <div>
                                 <label for="country" class="profile-third-wrap-four">Country</label>
-                                <input type="text" name="country" id="country" value="Nigeria" readonly class="profile-third-wrap-five">
+                                <input type="text" name="country" id="country" value="{{auth()->user()->country}}" readonly class="profile-third-wrap-five">
                             </div>
 
                             <div>
                                 <label for="phone" class="profile-third-wrap-four">Phone</label>
-                                <input type="tel" name="phone" id="phone" value="07010028679" class="profile-third-wrap-six">
+                                <input type="tel" name="phone" id="phone" value="{{auth()->user()->phone_number}}" class="profile-third-wrap-six">
                             </div>
 
                             <div>
                                 <label for="address" class="profile-third-wrap-four">Address</label>
-                                <input type="text" name="address" id="address" value="No. 21 Omila Road" class="profile-third-wrap-six">
+                                <input type="text" name="address" id="address" value="{{auth()->user()->address}}" class="profile-third-wrap-six">
                             </div>
                         </div>
 

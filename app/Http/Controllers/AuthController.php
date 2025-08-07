@@ -97,7 +97,10 @@ class AuthController extends Controller
             return back()->withErrors(['email' => 'Please verify your email before logging in.'])->withInput();
         }
 
-        Auth::login($user);
+        // Check if "remember me" was selected
+        $remember = $request->filled('remember');
+
+        Auth::login($user, $remember); // Pass $remember here
 
         return redirect()->route('trader.overview'); // Adjust this if needed
     }

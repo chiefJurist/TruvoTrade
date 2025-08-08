@@ -1,4 +1,13 @@
-<x-auth-layout>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('img/truvo_trades.png') }}" type="image/png">
+    <title>Truvo Trade</title>
+    @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+</head>
+<body>
     <div>
         <h2>Hello, {{ $user->first_name }}!</h2>
 
@@ -13,4 +22,5 @@
 
         <p>If you did not create this account, no action is required.</p>
     </div>
-</x-auth-layout>
+</body>
+</html>

@@ -7,12 +7,16 @@ use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect('/overview');
+    }
     return view('welcome');
 });
 
-Route::controller(HomepagesController::class)->group(function(){
+Route::middleware('guest')->controller(HomepagesController::class)->group(function(){
     Route::get('/about', 'about')->name('homepages.about');
     Route::get('/forex', 'forex')->name('homepages.forex');
     Route::get('/cryptos', 'cryptos')->name('homepages.cryptos');

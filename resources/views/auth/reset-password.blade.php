@@ -1,6 +1,6 @@
 <x-auth-layout>
     <div>
-        <h2 class="auth-sub-head-text">Reset Password</h2>
+        <div class="py-8 font-bold text-xl">Reset Password</div>
 
         @if (session('status'))
             <div>{{ session('status') }}</div>
@@ -29,13 +29,13 @@
             </div>
 
             <!-- New Password -->
-            <div class="mb-6">
+            <div class="relative w-full mb-6">
                 <input type="password" name="password" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 <label class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">New Password</label>
             </div>
 
             <!-- Confirm New Password -->
-            <div class="mb-6">
+            <div class="relative w-full mb-6">
                 <input type="password" name="password_confirmation" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 <label class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">Confirm Password</label>
             </div>

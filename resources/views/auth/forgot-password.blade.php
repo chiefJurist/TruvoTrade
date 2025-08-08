@@ -1,5 +1,9 @@
 <x-auth-layout>
-    <form action="" method="POST">
+    @if(session('status'))
+        <p style="color: green;">{{ session('status') }}</p>
+    @endif
+
+    <form action="{{ route('password.email') }}" method="POST">
         @csrf
 
         <div class="auth-header pt-20">Set Password</div>

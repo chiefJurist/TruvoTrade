@@ -75,7 +75,7 @@
                     <span class="icon-[tabler--info-circle]"></span>
                     <span>Verify KYC Information to activate withdrawals</span>
                 </div>
-                <a href="">
+                <a href="{{route('trader.kyc')}}">
                     <div class="overview-third-div-third">Verify KYC</div>
                 </a>
             </div>
@@ -84,7 +84,7 @@
                     <span class="icon-[tabler--info-circle]"></span>
                     <span>Update your account information from your profile to make withdrawals.</span>
                 </div>
-                <a href="">
+                <a href="{{route('trader.profile')}}">
                     <div class="overview-third-div-fifth">Update Profile</div>
                 </a>
             </div>

@@ -383,7 +383,9 @@
             <span>TruvoTrade</span>
         </div>
         <div>
-            <img src="{{ asset('img/user-1.png') }}" alt="user" class="trader-small-header-img">
+            <a href="{{route('trader.profile')}}">
+                <img src="{{ asset('img/user-1.png') }}" alt="user" class="trader-small-header-img">
+            </a>
         </div>
     </div>
 
@@ -607,7 +609,9 @@
                     <span class="icon-[material-symbols--menu-rounded]"></span>
                 </div>
                 <div>
-                    <img src="{{ asset('img/user-1.png') }}" alt="" class="trader-small-header-img">
+                    <a href="{{route('trader.profile')}}">
+                        <img src="{{ asset('img/user-1.png') }}" alt="" class="trader-small-header-img">
+                    </a>
                 </div>
             </div>
 

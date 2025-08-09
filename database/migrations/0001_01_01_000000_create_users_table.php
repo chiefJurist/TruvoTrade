@@ -27,6 +27,8 @@ return new class extends Migration
             $table->decimal('withdrawal', 15, 2)->default(0.00);
             $table->decimal('investments', 15, 2)->default(0.00);
             $table->decimal('profits', 15, 2)->default(0.00);
+            $table->decimal('token_balance', 15, 2)->default(0.00);
+            $table->decimal('token_profits', 15, 2)->default(0.00);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('verification_token')->nullable(); // for email confirmation
             $table->rememberToken();

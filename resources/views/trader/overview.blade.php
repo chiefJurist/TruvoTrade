@@ -229,7 +229,7 @@
                         </span>
                         <span class="font-bold">TOKEN BALANCE</span>
                     </div>
-                    <div class="overview-sixth-div-wrap-five">0 ELT</div>
+                    <div class="overview-sixth-div-wrap-five">{{ number_format((float)auth()->user()->token_balance,2) }} ELT</div>
                 </div>
                 <div>
                     <div class="overview-sixth-div-wrap-six button" onclick="toggleOverviewModal()">
@@ -244,9 +244,9 @@
                 <div>
                     <div class="overview-sixth-div-wrap-eight">
                         <img src="{{ asset('img/overview-img2.svg') }}" alt="" class="overview-sixth-div-wrap-nine">
-                        <span class="font-bold">TOKEN BALANCE</span>
+                        <span class="font-bold">TOTAL PROFIT</span>
                     </div>
-                    <div class="overview-sixth-div-wrap-ten">$0</div>
+                    <div class="overview-sixth-div-wrap-ten">${{ number_format((float)auth()->user()->token_profit,2) }}</div>
                 </div>
                 <div class="overview-sixth-div-wrap-eleven">
                     <span class="icon-[tabler--trending-up]"></span>

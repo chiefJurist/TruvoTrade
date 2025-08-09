@@ -33,6 +33,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'withdrawals',
         'investments',
         'profits',
+        'token_balance',
+        'token_profit',
     ];
 
     /**
@@ -62,6 +64,8 @@ class User extends Authenticatable implements MustVerifyEmail
             'withdrawals' => 'decimal:2',
             'investments' => 'decimal:2',
             'profits' => 'decimal:2',
+            'token_balance' => 'decimal:2',
+            'token_profit' => 'decimal:2',
         ];
     }
 }

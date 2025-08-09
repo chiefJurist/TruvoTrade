@@ -880,7 +880,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -923,7 +923,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -966,7 +966,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1009,7 +1009,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1052,7 +1052,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1095,7 +1095,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1138,7 +1138,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1181,7 +1181,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.
@@ -1240,7 +1240,7 @@
                 <div class="plan-modal-wrap-nine">
                     <div>
                         <label for="planBalance" class="plan-modal-wrap-ten">Account Balance (Available)</label><br>
-                        <input type="text" name="planBalance" value="$0" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
+                        <input type="text" name="planBalance" value="${{number_format((float)auth()->user()->balance,2) }}" readonly placeholder="Enter Amount" required class="plan-modal-wrap-eleven">
                     </div>
                     <div class="plan-modal-wrap-twelve">
                         This is your available account balance for investments.

@@ -174,7 +174,7 @@
                 <div>
                     <div class="overview-fifth-div-card-header">Available Balance</div>
                     <div class="overview-fifth-div-card-left">
-                        <span class="overview-fifth-div-card-balance">$0.00</span>
+                        <span class="overview-fifth-div-card-balance">${{number_format((float)auth()->user()->balance,2) }}</span>
                         <span class="overview-fifth-div-card-arrow">
                             <span class="icon-[tabler--arrow-up-left] text-green-400"></span>
                         </span>

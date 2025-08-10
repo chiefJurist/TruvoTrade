@@ -260,11 +260,16 @@
         {{-- seventh div --}}
         <div class="overview-seventh-div-con">
             <div class="overview-seventh-div-wrap-one">
-                <div class=" ">
-                    <img src="{{asset('img/overview-img4.png')}}" alt="bot" class="overview-seventh-div-img">
-                </div>
-                <div class="overview-seventh-div-wrap-two">Bot is not active</div>
-                <div>Please activate the bot to start trading</div>
+                @if(false)
+                    <div class=" ">
+                        <img src="{{asset('img/overview-img4.png')}}" alt="bot" class="overview-seventh-div-img">
+                    </div>
+                    <div class="overview-seventh-div-wrap-two">Bot is not active</div>
+                    <div>Please activate the bot to start trading</div>
+                @else
+                    <div class="font-bold text-2xl lg:text-4xl">Bot is Active</div>
+                    <div class="italic font-bold text-gray-400">Your profit will be displayed in the dashboard</div>
+                @endif
             </div>
         </div>
 

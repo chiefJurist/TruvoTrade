@@ -236,7 +236,9 @@
                         <span class="icon-[tabler--ticket]"></span>
                         <span>Load Tokens</span>
                     </div>
-                    <div class="overview-sixth-div-wrap-seven button">Purchase Tokens</div>
+                    <div class="overview-sixth-div-wrap-seven button" onclick="toggleOverviewTokenModal()">
+                        Purchase Tokens
+                    </div>
                 </div>
             </div>
 

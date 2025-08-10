@@ -160,6 +160,20 @@
         }
     }
 
+    //Plan Modal Five
+    window.toggleOverviewTokenModal = function () {
+        const modal = document.getElementById('overviewTokenModal');
+        let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
    //profile accounts display
    window.toggleProfileAccounts = function (){
         const buttons = document.getElementById('cryptoAndBank');
@@ -645,6 +659,73 @@
             </form>
         </div>
     </div>
+
+    {{-- Overview Token Modal --}}
+    <div id="overviewTokenModal" class="hidden plan-modal-backdrop">
+        <div class="plan-modal-con">
+            <form action="">
+                @csrf
+
+                <div class="authed-form-cancel-con" onclick="toggleOverviewTokenModal()">
+                    <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
+                </div>
+
+                <div class="plan-modal-wrap-one">Purchase Tokens</div>
+
+                <div class="plan-modal-wrap-two">You can purchase your tokens here.</div>
+
+                <div class="plan-modal-wrap-three">
+                    <select id="tokenPaymentAdrress" name="address" required class="profile-bank-modal-input">
+                        <option value="" disabled selected>Select Your Wallet Chain</option>
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum (ERC20)">Ethereum (ERC20)</option>
+                        <option value="Ethereum (BEP20)">Ethereum (BEP20)</option>
+                        <option value="USDT (BEP20)">USDT (BEP20)</option>
+                        <option value="USDT (TRC20)">USDT (TRC20)</option>
+                        <option value="Tron">Tron</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="XRP">XRP</option>
+                        <option value="USD Coin">USD Coin</option>
+                    </select>
+                </div>
+
+                <div class="relative w-full my-6">
+                    <input type="number" name="amount" id="token_amount" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                    <label for="email" class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">
+                        Enter Token Amount*
+                    </label>
+                </div>
+
+                <div class="relative w-full my-6">
+                    <input type="number" name="calculated_amount" id="token_calculated_amount" value="0" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required readonly/>
+                    <label for="email" class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">
+                        Calculated Amount($)
+                    </label>
+                </div>
+
+                <div class="text-red-400 font-mono text-sm">
+                    Note: 1 ELT Token = 50 USD
+                </div>
+
+                <div class="plan-modal-wrap-thirteen">
+                    <input type="submit" value="Proceed" class="plan-modal-wrap-fourteen button">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const amountInput = document.getElementById('token_amount');
+            const calculatedInput = document.getElementById('token_calculated_amount');
+
+            const TOKEN_PRICE = 50; // 1 Token = 50 USD
+
+            amountInput.addEventListener('input', function () {
+                let amount = parseFloat(amountInput.value) || 0; // Default to 0 if empty
+                calculatedInput.value = amount * TOKEN_PRICE;
+            });
+        });
+    </script>
 
     {{-- Profile Accounts Bank Modal --}}
     <div id="profileBankModal" class="hidden profile-bank-modal-backdrop">

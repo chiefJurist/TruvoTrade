@@ -28,8 +28,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'verification_token',
         'balance',
-        'transactions',
-        'deposits',
         'withdrawals',
         'investments',
         'profits',
@@ -59,13 +57,21 @@ class User extends Authenticatable implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'balance' => 'decimal:2',
-            'transactions' => 'decimal:2',
-            'deposits' => 'decimal:2',
             'withdrawals' => 'decimal:2',
             'investments' => 'decimal:2',
             'profits' => 'decimal:2',
             'token_balance' => 'decimal:2',
             'token_profit' => 'decimal:2',
         ];
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(\App\Models\Transaction::class);
+    }
+
+    public function deposits()
+    {
+        return $this->hasMany(\App\Models\Deposit::class);
     }
 }

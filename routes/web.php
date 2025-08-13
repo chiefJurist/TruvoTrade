@@ -77,7 +77,7 @@ Route::middleware('auth')->controller(WithdrawalController::class)->group(functi
 Route::middleware('auth')->controller(DepositController::class)->group(function(){
     Route::get('/deposits', 'index')->name('deposits.index');
     Route::get('/deposits/create', 'create')->name('deposits.create');
-    Route::get('/deposits/{deposit}', 'create')->name('deposits.show');
     Route::post('/deposits','store')->name('deposits.store');
+    Route::get('/deposits/{deposit}', 'show')->name('deposits.show');
     Route::delete('/deposits/{deposit}','destroy')->name('deposits.destroy');
 });

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Deposit;
+use App\Models\Transaction;
 
 class DepositController extends Controller
 {
@@ -32,5 +34,22 @@ class DepositController extends Controller
         $depositAddress = $addresses[$blockchain] ?? null;
 
         return view('deposits.create', compact('blockchain', 'amount', 'depositAddress'));
+    }
+
+    //store action
+    public function store(Request $request){
+        $validated = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'type' => 'required|string',
+            'status' => 'required|string',
+            'amount' => 'required|numeric',
+            'from' => 'nullable|string',
+            'hash' => 'nullable|string',
+            'date' => 'required|date',
+        ]);
+
+        Deposit::create($validated);
+
+        return redirect()->route('deposits.index')->with('success', 'Deposit created successfully.');
     }
 }

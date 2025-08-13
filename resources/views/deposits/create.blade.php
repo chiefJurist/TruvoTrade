@@ -25,9 +25,9 @@
                 <span class="icon-[tabler--copy]"></span>
                 <span>Copy</span>
             </div>
-        </div>
-        <div id="address-copy-toast" class="hidden fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow z-50">
-            Link copied to clipboard!
+            <div id="address-copy-toast" class="hidden fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow z-50">
+                Link copied to clipboard!
+            </div>
         </div>
 
         <div class="my-10">

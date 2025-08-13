@@ -370,15 +370,27 @@
 
     //copy referral link
     window.copyReferralLink = function () {
-    const text = document.getElementById("referral-link").innerText.trim();
-    navigator.clipboard.writeText(text).then(() => {
-        const toast = document.getElementById("copy-toast");
-        toast.classList.remove("hidden");
-        setTimeout(() => toast.classList.add("hidden"), 2000);
-    }).catch(err => {
-        alert("Failed to copy link: " + err);
-    });
-}
+        const text = document.getElementById("referral-link").innerText.trim();
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById("copy-toast");
+            toast.classList.remove("hidden");
+            setTimeout(() => toast.classList.add("hidden"), 2000);
+        }).catch(err => {
+            alert("Failed to copy link: " + err);
+        });
+    }
+
+    //copy address
+    window.copyDepositAddress = function () {
+        const text = document.getElementById("deposit-address").innerText.trim();
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById("address-copy-toast");
+            toast.classList.remove("hidden");
+            setTimeout(() => toast.classList.add("hidden"), 2000);
+        }).catch(err => {
+            alert("Failed to copy link: " + err);
+        });
+    }
 
 </script>
 <body class="bg-white relative">
@@ -1397,7 +1409,7 @@
     {{-- Deposit Modal --}}
     <div id="depositModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con animate-bounce-once">
-            <form action="">
+            <form action="{{route('deposits.create')}}" method="GET">
                 @csrf
 
                 <div class="authed-form-cancel-con" onclick="toggleDepositModal()">
@@ -1411,7 +1423,7 @@
                 <div class="font-bold text-sm mt-7">Payment method</div>
                 <div class="border border-blue-200 rounded-lg px-3 py-1">
                     <div class="text-gray-400 text-sm select-none">Select Payment Method*</div>
-                    <select required name="depositPaymentMethod" class="w-full outline-none text-gray-500">
+                    <select required name="blockchain" class="w-full outline-none text-gray-500">
                         <option value="BITCOIN">BITCOIN</option>
                         <option value="ETHEREUM">ETHEREUM (ERC20)</option>
                         <option value="SOLANA">SOLANA (SOL)</option>
@@ -1425,7 +1437,7 @@
 
                 <div class="overview-modal-div-wrap-five">
                     <div class="overview-modal-div-wrap-six">Enter Amount ($)</div>
-                    <input type="text" class="overview-modal-div-wrap-seven" required>
+                    <input type="number" name="amount" class="overview-modal-div-wrap-seven" required>
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Secure and safely deposit money into your account.

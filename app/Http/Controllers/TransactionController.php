@@ -12,6 +12,6 @@ class TransactionController extends Controller
     public function index() {
         $user = Auth::user();
         $transactions = Transaction::with('user')->where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(5);
-        return view('transactions.index', ['transactions'=>$transactions]);
+        return view('transactions.index', compact('transactions'));
     }
 }

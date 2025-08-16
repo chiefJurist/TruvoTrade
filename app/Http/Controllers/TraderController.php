@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Deposit;
 use Illuminate\Http\Request;
 
 class TraderController extends Controller
 {
     //overview action
     public function overview() {
-        return view('trader.overview');
+        //$totalDeposits = Deposit::where('status', 'successful')->sum('amount');
+        $totalDeposits = Deposit::where('status', 'successful')->sum('amount');
+        return view('trader.overview', compact('totalDeposits'));
     }
 
     //profile actions

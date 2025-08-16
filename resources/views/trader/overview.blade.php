@@ -189,7 +189,7 @@
                 <div>
                     <div class="overview-fifth-div-card-header">Total Deposit</div>
                     <div class="overview-fifth-div-card-left">
-                        <span class="overview-fifth-div-card-balance">${{ number_format((float)auth()->user()->deposits,2) }}</span>
+                        <span class="overview-fifth-div-card-balance">${{ number_format($totalDeposits, 2) }}</span>
                         <span class="overview-fifth-div-card-arrow">
                             <span class="icon-[tabler--arrow-up-left] text-green-400"></span>
                         </span>

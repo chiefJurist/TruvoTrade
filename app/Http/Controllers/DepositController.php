@@ -13,7 +13,7 @@ class DepositController extends Controller
     public function index() {
         $user = Auth::user();
         $deposits = Deposit::with('user')->where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(5);
-        return view('deposits.index', ['deposits'=>$deposits]);
+        return view('deposits.index', compact('deposits'));
     }
 
     //create action

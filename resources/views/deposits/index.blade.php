@@ -60,19 +60,26 @@
                             <th class="investment-fourth-div-wrap-six">Amount</th>
                             <th class="investment-fourth-div-wrap-six">Status</th>
                             <th class="investment-fourth-div-wrap-six">Date</th>
-                            <th class="investment-fourth-div-wrap-six">Link</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                            <td class="investment-fourth-div-wrap-six">Monday</td>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                        </tr>
+                        @if ($deposits->isEmpty())
+                            <tr>
+                                <td class="investment-fourth-div-wrap-six italic" colspan="4">No Data Available</td>
+                            </tr>
+                        @else
+                            @foreach ($deposits as $deposit)
+                                <tr>
+                                    <td class="investment-fourth-div-wrap-six">20496794540{{ $deposit->id }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $deposit->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $deposit->status }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $deposit->created_at }}</td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
+                {{$deposits->links()}}
             </div>
         </div>
     </div>

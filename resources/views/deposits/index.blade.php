@@ -74,6 +74,9 @@
                                     <td class="investment-fourth-div-wrap-six">${{ $deposit->amount }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $deposit->status }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $deposit->created_at->format('F j, Y g:i A') }}</td>
+                                    <td class="investment-fourth-div-wrap-six">
+                                        <a href="{{ route('deposits.show', $deposit->id) }}">View More</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif

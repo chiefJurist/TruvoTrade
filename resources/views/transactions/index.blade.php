@@ -25,25 +25,32 @@
                 <table class="investment-fourth-div-wrap-four">
                     <thead>
                         <tr class="investment-fourth-div-wrap-five">
-                            <th class="investment-fourth-div-wrap-six">Plan</th>
+                            <th class="investment-fourth-div-wrap-six">ID</th>
+                            <th class="investment-fourth-div-wrap-six">Type</th>
                             <th class="investment-fourth-div-wrap-six">Status</th>
-                            <th class="investment-fourth-div-wrap-six">From - To</th>
                             <th class="investment-fourth-div-wrap-six">Amount</th>
                             <th class="investment-fourth-div-wrap-six">Date</th>
-                            <th class="investment-fourth-div-wrap-six">Link</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                            <td class="investment-fourth-div-wrap-six">Monday</td>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                            <td class="investment-fourth-div-wrap-six">Monday</td>
-                        </tr>
+                        @if ($transactions->isEmpty())
+                            <tr>
+                                <td class="investment-fourth-div-wrap-six italic" colspan="4">No Data Available</td>
+                            </tr>
+                        @else
+                            @foreach ($transactions as $transaction)
+                                <tr>
+                                    <td class="investment-fourth-div-wrap-six">21796794540{{ $transaction->id }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $transaction->type }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $transaction->status }}</td>
+                                    <td class="investment-fourth-div-wrap-six">${{ $transaction->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $transaction->created_at->format('F j, Y g:i A') }}</td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
+                {{ $transactions->links() }}
             </div>
         </div>
     </div>

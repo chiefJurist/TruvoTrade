@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Transaction;
+use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
 {
     //index action
     public function index() {
-        return view('transactions.index');
+        $user = Auth::user();
+        $transactions = Transaction::with('user')->where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(5);
+        return view('transactions.index', ['transactions'=>$transactions]);
     }
 }

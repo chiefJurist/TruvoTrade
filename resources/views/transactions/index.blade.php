@@ -45,6 +45,9 @@
                                     <td class="investment-fourth-div-wrap-six">{{ $transaction->status }}</td>
                                     <td class="investment-fourth-div-wrap-six">${{ $transaction->amount }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $transaction->created_at->format('F j, Y g:i A') }}</td>
+                                    <td class="investment-fourth-div-wrap-six">
+                                        <a href="{{ route('transactions.show', $transaction->id) }}">View More</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif

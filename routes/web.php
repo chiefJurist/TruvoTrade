@@ -61,8 +61,8 @@ Route::middleware('auth')->controller(TraderController::class)->group(function()
 Route::middleware('auth')->controller(TransactionController::class)->group(function(){
     Route::get('/transactions', 'index')->name('transactions.index');
     Route::get('/transactions/create', 'create')->name('transactions.create');
-    Route::get('/transactions/{transaction}', 'create')->name('transactions.show');
     Route::post('/transactions','store')->name('transactions.store');
+    Route::get('/transactions/{transaction}', 'show')->name('transactions.show');
     Route::delete('/transactions/{transaction}','destroy')->name('transactions.destroy');
 });
 

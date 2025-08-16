@@ -38,9 +38,9 @@
         <div class="withdrawals-third-div-con">
             <div class="withdrawals-third-div-wrap-one">
                 <div>
-                    <div class="investment-fourth-div-wrap-one">Pending Deposits</div>
+                    <div class="investment-fourth-div-wrap-one">Deposits</div>
                     <div class="investment-fourth-div-wrap-two">
-                        List of Pending Deposits in your account
+                        List of Deposits in your account
                     </div>
                 </div>
                 <div>

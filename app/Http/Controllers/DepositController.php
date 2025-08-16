@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Deposit;
 use App\Models\Transaction;
+use Illuminate\Support\Facades\Auth;
 
 class DepositController extends Controller
 {
@@ -38,18 +39,47 @@ class DepositController extends Controller
 
     //store action
     public function store(Request $request){
+        $user = Auth::user();
+
         $validated = $request->validate([
-            'user_id' => 'required|exists:users,id',
-            'type' => 'required|string',
-            'status' => 'required|string',
-            'amount' => 'required|numeric',
-            'from' => 'nullable|string',
-            'hash' => 'nullable|string',
-            'date' => 'required|date',
+            'blockchain' => 'required|string|max:255',
+            'status' => 'required|string|max:255',
+            'amount' => 'required|numeric|min:0.01',
+            'from' => 'required|string|max:255',
+            'to' => 'required|string|max:255',
+            'hash' => 'required|string|max:255',
         ]);
 
-        Deposit::create($validated);
+        // Create deposit
+        Deposit::create([
+            'user_id' => $user->id,
+            'blockchain' => $validated['blockchain'],
+            'status' => $validated['status'],
+            'amount' => $validated['amount'],
+            'from' => $validated['from'],
+            'to' => $validated['to'],
+            'hash' => $validated['hash'],
+        ]);
 
-        return redirect()->route('deposits.index')->with('success', 'Deposit created successfully.');
+        // Create transaction
+        Transaction::create([
+            'user_id' => $user->id,
+            'type' => 'deposit',
+            'blockchain' => $validated['blockchain'],
+            'status' => $validated['status'],
+            'amount' => $validated['amount'],
+            'from' => $validated['from'],
+            'to' => $validated['to'],
+            'hash' => $validated['hash'],
+        ]);
+
+        return redirect()->route('deposits.index')->with('success', 'Deposit submitted successfully.');
+    }
+
+
+    //show action
+    public function show($id){
+        $deposit = Deposit::findOrFail($id);
+        return view('deposits.show', compact('deposit'));
     }
 }

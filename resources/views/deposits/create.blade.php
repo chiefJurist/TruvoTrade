@@ -1,15 +1,15 @@
 <x-trader-layout>
     <div class="p-6 bg-white rounded-lg shadow">
-        <form action="" method="POST">
+        <form action="{{ route('deposits.store') }}" method="POST">
             @csrf
 
             {{-- Hidden fields --}}
-            <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-            <input type="hidden" name="type" value="{{ $blockchain }}">
+            {{-- <input type="hidden" name="user_id" value="{{ auth()->id() }}"> --}}
+            <input type="hidden" name="blockchain" value="{{ $blockchain }}">
             <input type="hidden" name="status" value="pending">
+            <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="from" value="external transfer">
             <input type="hidden" name="to" value="{{ $depositAddress }}">
-            <input type="hidden" name="date" value="{{ now() }}">
 
             {{-- Display blockchain --}}
             <div class="bg-orange-100 px-6 py-3 rounded-lg mx-auto flex items-center gap-5 w-full lg:w-1/2 text-sm md:text-base">

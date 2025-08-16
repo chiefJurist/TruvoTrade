@@ -10,12 +10,12 @@ class Deposit extends Model
     //
     protected $fillable = [
         'user_id',
-        'type',
+        'blockchain',
         'status',
         'amount',
         'from',
+        'to',
         'hash',
-        'date',
     ];
 
     protected $casts = [

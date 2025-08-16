@@ -15,14 +15,12 @@ return new class extends Migration
             $table->id();
             // link to users
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-
-            $table->string('type', 50);        // e.g. Bitcoin, Ethereum, Solana
+            $table->string('blockchain', 50);        // e.g. Bitcoin, Ethereum, Solana
             $table->string('status', 50);      // e.g. pending, completed, failed
             $table->decimal('amount', 15, 2);
-            $table->string('from')->nullable(); // sender wallet / address or ref
-            $table->string('hash')->nullable(); // blockchain tx hash
-            $table->timestamp('date')->nullable();
-
+            $table->string('from'); // sender wallet / address or ref
+            $table->string('to');
+            $table->string('hash'); // blockchain tx hash
             $table->timestamps();
             $table->index(['user_id', 'status']);
         });

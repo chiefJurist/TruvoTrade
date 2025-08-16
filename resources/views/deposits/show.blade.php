@@ -4,11 +4,6 @@
 
         <div class="grid gap-4 sm:grid-cols-2">
             <div class="bg-gray-50 p-4 rounded-lg">
-                <p class="text-sm text-gray-500">Type</p>
-                <p class="text-lg font-semibold text-gray-800">Deposit</p>
-            </div>
-
-            <div class="bg-gray-50 p-4 rounded-lg">
                 <p class="text-sm text-gray-500">Blockchain</p>
                 <p class="text-lg font-semibold text-gray-800">{{ ucfirst($deposit->blockchain) }}</p>
             </div>

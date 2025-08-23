@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomepagesController;
@@ -80,4 +81,8 @@ Route::middleware('auth')->controller(DepositController::class)->group(function(
     Route::post('/deposits','store')->name('deposits.store');
     Route::get('/deposits/{deposit}', 'show')->name('deposits.show');
     Route::delete('/deposits/{deposit}','destroy')->name('deposits.destroy');
+});
+
+Route::middleware('auth')->controller(AccountController::class)->group(function () {
+    Route::get('/accounts', 'index')->name('accounts.index');
 });

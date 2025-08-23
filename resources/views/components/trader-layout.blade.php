@@ -545,6 +545,14 @@
                         <span class="trader-big-nav-link-text">My Profile</span>
                     </div>
                 </a>
+                <a href="{{ route('accounts.index') }}" id="accountsNav" class="trader-big-nav-link {{ request()->routeIs('accounts.index') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                    <div>
+                        <span class="icon-[tabler--building-bank] trader-big-nav-link-icon"></span>
+                    </div>
+                    <div id="traderProfileText">
+                        <span class="trader-big-nav-link-text">My Accounts</span>
+                    </div>
+                </a>
 
                 <div id="traderAppBigHeader" class="trader-big-nav-link-header">APPS</div>
                 <div id="traderAppBigDot" class="trader-big-nav-link-header-dot hidden">...</div>

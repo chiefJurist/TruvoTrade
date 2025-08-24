@@ -55,6 +55,8 @@
         const extrasDot = document.getElementById('traderExtrasBigDot');
         const overview = document.getElementById('traderOverviewText');
         const profile = document.getElementById('traderProfileText');
+        const accounts = document.getElementById('traderAccountsText');
+        const security = document.getElementById('traderSecurityText');
         const investment = document.getElementById('traderInvestmentText');
         const plans = document.getElementById('traderPlansText');
         const transactions = document.getElementById('traderTransactionsText');
@@ -64,6 +66,8 @@
         const extras = document.getElementById('extras');
         const overviewNav = document.getElementById('overviewNav');
         const profileNav = document.getElementById('profileNav');
+        const accountsNav = document.getElementById('accountsNav');
+        const securityNav = document.getElementById('securityNav');
         const investmentNav = document.getElementById('investmentNav');
         const plansNav = document.getElementById('plansNav');
         const transactionsNav = document.getElementById('transactionsNav');
@@ -93,6 +97,8 @@
             extrasDot.classList.remove('hidden');
             overview.classList.add('hidden');
             profile.classList.add('hidden');
+            accounts.classList.add('hidden');
+            security.classList.add('hidden');
             investment.classList.add('hidden');
             plans.classList.add('hidden');
             transactions.classList.add('hidden');
@@ -102,6 +108,8 @@
             extras.classList.add('hidden');
             overviewNav.classList.add('justify-center');
             profileNav.classList.add('justify-center');
+            accountsNav.classList.add('justify-center');
+            securityNav.classList.add('justify-center');
             investmentNav.classList.add('justify-center');
             plansNav.classList.add('justify-center');
             transactionsNav.classList.add('justify-center');
@@ -127,6 +135,8 @@
             extrasDot.classList.add('hidden');
             overview.classList.remove('hidden');
             profile.classList.remove('hidden');
+            accounts.classList.remove('hidden');
+            security.classList.remove('hidden');
             investment.classList.remove('hidden');
             plans.classList.remove('hidden');
             transactions.classList.remove('hidden');
@@ -136,6 +146,8 @@
             extras.classList.remove('hidden');
             overviewNav.classList.remove('justify-center');
             profileNav.classList.remove('justify-center');
+            accountsNav.classList.remove('justify-center');
+            securityNav.classList.remove('justify-center');
             investmentNav.classList.remove('justify-center');
             plansNav.classList.remove('justify-center');
             transactionsNav.classList.remove('justify-center');
@@ -443,6 +455,24 @@
                 </div>
             </a>
 
+            <a href="{{ route('accounts.index') }}" class="trader-small-nav-link {{ request()->routeIs('accounts.index') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <div>
+                    <span class="icon-[tabler--building-bank] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">My Accounts</span>
+                </div>
+            </a>
+             <a href="{{ route('trader.security') }}" class="trader-small-nav-link {{ request()->routeIs('trader.security') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <div>
+                    <span class="icon-[tabler--lock] trader-small-nav-link-icon"></span>
+                </div>
+                <div>
+                    <span class="trader-small-nav-link-text">Security</span>
+                </div>
+            </a>
+
+
             <div class="trader-small-nav-link-header">APPS</div>
             <a href="{{ route('trader.investment') }}" class="trader-small-nav-link {{ request()->routeIs('trader.investment') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
@@ -549,8 +579,16 @@
                     <div>
                         <span class="icon-[tabler--building-bank] trader-big-nav-link-icon"></span>
                     </div>
-                    <div id="traderProfileText">
+                    <div id="traderAccountsText">
                         <span class="trader-big-nav-link-text">My Accounts</span>
+                    </div>
+                </a>
+                <a href="{{ route('trader.security') }}" id="securityNav" class="trader-big-nav-link {{ request()->routeIs('trader.security') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                    <div>
+                        <span class="icon-[tabler--lock] trader-big-nav-link-icon"></span>
+                    </div>
+                    <div id="traderSecurityText">
+                        <span class="trader-big-nav-link-text">Security</span>
                     </div>
                 </a>
 

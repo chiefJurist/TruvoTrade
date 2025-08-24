@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomepagesController;
+use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WithdrawalController;
@@ -53,6 +54,7 @@ Route::post('logout', action: [AuthController::class, 'logout'])->name('logout')
 Route::middleware('auth')->controller(TraderController::class)->group(function() {
     Route::get('/overview', 'overview')->name('trader.overview');
     Route::get('/profile', 'profile')->name('trader.profile');
+    Route::get('/security', 'security')->name('trader.security');
     Route::get('/investment', 'investment')->name('trader.investment');
     Route::get('/plans', 'plans')->name('trader.plans');
     Route::get('/referrals', 'referrals')->name('trader.referrals');

@@ -20,6 +20,11 @@ class TraderController extends Controller
         return view('trader.profile', compact('section'));
     }
 
+    //security action
+    public function security() {
+        return view("trader.security");
+    }
+
     //investment action
     public function investment() {
         return view('trader.investment');

@@ -16,8 +16,7 @@ class TraderController extends Controller
 
     //profile actions
     public function profile(Request $request) {
-        $section = $request->query('section', 'trader.profile'); // Defaults to 'profile'
-        return view('trader.profile', compact('section'));
+        return view('trader.profile');
     }
 
     //security action

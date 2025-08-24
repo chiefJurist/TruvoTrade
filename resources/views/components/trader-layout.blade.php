@@ -789,8 +789,11 @@
     <div id="profileBankModal" class="hidden profile-bank-modal-backdrop">
         <div class="profile-bank-modal-sizer">
             <div class="profile-bank-modal-con">
-                <form action="">
+                <form action="{{ Route('accounts.store') }}" method="POST">
                     @csrf
+
+                    {{-- Hidden fields --}}
+                    <input type="hidden" name="type" value="Bank">
 
                     <div class="authed-form-cancel-con" onclick="toggleProfileBankModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -807,11 +810,11 @@
                         </div>
                         <div>
                             <span>
-                                <input type="radio" name="bank-type" id="personalBank">
+                                <input type="radio" name="account_type" id="personalBank">
                                 <span class="profile-bank-modal-wrap-five">Personal</span>
                             </span>
                             <span>
-                                <input type="radio" name="bank-type" id="businessBank">
+                                <input type="radio" name="account_type" id="businessBank">
                                 <span class="profile-bank-modal-wrap-five">Business</span>
                             </span>
                         </div>
@@ -823,21 +826,21 @@
                                 <span>Acount Name</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="account-name" placeholder="Your Account Name" class="profile-bank-modal-input" required>
+                            <input type="text" name="account_name" placeholder="Your Account Name" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Acount Number</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="number" name="account-number" placeholder="eg. 094567453712" class="profile-bank-modal-input">
+                            <input type="number" name="account_number" placeholder="eg. 094567453712" class="profile-bank-modal-input">
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Bank Country</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <select id="countrySelect" name="country" required class="profile-bank-modal-input">
+                            <select id="countrySelect" name="bank_country" required class="profile-bank-modal-input">
                                 <option value="" disabled selected>Select your country</option>
                             </select>
                         </div>
@@ -846,55 +849,55 @@
                                 <span>Bank Currency</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="bank-currency" placeholder="Enter Currency Name" class="profile-bank-modal-input" required>
+                            <input type="text" name="bank_currency" placeholder="Enter Currency Name" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Bank Name</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="bank-name" placeholder="Your Bank Name" class="profile-bank-modal-input" required>
+                            <input type="text" name="bank_name" placeholder="Your Bank Name" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Branch Name</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="branch-name" placeholder="Name of Branch" class="profile-bank-modal-input" required>
+                            <input type="text" name="branch_name" placeholder="Name of Branch" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Sort Code</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="sort-code" placeholder="Bank Sort Code" class="profile-bank-modal-input" required>
+                            <input type="text" name="sort_code" placeholder="Bank Sort Code" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Routing Number</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="routing-number" placeholder="Routing Number" class="profile-bank-modal-input" required>
+                            <input type="text" name="routing_number" placeholder="Routing Number" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>Swift Code / BIC</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="swift-code" placeholder="Bank Swift / BIC Code" class="profile-bank-modal-input" required>
+                            <input type="text" name="swift_code" placeholder="Bank Swift / BIC Code" class="profile-bank-modal-input" required>
                         </div>
                         <div>
                             <div class="profile-bank-modal-wrap-four">
                                 <span>IBAN Number</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="iban-number" placeholder="Bank IBAN Number" class="profile-bank-modal-input" required>
+                            <input type="text" name="iban_number" placeholder="Bank IBAN Number" class="profile-bank-modal-input" required>
                         </div>
                         <div class="md:col-span-2">
                             <div class="profile-bank-modal-wrap-four">
                                 Label of account (Optional)
                             </div>
-                            <input type="text" name="label" placeholder="eg. Personal" class="profile-bank-modal-input" required>
+                            <input type="text" name="label_of_account" placeholder="eg. Personal" class="profile-bank-modal-input" required>
                         </div>
                     </div>
 
@@ -914,8 +917,11 @@
     <div id="profileCryptoModal" class="hidden profile-bank-modal-backdrop">
         <div class="profile-bank-modal-sizer">
             <div class="profile-bank-modal-con">
-                <form action="">
+                <form action="{{ Route('accounts.store') }}" method="POST">
                     @csrf
+
+                    {{-- Hidden fields --}}
+                    <input type="hidden" name="type" value="Crypto">
 
                     <div class="authed-form-cancel-con" onclick="toggleProfileCryptoModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -931,7 +937,7 @@
                                 <span>Wallet Name</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <select id="addressSelect" name="address" required class="profile-bank-modal-input">
+                            <select id="addressSelect" name="wallet_chain" required class="profile-bank-modal-input">
                                 <option value="" disabled selected>Select Your Wallet Chain</option>
                                 <option value="Bitcoin">Bitcoin</option>
                                 <option value="Ethereum (ERC20)">Ethereum (ERC20)</option>
@@ -949,7 +955,7 @@
                                 <span>Wallet Address</span>
                                 <span class="profile-bank-modal-required">*</span>
                             </div>
-                            <input type="text" name="account-name"  class="profile-bank-modal-input" required placeholder="eg. GCSWJRVBEYSXO4U35DYWV6MZGLEVA3NRHNXPVWFTDR2J7XKM5IJ5IGB6">
+                            <input type="text" name="wallet_address"  class="profile-bank-modal-input" required placeholder="eg. GCSWJRVBEYSXO4U35DYWV6MZGLEVA3NRHNXPVWFTDR2J7XKM5IJ5IGB6">
                         </div>
                     </div>
 
@@ -959,9 +965,9 @@
 
                     <div class="profile-crypto-modal-wrap-four">
                         <div class="profile-bank-modal-wrap-four">
-                            Label of account (Optional)
+                            Label of account
                         </div>
-                        <input type="text" name="label" placeholder="eg. Personal" class="profile-bank-modal-input" required>
+                        <input type="text" name="label_of_account" placeholder="eg. Personal" class="profile-bank-modal-input" required>
                     </div>
 
                     <div class="profile-bank-modal-wrap-six">

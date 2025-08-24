@@ -87,4 +87,5 @@ Route::middleware('auth')->controller(DepositController::class)->group(function(
 
 Route::middleware('auth')->controller(AccountController::class)->group(function () {
     Route::get('/accounts', 'index')->name('accounts.index');
+    Route::post('/accounts','store')->name('accounts.store');
 });

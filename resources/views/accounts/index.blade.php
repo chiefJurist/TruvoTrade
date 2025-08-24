@@ -3,7 +3,7 @@
         {{-- first div --}}
         <div class="profile-first-div-con">
             <div class="profile-first-div-wrap-one">
-                <div class="profile-first-div-wrap-two">Profile</div>
+                <div class="profile-first-div-wrap-two">Accounts</div>
                 <div class="profile-first-div-wrap-three">
                     <span>Dashboard</span>
                     <span class="icon-[ph--dot] profile-first-div-wrap-four"></span>
@@ -17,6 +17,14 @@
 
         <div class="profile-second-and-third-div-con">
             {{-- second div --}}
+            <div class="profile-second-div-con">
+                <div>
+                    <span class="icon-[tabler--building-bank] profile-second-div-wrap-two"></span>
+                </div>
+                <div class="profile-second-div-wrap-three">Accounts</div>
+            </div>
+
+            {{-- third div --}}
             <div class="profile-third-div-con">
                     <div class="profile-third-wrap-nine">
                         <div class="profile-third-wrap-ten">

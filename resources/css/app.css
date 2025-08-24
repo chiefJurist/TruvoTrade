@@ -744,10 +744,7 @@ td{
 }
 
 .profile-second-div-con{
-  @apply flex items-center text-gray-600 my-5;
-}
-.profile-second-div-wrap-one{
-  @apply font-bold flex items-center gap-2 p-4 border-b-2 ;
+  @apply font-bold flex items-center gap-2 p-4 border-b-2 border-blue-600 text-blue-600 w-fit;
 }
 .profile-second-div-wrap-two{
   @apply font-bold text-lg;

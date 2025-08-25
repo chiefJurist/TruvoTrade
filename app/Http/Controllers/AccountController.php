@@ -32,7 +32,7 @@ class AccountController extends Controller
                 'routing_number' => 'required|string|max:50', // FIX
                 'swift_code' => 'required|string|max:255',
                 'iban_number' => 'required|string|max:50', // FIX
-                'label_of_account'=> 'nullable|string|max:255',
+                'label_of_account'=> 'required|distinct|string|max:255',
             ]);
         } else {
             // Crypto

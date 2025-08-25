@@ -902,21 +902,12 @@
                     </div>
 
                     <div class="profile-bank-modal-wrap-six">
-                        You can easily identify using this. The label will auto generate if you leave blank.
+                        You can easily identify using this. Two withdrawal methods cannot have one label.
                     </div>
 
                     <div class="profile-bank-modal-wrap-seven">
                         <input type="submit" value="Add Account" class="profile-bank-modal-wrap-eight button">
                     </div>
-
-                    <!-- Display validation or session errors -->
-                    @if ($errors->any())
-                        <div>
-                            @foreach ($errors->all() as $error)
-                                <p>{{ $error }}</p>
-                            @endforeach
-                        </div>
-                    @endif
                 </form>
             </div>
         </div>
@@ -980,7 +971,7 @@
                     </div>
 
                     <div class="profile-bank-modal-wrap-six">
-                        You can easily identify using this. The label will auto generate if you leave blank.
+                        You can easily identify using this. Two withdrawal methods cannot have one label.
                     </div>
 
                     <div class="profile-bank-modal-wrap-seven profile-crypto-modal-wrap-five">

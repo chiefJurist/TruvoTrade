@@ -53,6 +53,15 @@
             {{-- Submit Button --}}
             <button class="bg-orange-400 font-bold text-white px-4 py-2 rounded-md block mx-auto">Submit Payment</button>
 
+            <!-- Display validation or session errors -->
+            @if ($errors->any())
+                <div>
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
+
             <div class="mt-4 text-orange-300 font-bold">
                 <a href="{{ route('deposits.index') }}" class="button">Back to Deposits</a>
             </div>

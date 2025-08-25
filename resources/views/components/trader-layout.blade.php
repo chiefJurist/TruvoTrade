@@ -794,6 +794,8 @@
 
                     {{-- Hidden fields --}}
                     <input type="hidden" name="type" value="Bank">
+                    <input type="hidden" name="wallet_chain" value="none">
+                    <input type="hidden" name="wallet_address" value="none">
 
                     <div class="authed-form-cancel-con" onclick="toggleProfileBankModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -908,6 +910,15 @@
                     <div class="profile-bank-modal-wrap-seven">
                         <input type="submit" value="Add Account" class="profile-bank-modal-wrap-eight button">
                     </div>
+
+                    <!-- Display validation or session errors -->
+                    @if ($errors->any())
+                        <div>
+                            @foreach ($errors->all() as $error)
+                                <p>{{ $error }}</p>
+                            @endforeach
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>
@@ -921,7 +932,18 @@
                     @csrf
 
                     {{-- Hidden fields --}}
-                    <input type="hidden" name="type" value="Crypto">
+                    <input type="hidden" name="type" value="none">
+                    <input type="hidden" name="account_type" value="none">
+                    <input type="hidden" name="account_name" value="none">
+                    <input type="hidden" name="account_number" value="none">
+                    <input type="hidden" name="bank_country" value="none">
+                    <input type="hidden" name="bank_currency" value="none">
+                    <input type="hidden" name="bank_name" value="none">
+                    <input type="hidden" name="branch_name" value="none">
+                    <input type="hidden" name="sort_code" value="none">
+                    <input type="hidden" name="routing_number" value="000">
+                    <input type="hidden" name="swift_code" value="none">
+                    <input type="hidden" name="iban_number" value="000">
 
                     <div class="authed-form-cancel-con" onclick="toggleProfileCryptoModal()">
                         <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -991,6 +1013,15 @@
                             Caution: You will lose your funds if your wallet address is wrong or you don't have access.
                         </span>
                     </div>
+
+                    <!-- Display validation or session errors -->
+                    @if ($errors->any())
+                        <div>
+                            @foreach ($errors->all() as $error)
+                                <p>{{ $error }}</p>
+                            @endforeach
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>

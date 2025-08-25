@@ -24,11 +24,11 @@ return new class extends Migration
             $table->string('bank_currency')->nullable();
             $table->string('bank_name')->nullable();
             $table->string('branch_name')->nullable();
-            $table->string('sort_code', 30)->nullable();
-            $table->float('routing_number',30)->nullable();
-            $table->string('swift_code',30)->nullable();
-            $table->float('iban_number',30)->nullable();
-            $table->string('wallet_name')->nullable();
+            $table->string('sort_code')->nullable();
+            $table->string('routing_number')->nullable();
+            $table->string('swift_code')->nullable();
+            $table->string('iban_number')->nullable();
+            $table->string('wallet_chain')->nullable();
             $table->string('wallet_address')->nullable();
             $table->string('label_of_account')->nullable();
         });

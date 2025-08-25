@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class AccountController extends Controller
 {
@@ -32,7 +33,14 @@ class AccountController extends Controller
                 'routing_number' => 'required|string|max:50', // FIX
                 'swift_code' => 'required|string|max:255',
                 'iban_number' => 'required|string|max:50', // FIX
-                'label_of_account'=> 'required|distinct|string|max:255',
+                'label_of_account'=> [
+                    'required',
+                    'string',
+                    'max:255',
+                    Rule::unique('accounts', 'label_of_account')->where(function ($query) use ($request) {
+                        return $query->where('user_id', Auth::user()->id);
+                    }),
+                ],
             ]);
         } else {
             // Crypto
@@ -40,7 +48,14 @@ class AccountController extends Controller
                 'type'=> 'required|string|max:255',
                 'wallet_chain'=> 'required|string|max:255',
                 'wallet_address'=> 'required|string|max:255',
-                'label_of_account'=> 'nullable|string|max:255',
+                'label_of_account'=> [
+                    'required',
+                    'string',
+                    'max:255',
+                    Rule::unique('accounts', 'label_of_account')->where(function ($query) use ($request) {
+                        return $query->where('user_id', Auth::user()->id);
+                    }),
+                ],
             ]);
         }
 

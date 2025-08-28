@@ -88,4 +88,6 @@ Route::middleware('auth')->controller(DepositController::class)->group(function(
 Route::middleware('auth')->controller(AccountController::class)->group(function () {
     Route::get('/accounts', 'index')->name('accounts.index');
     Route::post('/accounts','store')->name('accounts.store');
+    Route::get('/accounts/{accounts}', 'show')->name('accounts.show');
+    Route::post('/accounts/{accounts}','destroy')->name('accounts.destroy');
 });

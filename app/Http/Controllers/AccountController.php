@@ -11,7 +11,13 @@ class AccountController extends Controller
 {
     //index action
     public function index() {
-        return view('accounts.index');
+        $user = Auth::user();
+        $accounts = Account::with("user")
+            ->where("user_id", $user->id)
+            ->orderBy("created_at")
+            ->get();
+
+        return view('accounts.index', compact('accounts'));
     }
 
     //store action
@@ -68,4 +74,14 @@ class AccountController extends Controller
         return redirect()->route('accounts.index')->with('success','Account Created Successfully');
     }
 
+    //show function 
+    public function show($id) {
+        //
+        $account = Account::findOrFail($id);
+    }
+
+    //Destroy Function
+    public function destroy(Account $account){
+        //
+    }
 }

@@ -76,7 +76,10 @@
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <a href="{{ Route('accounts.show', $account->id ) }}" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Details</a>
-                                        <a href="" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</a>
+                                        <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                                            @csrf
+                                            <button type="submit" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</button>
+                                        </form>
                                     </div>
                                 </div>
                             @else
@@ -96,7 +99,10 @@
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <a href="{{ Route('accounts.show', $account->id ) }}" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Details</a>
-                                        <a href="" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</a>
+                                        <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                                            @csrf
+                                            <button type="submit" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</button>
+                                        </form>
                                     </div>
                                 </div>
                             @endif

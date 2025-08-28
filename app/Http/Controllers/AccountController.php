@@ -82,7 +82,10 @@ class AccountController extends Controller
     }
 
     //Destroy Function
-    public function destroy(Account $account){
+    public function destroy($id){
         //
+        $account = Account::findOrFail($id);
+        $account->delete();
+        return redirect()->route('accounts.index')->with('success','Account Deleted Successfully');
     }
 }

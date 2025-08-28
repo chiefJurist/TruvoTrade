@@ -78,6 +78,7 @@ class AccountController extends Controller
     public function show($id) {
         //
         $account = Account::findOrFail($id);
+        return view('accounts.show', compact('account'));
     }
 
     //Destroy Function

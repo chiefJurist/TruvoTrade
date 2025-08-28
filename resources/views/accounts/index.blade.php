@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <a href="" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Edit</a>
+                                        <a href="{{ Route('accounts.show', $account->id ) }}" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Details</a>
                                         <a href="" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</a>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <a href="" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Edit</a>
+                                        <a href="{{ Route('accounts.show', $account->id ) }}" class="px-5 py-2 border border-purple-300 hover:bg-purple-300 text-purple-600 rounded-lg">Details</a>
                                         <a href="" class="px-5 p-2 border border-red-300 hover:bg-red-300 text-red-600 rounded-lg">Delete Account</a>
                                     </div>
                                 </div>

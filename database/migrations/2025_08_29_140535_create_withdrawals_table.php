@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('withdrawals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->decimal('amount',15,2)->nullable();
+            $table->string('method')->nullable();
+            $table->string('account')->nullable();
         });
     }
 

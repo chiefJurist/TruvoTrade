@@ -72,9 +72,9 @@ Route::middleware('auth')->controller(TransactionController::class)->group(funct
 Route::middleware('auth')->controller(WithdrawalController::class)->group(function(){
     Route::get('/withdrawals', 'index')->name('withdrawals.index');
     Route::get('/withdrawals/create', 'create')->name('withdrawals.create');
-    Route::get('/withdrawals/{withdrawal}', 'create')->name('withdrawals.show');
     Route::post('/withdrawals','store')->name('withdrawals.store');
-    Route::delete('/withdrawals/{withdrawal}','destroy')->name('withdrawals.destroy');
+    // Route::get('/withdrawals/{withdrawal}', 'create')->name('withdrawals.show');
+    // Route::delete('/withdrawals/{withdrawal}','destroy')->name('withdrawals.destroy');
 });
 
 Route::middleware('auth')->controller(DepositController::class)->group(function(){

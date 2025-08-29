@@ -1352,7 +1352,7 @@
     {{-- Withdrawal Modal --}}
     <div id="withdrawalModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con animate-bounce-once">
-            <form action="">
+            <form action="{{ Route('withdrawals.create') }}" method="GET">
                 @csrf
 
                 <div class="authed-form-cancel-con" onclick="toggleWithdrawalModal()">
@@ -1364,7 +1364,7 @@
                 <div class="plan-modal-wrap-two">Withdraw funds from your account directly.</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount ($)" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" placeholder="Enter Amount ($)" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1374,7 +1374,7 @@
                     <div class="plan-modal-wrap-ten">Select Withdrawal Method</div>
                     <div class="withdrawals-modal-wrap-two">
                         <label class="cursor-pointer">
-                            <input type="radio" name="payment_method" value="crypto" class="peer hidden" checked>
+                            <input type="radio" name="method" value="crypto" class="peer hidden" checked>
                             <div class="withdrawals-modal-wrap-three">
                                 <span class="icon-[tabler--coins]"></span>
                                 <span>Crypto Wallet</span>
@@ -1382,7 +1382,7 @@
                         </label>
 
                         <label class="cursor-pointer">
-                            <input type="radio" name="payment_method" value="bank" class="peer hidden">
+                            <input type="radio" name="method" value="bank" class="peer hidden">
                             <div class="withdrawals-modal-wrap-four">
                                 <span class="icon-[tabler--building-bank]"></span>
                                 <span>Bank Account</span>

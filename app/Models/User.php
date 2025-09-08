@@ -28,11 +28,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'verification_token',
         'balance',
-        'withdrawals',
-        'investments',
-        'profits',
-        'token_balance',
-        'token_profit',
     ];
 
     /**

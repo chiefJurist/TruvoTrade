@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('amount',15,2)->nullable();
             $table->string('method')->nullable();
             $table->string('account')->nullable();
+            $table->string('status')->nullable();
         });
     }
 

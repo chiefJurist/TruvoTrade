@@ -13,6 +13,7 @@
             {{-- Hidden inputs (from modal) --}}
             <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="method" value="{{ $method }}">
+            <input type="hidden" name="status" value="pending">
 
             {{-- Show withdrawal amount --}}
             <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg text-center">
@@ -30,7 +31,7 @@
                         <label class="cursor-pointer block">
                             <input 
                                 type="radio" 
-                                name="account_id" 
+                                name="account" 
                                 value="{{ $account->id }}" 
                                 class="peer hidden"
                                 required
@@ -66,6 +67,19 @@
                 <button type="submit" class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 button">
                     Confirm Withdrawal
                 </button>
+            </div>
+
+            <!-- Display validation or session errors -->
+            @if ($errors->any())
+                <div class="text-red-500">
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
+
+            <div class="mt-4 text-orange-300 font-bold">
+                <a href="{{ route('deposits.index') }}" class="button">Back to Deposits</a>
             </div>
         </form>
     </div>

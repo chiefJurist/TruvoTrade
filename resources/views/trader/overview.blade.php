@@ -84,8 +84,8 @@
                     <span class="icon-[tabler--info-circle]"></span>
                     <span>Update your account information from your profile to make withdrawals.</span>
                 </div>
-                <a href="{{route('trader.profile')}}">
-                    <div class="overview-third-div-fifth">Update Profile</div>
+                <a href="{{route('accounts.index')}}">
+                    <div class="overview-third-div-fifth">Update Account</div>
                 </a>
             </div>
         </div>

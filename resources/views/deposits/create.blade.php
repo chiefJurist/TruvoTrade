@@ -55,7 +55,7 @@
 
             <!-- Display validation or session errors -->
             @if ($errors->any())
-                <div>
+                <div class="text-red-500">
                     @foreach ($errors->all() as $error)
                         <p>{{ $error }}</p>
                     @endforeach

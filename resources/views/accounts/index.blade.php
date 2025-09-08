@@ -26,7 +26,7 @@
 
             {{-- third div --}}
             <div class="profile-third-div-con">
-                @if($accounts)
+                @if($accounts->isNotEmpty())
                     {{-- Heading and button --}}
                     <div class="flex justify-between items-center mx-auto w-full lg:w-2/3">
                         <div>

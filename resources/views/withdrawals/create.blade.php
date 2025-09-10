@@ -32,7 +32,7 @@
                             <input 
                                 type="radio" 
                                 name="account" 
-                                value="{{ $account->id }}" 
+                                value="{{ $account->label_of_account }}" 
                                 class="peer hidden"
                                 required
                             >

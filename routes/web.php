@@ -73,7 +73,7 @@ Route::middleware('auth')->controller(WithdrawalController::class)->group(functi
     Route::get('/withdrawals', 'index')->name('withdrawals.index');
     Route::get('/withdrawals/create', 'create')->name('withdrawals.create');
     Route::post('/withdrawals','store')->name('withdrawals.store');
-    // Route::get('/withdrawals/{withdrawal}', 'create')->name('withdrawals.show');
+    Route::get('/withdrawals/{withdrawal}', 'show')->name('withdrawals.show');
     // Route::delete('/withdrawals/{withdrawal}','destroy')->name('withdrawals.destroy');
 });
 

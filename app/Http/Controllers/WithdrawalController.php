@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\Transaction;
 use App\Models\User;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
@@ -13,7 +14,9 @@ class WithdrawalController extends Controller
 {
     //index action
     public function index() {
-        return view('withdrawals.index');
+        $user = Auth::user();
+        $withdrawals = Withdrawal::where("user_id", $user->id)->orderBy('created_at', 'desc')->paginate(5);
+        return view('withdrawals.index', compact('withdrawals'));
     }
 
     //create action
@@ -57,5 +60,21 @@ class WithdrawalController extends Controller
             'account'=> $validated['account'],
             'status'=> $validated['status'],
         ]);
+
+        //save to transaction table
+        Transaction::create([
+            'user_id' => $user->id,
+            'type' => 'withdrawal',
+            'status' => $validated['status'],
+            'amount' => $validated['amount'],
+            'from' => $validated['method'],
+            'to' => $validated['account'],
+        ]);
+    }
+
+    //show action
+    public function show($id){
+        $withdrawal =Withdrawal::findOrFail($id);
+        return view('withdrawals.show',compact('withdrawal'));
     }
 }

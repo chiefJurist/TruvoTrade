@@ -44,7 +44,7 @@ class WithdrawalController extends Controller
 
         //check if balance is enough
         if ($validated['amount'] > $user->balance) {
-            return back()->with('amount','Insuficient balance');
+            return back()->withErrors(['amount' => 'Insufficient balance'])->withInput();
         }
 
         //deduct balance

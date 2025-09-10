@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('blockchain', 50)->nullable();
             $table->string('status', 50);      // e.g. pending, success, failed
             $table->decimal('amount', 15, 2);  // money amount
-            $table->string('from'); // origin address / sender
-            $table->string('to');   // destination address / receiver
-            $table->string('hash'); // blockchain tx hash
+            $table->string('from')->nullable(); // origin address / sender
+            $table->string('to')->nullable();   // destination address / receiver
+            $table->string('hash')->nullable(); // blockchain tx hash
 
             $table->timestamps(); // created_at, updated_at
             $table->index(['user_id', 'status']);

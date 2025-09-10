@@ -78,19 +78,29 @@
                             <th class="investment-fourth-div-wrap-six">Amount</th>
                             <th class="investment-fourth-div-wrap-six">Status</th>
                             <th class="investment-fourth-div-wrap-six">Date</th>
-                            <th class="investment-fourth-div-wrap-six">Link</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                            <td class="investment-fourth-div-wrap-six">Monday</td>
-                            <td class="investment-fourth-div-wrap-six">Deposit</td>
-                            <td class="investment-fourth-div-wrap-six">Success</td>
-                        </tr>
+                        @if($withdrawals->isEmpty())
+                            <tr>
+                                <td class="investment-fourth-div-wrap-six italic" colspan="4">No Data Available</td>
+                            </tr>
+                        @else
+                            @foreach ($withdrawals as $withdrawal)
+                                <tr>
+                                    <td class="investment-fourth-div-wrap-six">20496794540{{ $withdrawal->id }}</td>
+                                    <td class="investment-fourth-div-wrap-six">${{ $withdrawal->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $withdrawal->status }}</td>
+                                    <td class="investment-fourth-div-wrap-six">{{ $withdrawal->created_at->format('F j, Y g:i A') }}</td>
+                                    <td class="investment-fourth-div-wrap-six">
+                                        <a href="{{ route('withdrawals.show', $withdrawal->id) }}">View More</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
+                {{$withdrawals->links()}}
             </div>
         </div>
     </div>

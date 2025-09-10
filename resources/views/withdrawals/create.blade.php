@@ -79,7 +79,7 @@
             @endif
 
             <div class="mt-4 text-orange-300 font-bold">
-                <a href="{{ route('deposits.index') }}" class="button">Back to Deposits</a>
+                <a href="{{ route('withdrawals.index') }}" class="button">Back to Withdrawals</a>
             </div>
         </form>
     </div>

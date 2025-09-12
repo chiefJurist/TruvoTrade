@@ -204,7 +204,7 @@
                 <div>
                     <div class="overview-fifth-div-card-header">Total Withdrawal</div>
                     <div class="overview-fifth-div-card-left">
-                        <span class="overview-fifth-div-card-balance">${{ number_format((float)auth()->user()->withdrawals,2) }}</span>
+                        <span class="overview-fifth-div-card-balance">${{ number_format($totalWithdrawals, 2) }}</span>
                         <span class="overview-fifth-div-card-arrow">
                             <span class="icon-[tabler--arrow-up-left] text-green-400"></span>
                         </span>

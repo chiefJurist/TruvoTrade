@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Deposit;
+use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 
 class TraderController extends Controller
@@ -11,7 +12,8 @@ class TraderController extends Controller
     public function overview() {
         //$totalDeposits = Deposit::where('status', 'successful')->sum('amount');
         $totalDeposits = Deposit::where('status', 'successful')->sum('amount');
-        return view('trader.overview', compact('totalDeposits'));
+        $totalWithdrawals = Withdrawal::where('status', 'successful')->sum('amount');
+        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals'));
     }
 
     //profile actions

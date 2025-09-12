@@ -41,11 +41,6 @@
                 <p class="text-sm text-gray-500">To</p>
                 <p class="text-lg font-semibold text-gray-800 break-all">{{ $transaction->to }}</p>
             </div>
-
-            <div class="bg-gray-50 p-4 rounded-lg sm:col-span-2">
-                <p class="text-sm text-gray-500">Transaction Hash</p>
-                <p class="text-lg font-semibold text-gray-800 break-all">{{ $transaction->hash }}</p>
-            </div>
         </div>
 
         <div class="mt-6">

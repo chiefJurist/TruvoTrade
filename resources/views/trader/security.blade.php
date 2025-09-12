@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="{{route('trader.kyc')}}">
+                            <a href="{{route('kyc.index')}}">
                                 <div class="profile-fourth-wrap-twenty-two button">Verify</div>
                             </a>
                         </div>

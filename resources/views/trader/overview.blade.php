@@ -70,15 +70,18 @@
 
         {{-- Third div --}}
         <div class="overview-third-div-first">
-            <div class="overview-third-div-second">
-                <div>
-                    <span class="icon-[tabler--info-circle]"></span>
-                    <span>Verify KYC Information to activate withdrawals</span>
+            @if($kyc->isEmpty())
+                <div class="overview-third-div-second">
+                    <div>
+                        <span class="icon-[tabler--info-circle]"></span>
+                        <span>Verify KYC Information to activate withdrawals</span>
+                    </div>
+                    <a href="{{route('kyc.index')}}">
+                        <div class="overview-third-div-third">Verify KYC</div>
+                    </a>
                 </div>
-                <a href="{{route('trader.kyc')}}">
-                    <div class="overview-third-div-third">Verify KYC</div>
-                </a>
-            </div>
+            @endif
+            
             @if($accounts->isEmpty())
                 <div class="overview-third-div-fourth">
                     <div>

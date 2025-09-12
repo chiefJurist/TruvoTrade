@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use App\Models\Deposit;
+use App\Models\Kyc;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,8 @@ class TraderController extends Controller
         $totalDeposits = Deposit::where('status', 'successful')->sum('amount');
         $totalWithdrawals = Withdrawal::where('status', 'successful')->sum('amount');
         $accounts = Account::where('user_id', $user->id)->get();
-        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals', 'accounts'));
+        $kyc = Kyc::where('user_id', Auth::id())->where('status', 'approved')->get();
+        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals', 'accounts', 'kyc'));
     }
 
     //profile actions

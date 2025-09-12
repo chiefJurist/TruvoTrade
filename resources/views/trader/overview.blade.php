@@ -79,15 +79,17 @@
                     <div class="overview-third-div-third">Verify KYC</div>
                 </a>
             </div>
-            <div class="overview-third-div-fourth">
-                <div>
-                    <span class="icon-[tabler--info-circle]"></span>
-                    <span>Update your account information from your profile to make withdrawals.</span>
+            @if($accounts->isEmpty())
+                <div class="overview-third-div-fourth">
+                    <div>
+                        <span class="icon-[tabler--info-circle]"></span>
+                        <span>Update your account information from your profile to make withdrawals.</span>
+                    </div>
+                    <a href="{{route('accounts.index')}}">
+                        <div class="overview-third-div-fifth">Update Account</div>
+                    </a>
                 </div>
-                <a href="{{route('accounts.index')}}">
-                    <div class="overview-third-div-fifth">Update Account</div>
-                </a>
-            </div>
+            @endif
         </div>
 
         {{-- overview fourth div --}}

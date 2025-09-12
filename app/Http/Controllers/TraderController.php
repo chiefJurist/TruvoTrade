@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Deposit;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TraderController extends Controller
 {
     //overview action
     public function overview() {
+        $user = Auth::user();
         //$totalDeposits = Deposit::where('status', 'successful')->sum('amount');
         $totalDeposits = Deposit::where('status', 'successful')->sum('amount');
         $totalWithdrawals = Withdrawal::where('status', 'successful')->sum('amount');
-        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals'));
+        $accounts = Account::where('user_id', $user->id)->get();
+        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals', 'accounts'));
     }
 
     //profile actions

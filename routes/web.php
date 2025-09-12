@@ -94,4 +94,5 @@ Route::middleware('auth')->controller(AccountController::class)->group(function 
 
 Route::middleware('auth')->controller(KycController::class)->group(function(){
     Route::get('/kyc','index')->name('kyc.index');
+    Route::post('/kyc','store')->name('kyc.store');
 });

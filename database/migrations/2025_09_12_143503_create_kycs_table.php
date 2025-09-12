@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('kycs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('type')->nullable();
+            $table->string('document_front')->nullable();
+            $table->string('document_back')->nullable();
+            $table->enum('status', ['pending','approved', 'rejected'])->default('pending');
         });
     }
 

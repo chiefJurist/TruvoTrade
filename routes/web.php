@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomepagesController;
+use App\Http\Controllers\KycController;
 use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
@@ -58,7 +59,6 @@ Route::middleware('auth')->controller(TraderController::class)->group(function()
     Route::get('/investment', 'investment')->name('trader.investment');
     Route::get('/plans', 'plans')->name('trader.plans');
     Route::get('/referrals', 'referrals')->name('trader.referrals');
-    Route::get('/kyc', 'kyc')->name('trader.kyc');
 });
 
 Route::middleware('auth')->controller(TransactionController::class)->group(function(){
@@ -90,4 +90,8 @@ Route::middleware('auth')->controller(AccountController::class)->group(function 
     Route::post('/accounts','store')->name('accounts.store');
     Route::get('/accounts/{accounts}', 'show')->name('accounts.show');
     Route::post('/accounts/{accounts}','destroy')->name('accounts.destroy');
+});
+
+Route::middleware('auth')->controller(KycController::class)->group(function(){
+    Route::get('/kyc','index')->name('kyc.index');
 });

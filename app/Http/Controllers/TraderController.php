@@ -23,13 +23,16 @@ class TraderController extends Controller
     }
 
     //profile actions
-    public function profile(Request $request) {
+    public function profile() {
         return view('trader.profile');
     }
 
     //security action
     public function security() {
-        return view("trader.security");
+        $kyc = Kyc::where('user_id', Auth::id())
+            ->latest() // latest submission
+            ->first(); // just one record
+        return view("trader.security", compact('kyc'));
     }
 
     //investment action

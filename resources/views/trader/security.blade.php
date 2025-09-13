@@ -27,19 +27,55 @@
             {{-- third div --}}
             <div class="profile-third-div-con">
                 <div class="profile-fourth-wrap-eighteen">
-                    <div class="profile-fourth-wrap-nineteen">
-                        <div>
-                            <div class="profile-fourth-wrap-twenty">KYC VERIFICATION</div>
-                            <div class="profile-fourth-wrap-twenty-one">
-                                Note: You have to complete your KYC Verification to access withdrawals
+                    @if(!$kyc)
+                        <div class="profile-fourth-wrap-nineteen">
+                            <div>
+                                <div class="profile-fourth-wrap-twenty">KYC VERIFICATION</div>
+                                <div class="profile-fourth-wrap-twenty-one">
+                                    Note: You have to complete your KYC Verification to access withdrawals
+                                </div>
+                            </div>
+                            <div>
+                                <a href="{{route('kyc.index')}}">
+                                    <div class="profile-fourth-wrap-twenty-two button">Verify</div>
+                                </a>
                             </div>
                         </div>
+                    @elseif($kyc->status == 'approved')
                         <div>
-                            <a href="{{route('kyc.index')}}">
-                                <div class="profile-fourth-wrap-twenty-two button">Verify</div>
-                            </a>
+                            <div class="font-extrabold text-2xl font-serif">KYC STATUS</div>
+                            <div class="flex justify-between items-center gap-3">
+                                <div class="font-semibold text-green-400">Your KYC has been approved</div>
+                                <div>
+                                    <span class="icon-[simple-icons--ticktick] bg-green-500"></span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    @elseif($kyc->status == 'rejected')
+                        <div class="profile-fourth-wrap-nineteen">
+                            <div>
+                                <div class="profile-fourth-wrap-twenty">KYC VERIFICATION</div>
+                                <div class="profile-fourth-wrap-twenty-one">
+                                    Your KYC was rejected. Reverify your identity. 
+                                </div>
+                            </div>
+                            <div>
+                                <a href="{{route('kyc.index')}}">
+                                    <div class="profile-fourth-wrap-twenty-two button">Verify</div>
+                                </a>
+                            </div>
+                        </div>
+                    @elseif($kyc->status == 'pending')
+                        <div>
+                            <div class="font-extrabold text-2xl font-serif">KYC STATUS</div>
+                            <div class="flex justify-between items-center gap-3">
+                                <div class="font-semibold text-yellow-600">Your KYC Verification is pending</div>
+                                <div>
+                                    <span class="icon-[material-symbols--pending-outline] bg-yellow-600 font-bold text-lgo478"></span>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="profile-fourth-wrap-twenty-three">
                         <form action="">

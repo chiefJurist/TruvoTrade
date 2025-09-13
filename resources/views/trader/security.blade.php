@@ -24,6 +24,21 @@
                 <div class="profile-second-div-wrap-three">Security</div>
             </div>
 
+            {{-- displaying errors or success --}}
+            @if(session('success'))
+                <div class="text-green-500 font-bold">{{ session('success') }}</div>
+            @endif
+
+            @if($errors->any())
+                <div class="text-red-500 font-bold bg-red-50 p-5 rounded">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             {{-- third div --}}
             <div class="profile-third-div-con">
                 <div class="profile-fourth-wrap-eighteen">
@@ -78,8 +93,9 @@
                     @endif
 
                     <div class="profile-fourth-wrap-twenty-three">
-                        <form action="">
+                        <form action="{{ route('trader.updatePassword') }}" method="POST">
                             @csrf
+
                             <div class="profile-fourth-wrap-twenty-four">Change Password</div>
                             <div class="profile-fourth-wrap-twenty-five">
                                 To change your password please confirm here
@@ -94,7 +110,7 @@
                             </div>
                             <div class="profile-fourth-wrap-twenty-six">
                                 <label for="confirmpassword" class="profile-fourth-wrap-twenty-seven">Confirm Password</label><br>
-                                <input type="password" name="confirmpassword" class="profile-fourth-wrap-twenty-eight">
+                                <input type="password" name="password_confirmation" class="profile-fourth-wrap-twenty-eight">
                             </div>
                             <div class="mt-10">
                                 <input type="submit" value="Update Password" class="profile-fourth-wrap-twenty-nine button">

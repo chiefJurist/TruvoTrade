@@ -59,6 +59,7 @@ Route::middleware('auth')->controller(TraderController::class)->group(function()
     Route::get('/investment', 'investment')->name('trader.investment');
     Route::get('/plans', 'plans')->name('trader.plans');
     Route::get('/referrals', 'referrals')->name('trader.referrals');
+    Route::post('/password', 'updatePassword')->name('trader.updatePassword');
 });
 
 Route::middleware('auth')->controller(TransactionController::class)->group(function(){

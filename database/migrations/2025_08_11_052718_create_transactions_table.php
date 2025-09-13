@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('type', 50);        // e.g. deposit, withdrawal, trade, etc.
             $table->string('blockchain', 50)->nullable();
-            $table->string('status', 50);      // e.g. pending, success, failed
+            $table->enum('status', ['pending','successful', 'failed'])->default('pending');
             $table->decimal('amount', 15, 2);  // money amount
             $table->string('from')->nullable(); // origin address / sender
             $table->string('to')->nullable();   // destination address / receiver

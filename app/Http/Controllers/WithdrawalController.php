@@ -39,7 +39,6 @@ class WithdrawalController extends Controller
             'amount' => 'required|numeric|min:1',
             'method' => 'required|string|max:255',
             'account' => 'required|string|max:255',
-            'status'=> 'required|string|max:255',
         ]);
 
         //check if balance is enough
@@ -58,14 +57,12 @@ class WithdrawalController extends Controller
             'amount'=> $validated['amount'],
             'method'=> $validated['method'],
             'account'=> $validated['account'],
-            'status'=> $validated['status'],
         ]);
 
         //save to transaction table
         Transaction::create([
             'user_id' => $user->id,
             'type' => 'withdrawal',
-            'status' => $validated['status'],
             'amount' => $validated['amount'],
             'from' => $validated['method'],
             'to' => $validated['account'],

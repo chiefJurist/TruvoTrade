@@ -16,7 +16,7 @@ return new class extends Migration
             // link to users
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('blockchain', 50);        // e.g. Bitcoin, Ethereum, Solana
-            $table->string('status', 50);      // e.g. pending, completed, failed
+             $table->enum('status', ['pending','successful', 'failed'])->default('pending');
             $table->decimal('amount', 15, 2);
             $table->string('from'); // sender wallet / address or ref
             $table->string('to');

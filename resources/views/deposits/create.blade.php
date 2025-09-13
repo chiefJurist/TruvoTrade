@@ -6,7 +6,6 @@
             {{-- Hidden fields --}}
             {{-- <input type="hidden" name="user_id" value="{{ auth()->id() }}"> --}}
             <input type="hidden" name="blockchain" value="{{ $blockchain }}">
-            <input type="hidden" name="status" value="pending">
             <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="from" value="external transfer">
             <input type="hidden" name="to" value="{{ $depositAddress }}">

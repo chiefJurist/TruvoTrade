@@ -13,7 +13,6 @@
             {{-- Hidden inputs (from modal) --}}
             <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="method" value="{{ $method }}">
-            <input type="hidden" name="status" value="pending">
 
             {{-- Show withdrawal amount --}}
             <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg text-center">

@@ -31,7 +31,6 @@ class KycController extends Controller
                 'type' => $request->input('type'),
                 'document_front' => $frontPath,
                 'document_back' => $backPath,
-                'status' => 'pending',
             ]
         );
 

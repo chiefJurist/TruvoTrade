@@ -45,7 +45,6 @@ class DepositController extends Controller
 
         $validated = $request->validate([
             'blockchain' => 'required|string|max:255',
-            'status' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0.01',
             'from' => 'required|string|max:255',
             'to' => 'required|string|max:255',
@@ -56,7 +55,6 @@ class DepositController extends Controller
         Deposit::create([
             'user_id' => $user->id,
             'blockchain' => $validated['blockchain'],
-            'status' => $validated['status'],
             'amount' => $validated['amount'],
             'from' => $validated['from'],
             'to' => $validated['to'],
@@ -68,7 +66,6 @@ class DepositController extends Controller
             'user_id' => $user->id,
             'type' => 'deposit',
             'blockchain' => $validated['blockchain'],
-            'status' => $validated['status'],
             'amount' => $validated['amount'],
             'from' => $validated['from'],
             'to' => $validated['to'],

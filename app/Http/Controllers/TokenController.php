@@ -52,14 +52,12 @@ class TokenController extends Controller
             'cost'=> $validated['cost'],
             'address'=> $validated['address'],
             'hash'=> $validated['hash'],
-            'status'=> 'pending',
         ]);
 
         Transaction::create([
             'user_id'=> $user->id,
             'type'=> 'Token Purchase',
             'blockchain'=> $validated['blockchain'],
-            'status'=> 'pending',
             'amount' => $validated['cost'],
             'from'=> 'External Deposit',
             'to'=> $validated['address'],

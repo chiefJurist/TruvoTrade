@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('address');
             $table->string('password');
             $table->decimal('balance', 15, 2)->default(0.00);
+            $table->decimal('tokens', 15, 2)->default(0.00);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('verification_token')->nullable(); // for email confirmation
             $table->rememberToken();

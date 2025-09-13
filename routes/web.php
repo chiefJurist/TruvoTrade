@@ -6,6 +6,7 @@ use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomepagesController;
 use App\Http\Controllers\KycController;
 use App\Http\Controllers\SecurityController;
+use App\Http\Controllers\TokenController;
 use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WithdrawalController;
@@ -96,4 +97,9 @@ Route::middleware('auth')->controller(AccountController::class)->group(function 
 Route::middleware('auth')->controller(KycController::class)->group(function(){
     Route::get('/kyc','index')->name('kyc.index');
     Route::post('/kyc','store')->name('kyc.store');
+});
+
+Route::middleware('auth')->controller(TokenController::class)->group(function(){
+    Route::get('/tokens/create','create')->name('tokens.create');
+    Route::post('/tokens','store')->name('tokens.store');
 });

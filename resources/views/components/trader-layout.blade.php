@@ -721,7 +721,7 @@
     {{-- Overview Token Modal --}}
     <div id="overviewTokenModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('tokens.create') }}" method="GET">
                 @csrf
 
                 <div class="authed-form-cancel-con" onclick="toggleOverviewTokenModal()">
@@ -733,29 +733,27 @@
                 <div class="plan-modal-wrap-two">You can purchase your tokens here.</div>
 
                 <div class="plan-modal-wrap-three">
-                    <select id="tokenPaymentAdrress" name="address" required class="profile-bank-modal-input">
-                        <option value="" disabled selected>Select Your Wallet Chain</option>
-                        <option value="Bitcoin">Bitcoin</option>
-                        <option value="Ethereum (ERC20)">Ethereum (ERC20)</option>
-                        <option value="Ethereum (BEP20)">Ethereum (BEP20)</option>
-                        <option value="USDT (BEP20)">USDT (BEP20)</option>
-                        <option value="USDT (TRC20)">USDT (TRC20)</option>
-                        <option value="Tron">Tron</option>
-                        <option value="Litecoin">Litecoin</option>
-                        <option value="XRP">XRP</option>
-                        <option value="USD Coin">USD Coin</option>
+                    <select required name="blockchain" class="w-full outline-none text-gray-500">
+                        <option value="BITCOIN">BITCOIN</option>
+                        <option value="ETHEREUM">ETHEREUM (ERC20)</option>
+                        <option value="SOLANA">SOLANA (SOL)</option>
+                        <option value="USDT(BEP20)">USDT(BEP20)</option>
+                        <option value="USDT(TRX10)">USDT(TRX10)</option>
+                        <option value="USDC(BEP20)">USDC(BEP20)</option>
+                        <option value="BNB(BEP20)">BNB(BEP20)</option>
+                        <option value="TRON(TRX)">TRON(TRX)</option>
                     </select>
                 </div>
 
                 <div class="relative w-full my-6">
-                    <input type="number" name="amount" id="token_amount" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                    <input type="number" name="token" id="token_amount" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
                     <label for="email" class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">
                         Enter Token Amount*
                     </label>
                 </div>
 
                 <div class="relative w-full my-6">
-                    <input type="number" name="calculated_amount" id="token_calculated_amount" value="0" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required readonly/>
+                    <input type="number" name="cost" id="token_calculated_amount" value="0" placeholder="" class="peer w-full border border-gray-300 rounded px-4 pt-6 pb-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required readonly/>
                     <label for="email" class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-600">
                         Calculated Amount($)
                     </label>

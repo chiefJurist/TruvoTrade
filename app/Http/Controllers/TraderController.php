@@ -23,8 +23,9 @@ class TraderController extends Controller
         $accounts = Account::where('user_id', $user->id)->get();
         $kyc = Kyc::where('user_id', Auth::id())->where('status', 'approved')->get();
         $tokens = Token::with('user')->where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(5);
+        $bot = Token::where('user_id', Auth::id())->where('status', 'successful')->get();
 
-        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals', 'accounts', 'kyc', 'tokens'));
+        return view('trader.overview', compact('totalDeposits', 'totalWithdrawals', 'accounts', 'kyc', 'tokens', 'bot'));
     }
 
     //profile actions

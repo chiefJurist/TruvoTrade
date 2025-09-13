@@ -323,16 +323,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($tokens as $token)
+                        @if ($tokens->isEmpty())
                             <tr>
-                                <td class="overview-ninth-div-wrap-eight">{{ $token->token }}</td>
-                                <td class="overview-ninth-div-wrap-eight">{{ $token->status }}</td>
-                                <td class="overview-ninth-div-wrap-eight">{{ $token->blockchain }}</td>
-                                <td class="overview-ninth-div-wrap-eight">
-                                    <a href="{{ route('tokens.show', $token->id) }}">View More ...</a>
-                                </td>
+                                <td class="investment-fourth-div-wrap-six italic" colspan="4">No Data Available</td>
                             </tr>
-                        @endforeach
+                        @else
+                            @foreach ($tokens as $token)
+                                <tr>
+                                    <td class="overview-ninth-div-wrap-eight">{{ $token->token }}</td>
+                                    <td class="overview-ninth-div-wrap-eight">{{ $token->status }}</td>
+                                    <td class="overview-ninth-div-wrap-eight">{{ $token->blockchain }}</td>
+                                    <td class="overview-ninth-div-wrap-eight">
+                                        <a href="{{ route('tokens.show', $token->id) }}">View More ...</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
                  {{$tokens->links()}}

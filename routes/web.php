@@ -90,8 +90,8 @@ Route::middleware('auth')->controller(DepositController::class)->group(function(
 Route::middleware('auth')->controller(AccountController::class)->group(function () {
     Route::get('/accounts', 'index')->name('accounts.index');
     Route::post('/accounts','store')->name('accounts.store');
-    Route::get('/accounts/{accounts}', 'show')->name('accounts.show');
-    Route::post('/accounts/{accounts}','destroy')->name('accounts.destroy');
+    Route::get('/accounts/{account}', 'show')->name('accounts.show');
+    Route::post('/accounts/{account}','destroy')->name('accounts.destroy');
 });
 
 Route::middleware('auth')->controller(KycController::class)->group(function(){
@@ -102,4 +102,5 @@ Route::middleware('auth')->controller(KycController::class)->group(function(){
 Route::middleware('auth')->controller(TokenController::class)->group(function(){
     Route::get('/tokens/create','create')->name('tokens.create');
     Route::post('/tokens','store')->name('tokens.store');
+    Route::get('/tokens/{token}','show')->name('tokens.show');
 });

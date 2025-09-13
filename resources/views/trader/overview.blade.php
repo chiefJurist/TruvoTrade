@@ -317,29 +317,25 @@
                 <table class="overview-ninth-div-wrap-six">
                     <thead>
                         <tr class="overview-ninth-div-wrap-seven">
-                            <th class="overview-ninth-div-wrap-eight">Transaction</th>
+                            <th class="overview-ninth-div-wrap-eight">Token Amount</th>
                             <th class="overview-ninth-div-wrap-eight">Status</th>
-                            <th class="overview-ninth-div-wrap-eight">Date</th>
+                            <th class="overview-ninth-div-wrap-eight">Blockchain</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
-                            <td class="overview-ninth-div-wrap-eight">Success</td>
-                            <td class="overview-ninth-div-wrap-eight">Monday</td>
-                        </tr>
-                        <tr>
-                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
-                            <td class="overview-ninth-div-wrap-eight">Success</td>
-                            <td class="overview-ninth-div-wrap-eight">Monday</td>
-                        </tr>
-                        <tr>
-                            <td class="overview-ninth-div-wrap-eight">Deposit</td>
-                            <td class="overview-ninth-div-wrap-eight">Success</td>
-                            <td class="overview-ninth-div-wrap-eight">Monday</td>
-                        </tr>
+                        @foreach ($tokens as $token)
+                            <tr>
+                                <td class="overview-ninth-div-wrap-eight">{{ $token->token }}</td>
+                                <td class="overview-ninth-div-wrap-eight">{{ $token->status }}</td>
+                                <td class="overview-ninth-div-wrap-eight">{{ $token->blockchain }}</td>
+                                <td class="overview-ninth-div-wrap-eight">
+                                    <a href="{{ route('tokens.show', $token->id) }}">View More ...</a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                 {{$tokens->links()}}
             </div>
         </div>
     </div>

@@ -56,4 +56,10 @@ class TokenController extends Controller
 
         return redirect()->route('trader.overview')->with('success', 'Deposit submitted successfully.');
     }
+
+    //show action
+    public function show($id) {
+        $token = Token::findOrFail($id);
+        return view('tokens.show', compact('token'));
+    }
 }

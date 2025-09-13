@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('cost',15,2)->nullable();
             $table->string('address')->nullable();
             $table->string('hash')->nullable();
-            $table->enum('status', ['pending', 'approved', 'failed'])->default('pending');
+            $table->enum('status', ['pending', 'successful', 'failed'])->default('pending');
 
             $table->timestamps();
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Token;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,6 +53,17 @@ class TokenController extends Controller
             'address'=> $validated['address'],
             'hash'=> $validated['hash'],
             'status'=> 'pending',
+        ]);
+
+        Transaction::create([
+            'user_id'=> $user->id,
+            'type'=> 'Token Purchase',
+            'blockchain'=> $validated['blockchain'],
+            'status'=> 'pending',
+            'amount' => $validated['cost'],
+            'from'=> 'External Deposit',
+            'to'=> $validated['address'],
+            'hash'=> $validated['hash'],
         ]);
 
         return redirect()->route('trader.overview')->with('success', 'Deposit submitted successfully.');

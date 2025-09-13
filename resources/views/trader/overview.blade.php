@@ -234,7 +234,7 @@
                         </span>
                         <span class="font-bold">TOKEN BALANCE</span>
                     </div>
-                    <div class="overview-sixth-div-wrap-five">{{ number_format((float)auth()->user()->token_balance,2) }} ELT</div>
+                    <div class="overview-sixth-div-wrap-five">{{ number_format((float)auth()->user()->tokens,2) }} ELT</div>
                 </div>
                 <div>
                     <div class="overview-sixth-div-wrap-six button" onclick="toggleOverviewModal()">
@@ -253,7 +253,7 @@
                         <img src="{{ asset('img/overview-img2.svg') }}" alt="" class="overview-sixth-div-wrap-nine">
                         <span class="font-bold">TOTAL PROFIT</span>
                     </div>
-                    <div class="overview-sixth-div-wrap-ten">${{ number_format((float)auth()->user()->token_profit,2) }}</div>
+                    <div class="overview-sixth-div-wrap-ten">${{ number_format((float)auth()->user()->tokens*50,2) }}</div>
                 </div>
                 <div class="overview-sixth-div-wrap-eleven">
                     <span class="icon-[tabler--trending-up]"></span>
@@ -273,7 +273,7 @@
                     <div>Please activate the bot to start trading</div>
                 @else
                     <div class="font-bold text-2xl lg:text-4xl">Bot is Active</div>
-                    <div class="italic font-bold text-gray-400">Your profit will be displayed in the dashboard</div>
+                    <div class="italic font-semibold text-gray-400">Your profit will be displayed in the dashboard</div>
                 @endif
             </div>
         </div>
@@ -330,7 +330,7 @@
                         @else
                             @foreach ($tokens as $token)
                                 <tr>
-                                    <td class="overview-ninth-div-wrap-eight">{{ $token->token }}</td>
+                                    <td class="overview-ninth-div-wrap-eight">{{ $token->token }} ELT</td>
                                     <td class="overview-ninth-div-wrap-eight">{{ $token->status }}</td>
                                     <td class="overview-ninth-div-wrap-eight">{{ $token->blockchain }}</td>
                                     <td class="overview-ninth-div-wrap-eight">

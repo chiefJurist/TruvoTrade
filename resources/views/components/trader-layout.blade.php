@@ -709,7 +709,7 @@
                     <input type="text" class="overview-modal-div-wrap-seven">
                 </div>
                 <div class="overview-modal-div-wrap-eight">Token Balance (Available)</div>
-                <input type="text" value="0 ELT" readonly class="overview-modal-div-wrap-nine">
+                <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly class="overview-modal-div-wrap-nine">
                 <div class="overview-modal-div-wrap-ten">These are the profits you currently have available.</div>
                 <div class="overview-modal-div-wrap-eleven">
                     <input type="submit" value="Proceed" class="overview-modal-div-wrap-twelve button">

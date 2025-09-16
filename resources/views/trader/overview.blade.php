@@ -239,7 +239,7 @@
                 <div>
                     <div class="overview-sixth-div-wrap-six button" onclick="toggleOverviewModal()">
                         <span class="icon-[tabler--ticket]"></span>
-                        <span>Load Tokens</span>
+                        <span>Transfer Tokens</span>
                     </div>
                     <div class="overview-sixth-div-wrap-seven button" onclick="toggleOverviewTokenModal()">
                         Purchase Tokens

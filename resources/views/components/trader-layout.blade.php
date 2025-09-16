@@ -702,11 +702,11 @@
                 <div class="overview-modal-div-wrap-one" onclick="toggleOverviewModal()">
                     <span class="icon-[hugeicons--cancel-01] overview-modal-div-wrap-two"></span>
                 </div>
-                <div class="overview-modal-div-wrap-three">Load Tokens</div>
-                <div class="overview-modal-div-wrap-four">Enter the Coupon Code</div>
+                <div class="overview-modal-div-wrap-three">Transfer Tokens</div>
+                <div class="overview-modal-div-wrap-four">Enter Token Amount To Be Transferred</div>
                 <div class="overview-modal-div-wrap-five">
-                    <div class="overview-modal-div-wrap-six">Enter Coupon Code to load tokens</div>
-                    <input type="text" class="overview-modal-div-wrap-seven">
+                    <div class="overview-modal-div-wrap-six">Minimum transfer of 10 tokens</div>
+                    <input type="number" name="amount" class="overview-modal-div-wrap-seven">
                 </div>
                 <div class="overview-modal-div-wrap-eight">Token Balance (Available)</div>
                 <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly class="overview-modal-div-wrap-nine">

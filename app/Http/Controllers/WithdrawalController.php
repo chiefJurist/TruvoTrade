@@ -36,7 +36,7 @@ class WithdrawalController extends Controller
 
         //validating input
         $validated = $request->validate([
-            'amount' => 'required|numeric|min:1',
+            'amount' => 'required|numeric|min:1000',
             'method' => 'required|string|max:255',
             'account' => 'required|string|max:255',
         ]);

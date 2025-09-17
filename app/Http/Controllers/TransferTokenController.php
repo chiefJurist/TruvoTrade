@@ -18,12 +18,12 @@ class TransferTokenController extends Controller
     }
 
     //store action
-    public function store(){
+    public function store(Request $request){
         $user = Auth::user();
 
         //validate input
-        $validated = $user->validate([
-            'amount'=> 'required|numeric|min:1000',
+        $validated = $request->validate([
+            'amount'=> 'required|numeric|min:10',
         ]);
 
         //checking if the token balance is enough

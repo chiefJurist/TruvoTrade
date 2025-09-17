@@ -265,7 +265,7 @@
         {{-- seventh div --}}
         <div class="overview-seventh-div-con">
             <div class="overview-seventh-div-wrap-one">
-                @if($bot->isEmpty())
+                @if(auth()->user()->tokens <= 0)
                     <div>
                         <img src="{{asset('img/overview-img4.png')}}" alt="bot" class="overview-seventh-div-img">
                     </div>

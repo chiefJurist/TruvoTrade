@@ -9,7 +9,9 @@ use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\TokenController;
 use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TransferTokenController;
 use App\Http\Controllers\WithdrawalController;
+use App\Models\TransferToken;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -103,4 +105,9 @@ Route::middleware('auth')->controller(TokenController::class)->group(function(){
     Route::get('/tokens/create','create')->name('tokens.create');
     Route::post('/tokens','store')->name('tokens.store');
     Route::get('/tokens/{token}','show')->name('tokens.show');
+});
+
+Route::middleware('auth')->controller(TransferTokenController::class)->group(function(){
+    Route::get('/token-transfer/create','create')->name('tokens-transfer.create');
+    Route::post('/token-transfer','store')->name('tokens-transfer.store');
 });

@@ -18,7 +18,8 @@ class TraderController extends Controller
     public function overview() {
         $user = Auth::user();
         //$totalDeposits = Deposit::where('status', 'successful')->sum('amount');
-        $totalDeposits = Deposit::where('status', 'successful')->sum('amount');
+        //$totalDeposits = Deposit::where('status', 'successful')->sum('amount');
+        $totalDeposits = Deposit::where('user_id', $user->id)->where('status', 'successful')->sum('amount');
         $totalWithdrawals = Withdrawal::where('status', 'successful')->sum('amount');
         $accounts = Account::where('user_id', $user->id)->get();
         $kyc = Kyc::where('user_id', Auth::id())->where('status', 'approved')->get();

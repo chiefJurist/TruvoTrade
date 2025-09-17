@@ -67,6 +67,9 @@ class WithdrawalController extends Controller
             'from' => $validated['method'],
             'to' => $validated['account'],
         ]);
+
+        //redirect
+        return redirect()->route('withdrawals.index')->with('success', 'Withdrawals submitted successfully.');
     }
 
     //show action

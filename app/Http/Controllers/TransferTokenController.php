@@ -47,7 +47,11 @@ class TransferTokenController extends Controller
             'type'=> 'token transfer',
             'amount' => $validated['amount']*50,
             'from' => 'bot',
-            'to'=> 'balance'
+            'to'=> 'balance',
+            'status'=> 'successful',
         ]);
+
+        //redirect
+        return redirect()->route('trader.overview')->with('success', 'Token transferred successfully.');
     }
 }

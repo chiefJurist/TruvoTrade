@@ -697,7 +697,7 @@
     {{-- Overview Modal View --}}
     <div id="overviewModal" class="hidden overview-modal-backdrop">
         <div id="overviewModalContent" class="overview-modal-con animate-bounce-once">
-            <form action="">
+            <form action="{{ route('tokens-transfer.create') }}" method="GET">
                 @csrf
                 <div class="overview-modal-div-wrap-one" onclick="toggleOverviewModal()">
                     <span class="icon-[hugeicons--cancel-01] overview-modal-div-wrap-two"></span>
@@ -705,11 +705,11 @@
                 <div class="overview-modal-div-wrap-three">Transfer Tokens</div>
                 <div class="overview-modal-div-wrap-four">Enter Token Amount To Be Transferred</div>
                 <div class="overview-modal-div-wrap-five">
-                    <div class="overview-modal-div-wrap-six">Minimum transfer of 10 tokens</div>
+                    <div class="overview-modal-div-wrap-six">Minimum transfer of 10 ELT</div>
                     <input type="number" name="amount" class="overview-modal-div-wrap-seven">
                 </div>
                 <div class="overview-modal-div-wrap-eight">Token Balance (Available)</div>
-                <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly class="overview-modal-div-wrap-nine">
+                <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly name="tokens" class="overview-modal-div-wrap-nine">
                 <div class="overview-modal-div-wrap-ten">These are the profits you currently have available.</div>
                 <div class="overview-modal-div-wrap-eleven">
                     <input type="submit" value="Proceed" class="overview-modal-div-wrap-twelve button">

@@ -7,6 +7,7 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
+
 <script>
     //for the loader
     window.addEventListener('load', function () {
@@ -405,6 +406,7 @@
     }
 
 </script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -418,6 +420,7 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
+
 <body class="bg-white relative">
     {{-- LOADER --}}
     <div id="app-loader" class="loader">
@@ -476,7 +479,7 @@
                     <span class="trader-small-nav-link-text">My Accounts</span>
                 </div>
             </a>
-             <a href="{{ route('trader.security') }}" class="trader-small-nav-link {{ request()->routeIs('trader.security') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <a href="{{ route('trader.security') }}" class="trader-small-nav-link {{ request()->routeIs('trader.security') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
                     <span class="icon-[tabler--lock] trader-small-nav-link-icon"></span>
                 </div>
@@ -551,13 +554,6 @@
                         </div>
                     </button>
                 </form>
-
-            <div class="trader-small-nav-link-contact-btn-con">
-                <div>24/7 Support Available</div>
-                <div class="trader-small-nav-link-contact-btn">
-                    <span>Contact Us</span>
-                    <span class="icon-[tabler--headset]"></span>
-                </div>
             </div>
         </div>
     </div>
@@ -674,14 +670,6 @@
                             </div>
                         </button>
                     </form>
-
-                    <div class="trader-big-nav-link-contact-btn-con">
-                        <div>24/7 Support Available</div>
-                        <div class="trader-big-nav-link-contact-btn">
-                            <span>Contact Us</span>
-                            <span class="icon-[tabler--headset]"></span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

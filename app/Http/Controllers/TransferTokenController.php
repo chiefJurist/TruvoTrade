@@ -23,7 +23,7 @@ class TransferTokenController extends Controller
 
         //validate input
         $validated = $request->validate([
-            'amount'=> 'required|numeric|min:10',
+            'amount'=> 'required|numeric|min:0.5',
         ]);
 
         //checking if the token balance is enough

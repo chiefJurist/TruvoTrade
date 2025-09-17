@@ -39,7 +39,7 @@ class TokenController extends Controller
 
         $validated = $request->validate([
             'blockchain'=> 'required|string|max:255',
-            'token'=> 'required|numeric|min:0.5',
+            'token'=> 'required|numeric|min:0.1',
             'cost'=> 'required|numeric|min:5',
             'address'=>'required|string|max:255',
             'hash'=> 'required|string|max:255',

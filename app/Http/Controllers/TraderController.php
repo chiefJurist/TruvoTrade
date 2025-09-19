@@ -39,11 +39,6 @@ class TraderController extends Controller
         return view("trader.security", compact('kyc'));
     }
 
-    //investment action
-    public function investment() {
-        return view('trader.investment');
-    }
-
     //plans action
     public function plans() {
         return view('trader.plans');

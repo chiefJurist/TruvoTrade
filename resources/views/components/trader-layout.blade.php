@@ -490,7 +490,7 @@
 
 
             <div class="trader-small-nav-link-header">APPS</div>
-            <a href="{{ route('trader.investment') }}" class="trader-small-nav-link {{ request()->routeIs('trader.investment') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+            <a href="{{ route('investments.index') }}" class="trader-small-nav-link {{ request()->routeIs('investments.index') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                 <div>
                     <span class="icon-[tabler--home-stats] trader-small-nav-link-icon"></span>
                 </div>
@@ -603,7 +603,7 @@
 
                 <div id="traderAppBigHeader" class="trader-big-nav-link-header">APPS</div>
                 <div id="traderAppBigDot" class="trader-big-nav-link-header-dot hidden">...</div>
-                <a href="{{ route('trader.investment') }}" id="investmentNav" class="trader-big-nav-link {{ request()->routeIs('trader.investment') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
+                <a href="{{ route('investments.index') }}" id="investmentNav" class="trader-big-nav-link {{ request()->routeIs('investments.index') ? 'bg-blue-400 text-white' : 'text-gray-800 hover:bg-gray-100' }}">
                     <div>
                         <span class="icon-[tabler--home-stats] trader-big-nav-link-icon"></span>
                     </div>

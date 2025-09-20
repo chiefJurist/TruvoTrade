@@ -154,7 +154,7 @@
                                 <div class="plans-second-div-wrap-nine">Interest</div>
                             </div>
                             <div>
-                                <div class="plans-second-div-wrap-eight">28</div>
+                                <div class="plans-second-div-wrap-eight">38</div>
                                 <div class="plans-second-div-wrap-nine">Term Days</div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                                 <div class="plans-second-div-wrap-nine">Interest</div>
                             </div>
                             <div>
-                                <div class="plans-second-div-wrap-eight">28</div>
+                                <div class="plans-second-div-wrap-eight">64</div>
                                 <div class="plans-second-div-wrap-nine">Term Days</div>
                             </div>
                         </div>

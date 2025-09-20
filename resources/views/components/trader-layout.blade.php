@@ -770,6 +770,8 @@
             </form>
         </div>
     </div>
+
+    {{-- Script for Token --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const amountInput = document.getElementById('token_amount');
@@ -1007,8 +1009,13 @@
     {{-- Plan-one Modal --}}
     <div id="planOneModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="starter pack">
+                <input type="hidden" name="minimum" value="1000">
+                <input type="hidden" name="maximum" value="10000">
+                <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalOne()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1019,7 +1026,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="1000" max="10000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1050,8 +1057,13 @@
     {{-- Plan-Two Modal --}}
     <div id="planTwoModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="standard pack">
+                <input type="hidden" name="minimum" value="10000">
+                <input type="hidden" name="maximum" value="50000">
+                <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalTwo()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1062,7 +1074,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="10000" max="50000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1093,8 +1105,13 @@
     {{-- Plan-Three Modal --}}
     <div id="planThreeModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="diamond pack">
+                <input type="hidden" name="minimum" value="50000">
+                <input type="hidden" name="maximum" value="100000">
+                <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalThree()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1105,7 +1122,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="50000" max="100000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1136,8 +1153,13 @@
     {{-- Plan-Four Modal --}}
     <div id="planFourModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="gold pack">
+                <input type="hidden" name="minimum" value="100000">
+                <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="end" value="38">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalFour()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1148,7 +1170,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="100000" max="1000000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1179,8 +1201,13 @@
     {{-- Plan-Five Modal --}}
     <div id="planFiveModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="pre starter">
+                <input type="hidden" name="minimum" value="500">
+                <input type="hidden" name="maximum" value="10000">
+                <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalFive()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1191,7 +1218,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="500" max="10000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1222,8 +1249,13 @@
     {{-- Plan-Six Modal --}}
     <div id="planSixModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="bitcoin live">
+                <input type="hidden" name="minimum" value="50000">
+                <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="end" value="64">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalSix()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1234,7 +1266,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="50000" max="1000000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1265,8 +1297,13 @@
     {{-- Plan-Seven Modal --}}
     <div id="planSevenModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="pattern day">
+                <input type="hidden" name="minimum" value="55000">
+                <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalSeven()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1277,7 +1314,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="55000" max="1000000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.
@@ -1308,8 +1345,13 @@
     {{-- Plan-Eight Modal --}}
     <div id="planEightModal" class="hidden plan-modal-backdrop">
         <div class="plan-modal-con">
-            <form action="">
+            <form action="{{ route('investments.create') }}" method="GET">
                 @csrf
+
+                <input type="hidden" name="plan" value="bitcoin live">
+                <input type="hidden" name="minimum" value="100000">
+                <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="end" value="56">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalEight()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1320,7 +1362,7 @@
                 <div class="plan-modal-wrap-two">Please input the amount you'd like to invest</div>
 
                 <div class="plan-modal-wrap-three">
-                    <input type="number" name="planAmount" placeholder="Enter Amount" required class="plan-modal-wrap-four">
+                    <input type="number" name="amount" min="100000" max="1000000" placeholder="Enter Amount" required class="plan-modal-wrap-four">
                 </div>
                 <div class="plan-modal-wrap-five">
                     * Your account balance will be immediately deducted upon confirmation.

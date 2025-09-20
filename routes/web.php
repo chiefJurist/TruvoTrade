@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomepagesController;
+use App\Http\Controllers\InvestmentController;
 use App\Http\Controllers\KycController;
 use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\TokenController;
@@ -59,7 +60,6 @@ Route::middleware('auth')->controller(TraderController::class)->group(function()
     Route::get('/overview', 'overview')->name('trader.overview');
     Route::get('/profile', 'profile')->name('trader.profile');
     Route::get('/security', 'security')->name('trader.security');
-    Route::get('/investment', 'investment')->name('trader.investment');
     Route::get('/plans', 'plans')->name('trader.plans');
     Route::get('/referrals', 'referrals')->name('trader.referrals');
     Route::post('/password', 'updatePassword')->name('trader.updatePassword');
@@ -110,4 +110,11 @@ Route::middleware('auth')->controller(TokenController::class)->group(function(){
 Route::middleware('auth')->controller(TransferTokenController::class)->group(function(){
     Route::get('/token-transfer/create','create')->name('tokens-transfer.create');
     Route::post('/token-transfer','store')->name('tokens-transfer.store');
+});
+
+Route::middleware('auth')->controller(InvestmentController::class)->group(function () {
+    Route::get('/investment','index')->name('investments.index');
+    Route::get('/investment/create','create')->name('investments.create');
+    Route::post('/investment','store')->name('investments.store');
+    Route::get('/investments/{investment}','show')->name('investments.show');
 });

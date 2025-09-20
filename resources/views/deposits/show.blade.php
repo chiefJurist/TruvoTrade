@@ -44,8 +44,7 @@
         </div>
 
         <div class="mt-6">
-            <a href="{{ route('deposits.index') }}" 
-               class="inline-block px-5 py-2 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700">
+            <a href="{{ route('deposits.index') }}" class="inline-block px-5 py-2 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700">
                 Back to Deposits
             </a>
         </div>

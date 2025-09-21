@@ -24,9 +24,10 @@ class InvestmentController extends Controller
         $amount = $request->get('amount');
         $minimum = $request->get('minimum');
         $maximum = $request->get('maximum');
+        $interest = $request->get('interest');
         $end = Carbon::now()->addDays((int)$request->get('end'));
 
-        return view('investments.create', compact('plan', 'amount','minimum','maximum', 'end'));
+        return view('investments.create', compact('plan', 'amount','minimum','maximum', 'interest', 'end'));
     }
 
     //store action
@@ -39,6 +40,7 @@ class InvestmentController extends Controller
             'minimum'=> 'required|string|max:255',
             'maximum'=> 'required|string|max:255',
             'end'=> 'required|date',
+            'intesrest'=> 'interest',
         ]);
 
         //check minimum limit
@@ -68,6 +70,7 @@ class InvestmentController extends Controller
             'minimum'=> $validated['minimum'],
             'maximum'=> $validated['maximum'],
             'status'=> 'successful',
+            'interest'=> $validated['interest'],
             'end'=> $validated['end']
         ]);
 

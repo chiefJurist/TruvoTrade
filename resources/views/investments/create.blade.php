@@ -9,6 +9,7 @@
             <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="minimum" value="{{ $minimum }}">
             <input type="hidden" name="maximum" value="{{ $maximum }}">
+            <input type="hidden" name="interest" value="{{ $interest }}">
             <input type="hidden" name="end" value="{{ $end }}">
 
             <!-- Display validation or session errors -->

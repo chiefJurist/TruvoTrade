@@ -15,6 +15,7 @@ class Investment extends Model
         'status',
         'minimum',
         'maximum',
+        'interest',
         'profit',
         'end',
     ];

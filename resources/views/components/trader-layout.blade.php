@@ -1015,6 +1015,7 @@
                 <input type="hidden" name="plan" value="starter pack">
                 <input type="hidden" name="minimum" value="1000">
                 <input type="hidden" name="maximum" value="10000">
+                <input type="hidden" name="interest" value="45">
                 <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalOne()">
@@ -1063,6 +1064,7 @@
                 <input type="hidden" name="plan" value="standard pack">
                 <input type="hidden" name="minimum" value="10000">
                 <input type="hidden" name="maximum" value="50000">
+                <input type="hidden" name="interest" value="55">
                 <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalTwo()">
@@ -1111,7 +1113,8 @@
                 <input type="hidden" name="plan" value="diamond pack">
                 <input type="hidden" name="minimum" value="50000">
                 <input type="hidden" name="maximum" value="100000">
-                <input type="hidden" name="end" value="28">
+                <input type="hidden" name="interest" value="65">
+                <input type="hidden" name="end" value="34">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalThree()">
                     <span class="icon-[hugeicons--cancel-01] authed-form-cancel"></span>
@@ -1159,6 +1162,7 @@
                 <input type="hidden" name="plan" value="gold pack">
                 <input type="hidden" name="minimum" value="100000">
                 <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="interest" value="75">
                 <input type="hidden" name="end" value="38">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalFour()">
@@ -1207,6 +1211,7 @@
                 <input type="hidden" name="plan" value="pre starter">
                 <input type="hidden" name="minimum" value="500">
                 <input type="hidden" name="maximum" value="10000">
+                <input type="hidden" name="interest" value="45">
                 <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalFive()">
@@ -1255,6 +1260,7 @@
                 <input type="hidden" name="plan" value="bitcoin live">
                 <input type="hidden" name="minimum" value="50000">
                 <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="interest" value="85">
                 <input type="hidden" name="end" value="64">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalSix()">
@@ -1303,6 +1309,7 @@
                 <input type="hidden" name="plan" value="pattern day">
                 <input type="hidden" name="minimum" value="55000">
                 <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="interest" value="65">
                 <input type="hidden" name="end" value="28">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalSeven()">
@@ -1351,6 +1358,7 @@
                 <input type="hidden" name="plan" value="bitcoin live">
                 <input type="hidden" name="minimum" value="100000">
                 <input type="hidden" name="maximum" value="1000000">
+                <input type="hidden" name="interest" value="85">
                 <input type="hidden" name="end" value="56">
 
                 <div class="authed-form-cancel-con" onclick="togglePlanModalEight()">

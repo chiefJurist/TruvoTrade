@@ -39,8 +39,8 @@ class InvestmentController extends Controller
             'amount'=> 'required|numeric',
             'minimum'=> 'required|string|max:255',
             'maximum'=> 'required|string|max:255',
+            'interest'=> 'required|numeric|max:85|min:45',
             'end'=> 'required|date',
-            'intesrest'=> 'interest',
         ]);
 
         //check minimum limit

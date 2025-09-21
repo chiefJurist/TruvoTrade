@@ -85,17 +85,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($investments as $investment)
+                        @if($investments->isEmpty())
                             <tr>
-                                <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->plan }}</td>
-                                <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->status }}</td>
-                                <td class="investment-fourth-div-wrap-six capitalize">${{ $investment->amount }}</td>
-                                <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->created_at->format('F j, Y g:i A') }}</td>
-                                <td class="investment-fourth-div-wrap-six">
-                                    <a href="{{ route('investments.show', $investment->id) }}">View More</a>
-                                </td>
+                                <td class="investment-fourth-div-wrap-six italic" colspan="4">No Data Available</td>
                             </tr>
-                        @endforeach
+                        @else
+                            @foreach ($investments as $investment)
+                                <tr>
+                                    <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->plan }}</td>
+                                    <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->status }}</td>
+                                    <td class="investment-fourth-div-wrap-six capitalize">${{ $investment->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->created_at->format('F j, Y g:i A') }}</td>
+                                    <td class="investment-fourth-div-wrap-six">
+                                        <a href="{{ route('investments.show', $investment->id) }}">View More</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

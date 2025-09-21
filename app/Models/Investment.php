@@ -20,6 +20,10 @@ class Investment extends Model
         'end',
     ];
 
+    protected $casts = [
+        'end' => 'datetime',
+    ];
+
     public function user() : BelongsTo {
         return $this->belongsTo(User::class);
     }

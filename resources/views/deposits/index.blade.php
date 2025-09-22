@@ -71,7 +71,7 @@
                             @foreach ($deposits as $deposit)
                                 <tr>
                                     <td class="investment-fourth-div-wrap-six">20496794540{{ $deposit->id }}</td>
-                                    <td class="investment-fourth-div-wrap-six">${{ $deposit->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">${{ number_format($deposit->amount, 2) }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $deposit->status }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $deposit->created_at->format('F j, Y g:i A') }}</td>
                                     <td class="investment-fourth-div-wrap-six">

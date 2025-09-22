@@ -89,7 +89,7 @@
                             @foreach ($withdrawals as $withdrawal)
                                 <tr>
                                     <td class="investment-fourth-div-wrap-six">20496794540{{ $withdrawal->id }}</td>
-                                    <td class="investment-fourth-div-wrap-six">${{ $withdrawal->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">${{ number_format($withdrawal->amount,2) }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $withdrawal->status }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $withdrawal->created_at->format('F j, Y g:i A') }}</td>
                                     <td class="investment-fourth-div-wrap-six">

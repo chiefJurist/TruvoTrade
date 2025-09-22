@@ -43,7 +43,7 @@
                                     <td class="investment-fourth-div-wrap-six">21796794540{{ $transaction->id }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $transaction->type }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $transaction->status }}</td>
-                                    <td class="investment-fourth-div-wrap-six">${{ $transaction->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six">${{ number_format($transaction->amount, 2) }}</td>
                                     <td class="investment-fourth-div-wrap-six">{{ $transaction->created_at->format('F j, Y g:i A') }}</td>
                                     <td class="investment-fourth-div-wrap-six">
                                         <a href="{{ route('transactions.show', $transaction->id) }}">View More</a>

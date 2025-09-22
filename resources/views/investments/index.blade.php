@@ -94,7 +94,7 @@
                                 <tr>
                                     <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->plan }}</td>
                                     <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->status }}</td>
-                                    <td class="investment-fourth-div-wrap-six capitalize">${{ $investment->amount }}</td>
+                                    <td class="investment-fourth-div-wrap-six capitalize">${{ number_format($investment->amount, 2) }}</td>
                                     <td class="investment-fourth-div-wrap-six capitalize">{{ $investment->created_at->format('F j, Y g:i A') }}</td>
                                     <td class="investment-fourth-div-wrap-six">
                                         <a href="{{ route('investments.show', $investment->id) }}">View More</a>

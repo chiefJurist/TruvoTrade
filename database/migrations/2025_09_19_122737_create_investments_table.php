@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('plan')->nullable();
-            $table->string('amount')->nullable();
+            $table->decimal('amount', 15, 2)->nullable();
             $table->enum('status', ['pending','successful', 'failed'])->default('pending');
             $table->string('minimum')->nullable();
             $table->string('maximum')->nullable();

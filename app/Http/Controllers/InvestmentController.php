@@ -15,7 +15,11 @@ class InvestmentController extends Controller
     public function index(){
         $user = Auth::user();
         $investments = Investment::where('user_id', $user->id)->where('status', 'successful')->get();
-        return view('investments.index', compact('investments'));
+        $currentInvestments = Investment::where('user_id', $user->id)
+            ->where('status', 'successful')
+            ->where('end', '>', Carbon::now())
+            ->sum('amount');
+        return view('investments.index', compact('investments', 'currentInvestments'));
     }
 
     //create action

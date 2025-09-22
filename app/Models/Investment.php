@@ -21,6 +21,8 @@ class Investment extends Model
     ];
 
     protected $casts = [
+        'amount' => 'decimal:2',
+        'profit' => 'decimal:2',
         'end' => 'datetime',
     ];
 

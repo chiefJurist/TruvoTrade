@@ -55,12 +55,12 @@
             <div class="investment-third-div-wrap-six">
                 <div>
                     <div class="investment-third-div-wrap-two">Current Investments</div>
-                    <div class="investment-third-div-wrap-three">${{ number_format((float)auth()->user()->investments,2) }}</div>
+                    <div class="investment-third-div-wrap-three">${{ number_format($currentInvestments,2) }}</div>
                     <div class="investment-third-div-wrap-four">Amount Invested</div>
-                    <div class="investment-third-div-wrap-five button">
+                    <a href="{{ route('transactions.index') }}" class="investment-third-div-wrap-five button">
                         <span>History</span>
                         <span class="icon-[tabler--history]"></span>
-                    </div>
+                    </a>
                 </div>
                 <div>
                     <span class="icon-[tabler--chart-histogram] investment-third-div-wrap-seven"></span>

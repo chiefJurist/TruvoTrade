@@ -19,6 +19,10 @@ class InvestmentController extends Controller
             ->where('status', 'successful')
             ->where('end', '>', Carbon::now())
             ->sum('amount');
+        $profit = Investment::where('user_id', $user->id)
+            ->where('status', 'successful')
+            ->where('end', '<', Carbon::now())
+            ->sum('profit');
         return view('investments.index', compact('investments', 'currentInvestments'));
     }
 

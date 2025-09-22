@@ -80,6 +80,6 @@ class TransferController extends Controller
         ]);
 
         //redirect
-        return redirect()->route('investment.index')->with('success', 'Profit transferred successfully.');
+        return redirect()->route('investments.index')->with('success', 'Profit transferred successfully.');
     }
 }

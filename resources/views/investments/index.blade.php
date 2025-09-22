@@ -47,7 +47,7 @@
                 <div class="investment-third-div-wrap-two">Investment Account</div>
                 <div class="investment-third-div-wrap-three">{{ number_format((float)auth()->user()->profits,2) }} USD</div>
                 <div class="investment-third-div-wrap-four">Gained profits</div>
-                <div class="investment-third-div-wrap-five button">
+                <div class="investment-third-div-wrap-five button" onclick="toggleTransferInvestmentModal()">
                     <span>Transfer Funds</span>
                     <span class="icon-[tabler--arrow-big-right]"></span>
                 </div>

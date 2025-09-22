@@ -188,7 +188,7 @@
     }
 
    //profile accounts display
-   window.toggleProfileAccounts = function (){
+    window.toggleProfileAccounts = function (){
         const buttons = document.getElementById('cryptoAndBank');
         let visible = !buttons.classList.contains('hidden');
 
@@ -371,6 +371,21 @@
     window.toggleDepositModal = function () {
         const modal = document.getElementById('depositModal');
         let visible = !modal.classList.contains('hidden');
+
+        if (visible) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        } else {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+    }
+
+    //transfer investment Modal
+    window.toggleTransferInvestmentModal = function () {
+        const modal = document.getElementById('transferInvestmentModal');
+        let visible = !modal.classList.contains('hidden');
+        const content = document.getElementById('transferInvestmentModalContent');
 
         if (visible) {
             modal.classList.add('hidden');
@@ -1555,6 +1570,30 @@
 
                 <div class="plan-modal-wrap-thirteen">
                     <input type="submit" value="Proceed" class="plan-modal-wrap-fourteen button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{-- Transfer Investment Modal --}}
+    <div id="transferInvestmentModal" class="hidden overview-modal-backdrop">
+        <div id="transferInvestmentModalContent" class="overview-modal-con animate-bounce-once">
+            <form action="{{ route('tokens-transfer.create') }}" method="GET">
+                @csrf
+                <div class="overview-modal-div-wrap-one" onclick="toggleTransferInvestmentModal()">
+                    <span class="icon-[hugeicons--cancel-01] overview-modal-div-wrap-two"></span>
+                </div>
+                <div class="overview-modal-div-wrap-three">Transfer Investment Profit</div>
+                <div class="overview-modal-div-wrap-four">Enter Amount To Be Transferred</div>
+                <div class="overview-modal-div-wrap-five">
+                    <div class="overview-modal-div-wrap-six">Enter Amount In USD</div>
+                    <input type="number" name="amount" class="overview-modal-div-wrap-seven">
+                </div>
+                <div class="overview-modal-div-wrap-eight">Profit Balance (Available)</div>
+                <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly name="tokens" class="overview-modal-div-wrap-nine">
+                <div class="overview-modal-div-wrap-ten">These are the profits you currently have available.</div>
+                <div class="overview-modal-div-wrap-eleven">
+                    <input type="submit" value="Proceed" class="overview-modal-div-wrap-twelve button">
                 </div>
             </form>
         </div>

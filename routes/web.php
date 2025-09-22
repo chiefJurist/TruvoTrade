@@ -10,6 +10,7 @@ use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\TokenController;
 use App\Http\Controllers\TraderController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TransferController;
 use App\Http\Controllers\TransferTokenController;
 use App\Http\Controllers\WithdrawalController;
 use App\Models\TransferToken;
@@ -117,4 +118,9 @@ Route::middleware('auth')->controller(InvestmentController::class)->group(functi
     Route::get('/investment/create','create')->name('investments.create');
     Route::post('/investment','store')->name('investments.store');
     Route::get('/investments/{investment}','show')->name('investments.show');
+});
+
+Route::middleware('auth')->controller(TransferController::class)->group(function () {
+    Route::get('/transfer', 'create')->name('transfer.create');
+    Route::post('/transfer','store')->name('transfer.store');
 });

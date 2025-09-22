@@ -1578,7 +1578,7 @@
     {{-- Transfer Investment Modal --}}
     <div id="transferInvestmentModal" class="hidden overview-modal-backdrop">
         <div id="transferInvestmentModalContent" class="overview-modal-con animate-bounce-once">
-            <form action="{{ route('tokens-transfer.create') }}" method="GET">
+            <form action="{{ route('transfer.create') }}" method="GET">
                 @csrf
                 <div class="overview-modal-div-wrap-one" onclick="toggleTransferInvestmentModal()">
                     <span class="icon-[hugeicons--cancel-01] overview-modal-div-wrap-two"></span>
@@ -1590,7 +1590,14 @@
                     <input type="number" name="amount" class="overview-modal-div-wrap-seven">
                 </div>
                 <div class="overview-modal-div-wrap-eight">Profit Balance (Available)</div>
-                <input type="text" value="{{ number_format((float)auth()->user()->tokens,2) }} ELT" readonly name="tokens" class="overview-modal-div-wrap-nine">
+                <input type="text" 
+                    value="{{ number_format(\App\Models\Investment::where('user_id', auth()->id())
+                        ->where('status', 'successful')
+                        ->where('end', '<', \Carbon\Carbon::now())
+                        ->sum('profit'), 2) }}" 
+                    readonly 
+                    name="tokens" 
+                    class="overview-modal-div-wrap-nine">
                 <div class="overview-modal-div-wrap-ten">These are the profits you currently have available.</div>
                 <div class="overview-modal-div-wrap-eleven">
                     <input type="submit" value="Proceed" class="overview-modal-div-wrap-twelve button">

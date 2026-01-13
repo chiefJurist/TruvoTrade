@@ -69,7 +69,9 @@ class TokenController extends Controller
 
     //show action
     public function show($id) {
-        $token = Token::findOrFail($id);
+        $user = Auth::user();
+        $token = Token::where('user_id', $user->id)
+            ->findOrFail($id);
         return view('tokens.show', compact('token'));
     }
 }

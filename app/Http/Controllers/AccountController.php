@@ -77,7 +77,10 @@ class AccountController extends Controller
     //show function 
     public function show($id) {
         //
-        $account = Account::findOrFail($id);
+        $user = Auth::user();
+        
+        $account = Account::where('user_id', $user->id)
+        ->findOrFail($id);
         return view('accounts.show', compact('account'));
     }
 

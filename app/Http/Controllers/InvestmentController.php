@@ -96,7 +96,10 @@ class InvestmentController extends Controller
 
     //show action
     public function show($id){
-        $investment = Investment::findOrFail($id);
+        $user = Auth::user();
+        
+        $investment = Investment::where('user_id', $user->id)
+        ->findOrFail($id);
         return view('investments.show', compact('investment'));
     }
 }

@@ -74,7 +74,9 @@ class WithdrawalController extends Controller
 
     //show action
     public function show($id){
-        $withdrawal =Withdrawal::findOrFail($id);
+        $user = Auth::user();
+        $withdrawal = Withdrawal::where('user_id', $user->id)
+            ->findOrFail($id);
         return view('withdrawals.show',compact('withdrawal'));
     }
 }

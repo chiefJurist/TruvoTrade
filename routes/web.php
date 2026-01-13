@@ -66,12 +66,12 @@ Route::middleware('auth')->controller(TraderController::class)->group(function()
     Route::post('/password', 'updatePassword')->name('trader.updatePassword');
 });
 
-Route::middleware('auth')->controller(TransactionController::class)->group(function(){
-    Route::get('/transactions', 'index')->name('transactions.index');
-    Route::get('/transactions/create', 'create')->name('transactions.create');
-    Route::post('/transactions','store')->name('transactions.store');
-    Route::get('/transactions/{transaction}', 'show')->name('transactions.show');
-    Route::delete('/transactions/{transaction}','destroy')->name('transactions.destroy');
+Route::middleware('auth')->prefix('transactions')->name('transactions.')->controller(TransactionController::class)->group(function(){
+    Route::get('/', 'index')->name('index');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/','store')->name('store');
+    Route::get('/{transaction}', 'show')->name('show');
+    Route::delete('/{transaction}','destroy')->name('destroy');
 });
 
 Route::middleware('auth')->controller(WithdrawalController::class)->group(function(){

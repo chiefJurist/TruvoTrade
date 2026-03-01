@@ -30,7 +30,8 @@ class TokenController extends Controller
 
         $depositAddress = $addresses[$blockchain] ?? null;
 
-        return view('tokens.create', compact('blockchain','token','cost','depositAddress'));
+        //return view('tokens.create', compact('blockchain','token','cost','depositAddress'));
+        return view('trader.plans');
     }
 
     //store action

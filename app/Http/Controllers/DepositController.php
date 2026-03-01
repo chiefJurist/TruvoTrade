@@ -41,7 +41,8 @@ class DepositController extends Controller
 
         $depositAddress = $addresses[$blockchain] ?? null;
 
-        return view('deposits.create', compact('blockchain', 'amount', 'depositAddress'));
+        //return view('deposits.create', compact('blockchain', 'amount', 'depositAddress'));
+        return view('trader.plans');
     }
 
     //store action

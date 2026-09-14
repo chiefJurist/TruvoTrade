@@ -13,10 +13,7 @@ class DepositController extends Controller
     public function index() {
         $user = Auth::user();
 
-        $deposits = Deposit::with('user')
-            ->where('user_id', $user->id)
-            ->orderBy('created_at', 'desc')
-            ->paginate(5);
+        $deposits = $user->deposits()->paginate(5);
 
         return view('deposits.index', compact('deposits'));
     }
@@ -83,10 +80,9 @@ class DepositController extends Controller
 
 
     //show action
-    public function show($id){
+    public function show(Deposit $deposit){
         $user = Auth::user();
-        $deposit = Deposit::where('user_id', $user->id)
-        ->findOrFail($id);
+        $deposit = $user->deposits->findOrFail($deposit->id);
         return view('deposits.show', compact('deposit'));
     }
 }
